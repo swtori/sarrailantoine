@@ -1,18 +1,58 @@
 [
   {
-    "id": "domaine-de-gach",
-    "title": "Domaine de gach",
-    "url": "https://domainedegach.com",
-    "image": "assets/projets/domaine-de-gach.jpg",
-    "description": "Site de chambre d'hôte pour le Domaine de gach. Présentation de l'établissement, des chambres et des prestations, avec formulaire de contact et informations pratiques.\n\nRéalisation en HTML, CSS et JavaScript. Site responsive et épuré, pensé pour les voyageurs en recherche d'hébergement.",
+    "id": "projet-1",
+    "title": "Application de gestion interne",
+    "image": "assets/projets/projet-1.jpg",
+    "description": "Application desktop en C# pour la gestion des stocks et des commandes. Interface intuitive avec formulaires et tableaux de bord.\n\nTechnologies : C#, Windows Forms, SQL Server. Conception de la base de données et des requêtes, tests et documentation technique.\n\nProjet réalisé dans le cadre du BTS SIO, démontrant la maîtrise du développement d’applications métier et de l’intégration base de données.",
+    "tags": ["C#", "SQL Server", "Windows Forms"]
+  },
+  {
+    "id": "projet-2",
+    "title": "Site vitrine entreprise",
+    "image": "assets/projets/projet-2.jpg",
+    "description": "Site vitrine responsive pour une petite entreprise : présentation des services, formulaire de contact et intégration des réseaux sociaux.\n\nRéalisation en HTML, CSS et JavaScript. Mise en avant de la lisibilité et de l’accessibilité sur mobile et desktop.\n\nObjectif : offrir une présence web professionnelle et facile à maintenir.",
     "tags": ["HTML", "CSS", "JavaScript"]
   },
   {
-    "id": "lusciana",
-    "title": "Lusciana",
-    "url": "https://lusciana.fr",
-    "image": "assets/projets/lusciana.jpg",
-    "description": "Site de ma société de build & development. Présentation de l'activité, des services (conception, développement, déploiement) et des réalisations.\n\nSite vitrine professionnel en HTML, CSS et JavaScript. Mise en avant du positionnement et des compétences de l'entreprise.",
+    "id": "projet-3",
+    "title": "Outil de suivi de tâches",
+    "image": "assets/projets/projet-3.jpg",
+    "description": "Application web de type to-do list avec sauvegarde locale. Ajout, modification et suppression de tâches, filtres par statut.\n\nDéveloppement en JavaScript (vanilla) et stockage via localStorage. Interface épurée et réactive.\n\nProjet personnel pour mettre en pratique les notions de DOM et de gestion d’état côté client.",
+    "tags": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": "projet-4",
+    "title": "API REST et documentation",
+    "image": "assets/projets/projet-4.jpg",
+    "description": "Petite API REST pour exposer des données métier (CRUD). Documentation avec exemples de requêtes et réponses.\n\nBack-end en C# (ASP.NET Core) ou Node.js selon la version du projet. Base SQL Server ou SQLite. Support de communication : documentation technique et guide d’intégration.\n\nMontre la capacité à concevoir une API claire et à la documenter pour d’autres développeurs.",
+    "tags": ["C#", "API REST", "SQL"]
+  },
+  {
+    "id": "projet-5",
+    "title": "Dashboard de visualisation",
+    "image": "assets/projets/projet-5.jpg",
+    "description": "Tableau de bord web affichant des indicateurs (graphiques, tableaux) à partir de données simulées ou d’un fichier JSON.\n\nTechnologies : HTML, CSS, JavaScript. Mise en forme des données et rendu visuel simple et lisible.\n\nObjectif : démontrer la capacité à présenter des données de manière claire pour un usage métier.",
+    "tags": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": "projet-6",
+    "title": "Scripts d’automatisation",
+    "image": "assets/projets/projet-6.jpg",
+    "description": "Scripts Python pour automatiser des tâches répétitives : nettoyage de fichiers, génération de rapports, import/export de données.\n\nDocumentation des scripts et des prérequis. Utilisation en ligne de commande avec arguments.\n\nMontre la maîtrise de Python et la volonté de gagner en efficacité grâce à l’automatisation.",
+    "tags": ["Python", "Scripts", "CLI"]
+  },
+  {
+    "id": "projet-7",
+    "title": "Portfolio personnel (ce site)",
+    "image": "assets/projets/projet-7.jpg",
+    "description": "Ce portfolio a été conçu en HTML, CSS et JavaScript pour être sobre, responsive et facile à maintenir. Les projets sont chargés depuis un fichier JSON pour permettre l’ajout de nouveaux réalisations sans modifier le code.\n\nThème sombre, typographie Inter, animations légères. Structure pensée pour l’évolution du contenu (projets, CV, contact).\n\nReflète la capacité à livrer un produit fini, lisible et professionnel.",
     "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": "projet-8",
+    "title": "Support de communication – présentation projet",
+    "image": "assets/projets/projet-8.jpg",
+    "description": "Support de communication (présentation, maquette ou documentation) réalisé pour accompagner un projet technique. Objectif : faciliter la compréhension par les équipes ou les clients.\n\nMontre le sérieux du travail et la capacité à communiquer sur le technique de manière claire et structurée.",
+    "tags": ["Communication", "Documentation", "Présentation"]
   }
 ]

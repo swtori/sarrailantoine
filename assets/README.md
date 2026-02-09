@@ -2,10 +2,10 @@
 
 Placez ici les fichiers suivants :
 
-- **photo.jpg** – Votre photo professionnelle (utilisée sur la page d’accueil).
-- **cv-antoine-sarrail.pdf** – Votre CV au format PDF (lien de téléchargement sur la page À propos).
-- **projets/** – Captures d’écran de vos projets :
-  - projet-1.jpg, projet-2.jpg, … (noms utilisés dans `data/projects.json`)
-  - Ou featured.jpg pour le projet mis en avant sur l’accueil.
+- **Photo** – La photo de la page d’accueil est dans **img/Antoine.png**.
+- **CV** – Le CV PDF est dans **img/cvAntoine.pdf** (section CV accueil + page À propos).
+- **img/** (à la racine du projet) – Captures des projets : **domainedegach.png**, **lusciana.png** (chemins utilisés dans `js/projects.js`).
 
-Formats conseillés : JPG ou PNG. Résolution raisonnable (ex. 800×500 px pour les captures de projets).
+Si une image manque ou ne charge pas, un bloc de repli affiche le domaine du site, son favicon et un lien « Ouvrir le site ».
+
+Formats conseillés : JPG ou PNG. Résolution raisonnable (ex. 800×500 px ou 1200×750 px pour les captures).

@@ -68,6 +68,10 @@ img {
   padding: 0 1.25rem;
 }
 
+.container--wide {
+  max-width: 1400px;
+}
+
 /* ========== Header & Nav ========== */
 .header {
   position: sticky;
@@ -333,6 +337,12 @@ img {
   padding: 2.5rem 0 3.5rem;
 }
 
+.featured-project__subtitle {
+  margin: -0.5rem 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
 .featured-card {
   display: grid;
   gap: 1.5rem;
@@ -347,12 +357,46 @@ img {
   aspect-ratio: 16/10;
   overflow: hidden;
   background: var(--surface);
+  position: relative;
+}
+
+.featured-card__media .project-card__media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .featured-card__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+.featured-card__media--fallback .project-card__media-link,
+.featured-card__media-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  min-height: 100%;
+  background: var(--bg-elevated);
+}
+
+.featured-card__media-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+
+.featured-card__media.is-fallback .project-card__media-link > img {
+  display: none;
+}
+
+.featured-card__media.is-fallback .featured-card__media-fallback {
+  display: flex;
 }
 
 .featured-card__body {
@@ -381,6 +425,210 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+}
+
+/* ========== Carrousel « un projet à l’honneur » (accueil) ========== */
+/* Structure : container > [content: image gauche + texte droite] + nav en bas */
+/* Image : 100 % visible (contain), aucun espace vide au-dessus (object-position top) */
+.featured-carousel {
+  position: relative;
+  border-radius: var(--radius-lg);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.featured-carousel__content {
+  position: relative;
+  min-height: 320px;
+  padding: 0;
+}
+
+.featured-carousel__track {
+  position: absolute;
+  inset: 0;
+}
+
+.featured-carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.featured-carousel__slide.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Carte : image à gauche, texte à droite (desktop) ; empilé (mobile) */
+.featured-carousel__card {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  height: 100%;
+  min-height: 0;
+}
+
+/* Colonne image : pas de marge/padding en haut, image collée en haut */
+.featured-carousel__media {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--surface);
+}
+
+.featured-carousel__media .project-card__media-link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 240px;
+}
+
+/* 100 % de l’image visible, aucun recadrage ; espace éventuel en bas, pas en haut */
+.featured-carousel__media img {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: top center;
+  display: block;
+}
+
+.featured-carousel__media.is-fallback .project-card__media-link > img {
+  display: none;
+}
+
+.featured-carousel__media.is-fallback .featured-card__media-fallback {
+  display: flex;
+}
+
+.featured-carousel__body {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--bg-elevated);
+}
+
+.featured-carousel__title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+.featured-carousel__desc {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* Nav : gauche/droite + points, en dessous du bloc image+texte */
+.featured-carousel__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.featured-carousel__btn {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.featured-carousel__btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-muted);
+}
+
+.featured-carousel__dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.featured-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--border);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.featured-carousel__dot:hover {
+  background: var(--text-muted);
+}
+
+.featured-carousel__dot.is-active {
+  background: var(--accent);
+  transform: scale(1.25);
+}
+
+@media (min-width: 768px) {
+  .featured-carousel__content {
+    min-height: 380px;
+  }
+
+  /* Image à gauche, texte à droite */
+  .featured-carousel__card {
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .featured-carousel__media {
+    align-items: flex-start;
+    min-height: 100%;
+  }
+
+  .featured-carousel__media .project-card__media-link {
+    min-height: 100%;
+  }
+
+  .featured-carousel__media img {
+    max-height: none;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: top left;
+  }
+
+  .featured-carousel__body {
+    padding: 2rem 2.5rem;
+  }
+
+  .featured-carousel__title {
+    font-size: 1.5rem;
   }
 }
 
@@ -453,6 +701,26 @@ img {
   text-align: center;
 }
 
+/* Section télécharger le CV (accueil) */
+.cv-section {
+  padding: 2.5rem 0 3rem;
+  background: var(--bg-elevated);
+  text-align: center;
+}
+
+.cv-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cv-section__text {
+  margin: 0;
+  color: var(--text-muted);
+  max-width: 480px;
+}
+
 @media (min-width: 640px) {
   .about-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -493,12 +761,73 @@ img {
   aspect-ratio: 16/10;
   overflow: hidden;
   background: var(--surface);
+  position: relative;
+}
+
+.project-card__media-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card__media-link:hover {
+  color: var(--accent);
 }
 
 .project-card__media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+}
+
+/* Fallback quand pas d’image ou image cassée : domaine + favicon + lien */
+.project-card__media--fallback .project-card__media-link,
+.project-card__media-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  min-height: 100%;
+  background: var(--bg-elevated);
+}
+
+.project-card__media-fallback {
+  display: none;
+  position: absolute;
+  inset: 0;
+}
+
+.project-card__media.is-fallback .project-card__media-link > img {
+  display: none;
+}
+
+.project-card__media.is-fallback .project-card__media-fallback {
+  display: flex;
+}
+
+.project-card__favicon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.project-card__domain {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text-bright);
+  text-align: center;
+  word-break: break-all;
+}
+
+.project-card__open {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 500;
 }
 
 .project-card__body {
@@ -520,6 +849,15 @@ img {
   white-space: pre-line;
 }
 
+.project-card__link {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+
+.project-card__link a {
+  font-weight: 500;
+}
+
 .project-card__tags {
   display: flex;
   flex-wrap: wrap;
@@ -535,17 +873,6 @@ img {
   background: var(--surface);
   border-radius: 4px;
   color: var(--text-muted);
-}
-
-.project-card__link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent);
-}
-.project-card__link:hover {
-  color: var(--accent-hover);
 }
 
 @keyframes fadeIn {

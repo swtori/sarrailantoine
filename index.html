@@ -30,7 +30,7 @@
     <section class="hero">
       <div class="hero__content">
         <div class="hero__image-wrap">
-          <img src="assets/photo.jpg" alt="Antoine Sarrail – photo professionnelle" class="hero__image" width="280" height="280">
+          <img src="img/Antoine.png" alt="Antoine Sarrail – photo professionnelle" class="hero__image" width="280" height="280">
         </div>
         <div class="hero__text">
           <h1 class="hero__title">Antoine Sarrail</h1>
@@ -62,21 +62,29 @@
     </section>
 
     <section class="featured-project">
+      <div class="container container--wide">
+        <h2 class="section-title">Un projet mis en avant</h2>
+        <p class="featured-project__subtitle">Il change toutes les 30 secondes</p>
+        <div id="featured-carousel" class="featured-carousel" aria-label="Projet à l’honneur">
+          <div class="featured-carousel__content">
+            <div class="featured-carousel__track">
+              <!-- Slides générés par JS -->
+            </div>
+          </div>
+          <div class="featured-carousel__nav">
+            <button type="button" class="featured-carousel__btn featured-carousel__btn--prev" aria-label="Projet précédent">‹</button>
+            <div class="featured-carousel__dots" role="tablist" aria-label="Choisir un projet"></div>
+            <button type="button" class="featured-carousel__btn featured-carousel__btn--next" aria-label="Projet suivant">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
       <div class="container">
-        <h2 class="section-title">Projet mis en avant</h2>
-        <article class="featured-card">
-          <div class="featured-card__media">
-            <img src="assets/projets/lusciana.jpg" alt="Lusciana – site de la société" width="600" height="360">
-          </div>
-          <div class="featured-card__body">
-            <h3 class="featured-card__title">Lusciana</h3>
-            <p class="featured-card__desc">
-              Site de ma société de build & development : présentation de l’activité, des services et des réalisations. 
-              Réalisé en HTML, CSS et JavaScript.
-            </p>
-            <a href="https://lusciana.fr" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le site</a>
-          </div>
-        </article>
+        <h2 class="section-title">Mon CV</h2>
+        <p class="cv-section__text">Téléchargez mon CV au format PDF pour consulter mon parcours et mes compétences.</p>
+        <a href="img/cvAntoine.pdf" class="btn btn--primary" download>Télécharger mon CV (PDF)</a>
       </div>
     </section>
   </main>
@@ -86,12 +94,13 @@
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
       <nav class="footer__nav" aria-label="Liens footer">
         <a href="contact.html">Contact</a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://github.com/swtori" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/antoine-sarrail-aab821259/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </nav>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="js/projects.js"></script>
 </body>
 </html>
