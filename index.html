@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Antoine Sarrail – Développeur, BTS SIO candidat libre. Portfolio professionnel : projets, compétences et parcours.">
+  <title>Antoine Sarrail – Développeur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html" class="nav__logo">Antoine Sarrail</a>
+      <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link nav__link--active">Accueil</a></li>
+        <li><a href="about.html" class="nav__link">À propos</a></li>
+        <li><a href="projects.html" class="nav__link">Projets</a></li>
+        <li><a href="contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__image-wrap">
+          <img src="assets/photo.jpg" alt="Antoine Sarrail – photo professionnelle" class="hero__image" width="280" height="280">
+        </div>
+        <div class="hero__text">
+          <h1 class="hero__title">Antoine Sarrail</h1>
+          <p class="hero__tagline">Développeur – BTS SIO candidat libre</p>
+          <p class="hero__hook">
+            Je conçois des applications et des sites web pour résoudre des problèmes concrets. 
+            À la recherche d’une entreprise où continuer à apprendre et à évoluer.
+          </p>
+          <div class="hero__cta">
+            <a href="about.html" class="btn btn--primary">En savoir plus</a>
+            <a href="projects.html" class="btn btn--outline">Voir mes projets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro">
+      <div class="container">
+        <h2 class="section-title">Qui je suis</h2>
+        <p class="intro__lead">
+          Passionné par le développement et la création de solutions numériques, je m’oriente vers un poste de développeur 
+          où je pourrai mettre à profit mes compétences techniques et ma capacité d’adaptation.
+        </p>
+        <p class="intro__body">
+          Mon parcours en BTS SIO en candidat libre m’a donné une base solide en développement (C#, JavaScript, bases de données) 
+          et une approche autonome du travail. Je souhaite rejoindre une équipe pour monter en compétence et contribuer à des projets concrets.
+        </p>
+      </div>
+    </section>
+
+    <section class="featured-project">
+      <div class="container">
+        <h2 class="section-title">Projet mis en avant</h2>
+        <article class="featured-card">
+          <div class="featured-card__media">
+            <img src="assets/projets/lusciana.jpg" alt="Lusciana – site de la société" width="600" height="360">
+          </div>
+          <div class="featured-card__body">
+            <h3 class="featured-card__title">Lusciana</h3>
+            <p class="featured-card__desc">
+              Site de ma société de build & development : présentation de l’activité, des services et des réalisations. 
+              Réalisé en HTML, CSS et JavaScript.
+            </p>
+            <a href="https://lusciana.fr" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le site</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
+      <nav class="footer__nav" aria-label="Liens footer">
+        <a href="contact.html">Contact</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

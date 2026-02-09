@@ -1,0 +1,82 @@
+
+# Portfolio Antoine Sarrail – Vision et besoins
+
+Mon objectif principal est de créer un **portfolio professionnel sobre, moderne et minimaliste**, destiné à **mon école et aux recruteurs**. Ce site doit permettre de :
+
+* **Trouver un emploi** dans le développement informatique.
+* **Montrer mes projets**, études et compétences.
+* **Présenter qui je suis**, mon parcours, mes qualités et ma personnalité.
+
+---
+
+## Style et identité visuelle
+
+* **Sobriété et modernité** : design épuré, sans éléments superflus.
+* **Mode sombre** : noir/gris/bleu nuit pour un rendu professionnel et actuel.
+* **Typographie moderne** : Inter ou Montserrat.
+* **Minimalisme** : mise en avant du contenu essentiel, ma photo professionnelle, pas de distractions inutiles.
+* **Ambiance claire dans un monde sombre** : lisibilité et clarté au milieu d’un design sombre.
+
+---
+
+## Contenu et structure
+
+### Page d’accueil
+
+* Photo professionnelle, titre et accroche courte.
+* Introduction claire sur mon profil et mes ambitions.
+* Mise en avant d’un projet clé.
+
+### Page “À propos”
+
+* Présentation personnelle : parcours, motivation et valeurs.
+* Compétences techniques et qualités humaines.
+* Études et parcours scolaire, mention BTS SIO candidat libre.
+* CV téléchargeable au format PDF.
+
+### Page “Projets”
+
+* Liste de **7+ projets** en quinconce pour un rendu dynamique.
+* Chaque projet : 1 capture d’écran, 1 texte descriptif concis (3-4 paragraphes max), pas trop technique mais assez précis pour montrer les compétences.
+* Possibilité d’ajouter facilement de nouveaux projets via JSON ou markdown.
+* Section support de communication pour montrer la qualité et le sérieux du travail.
+
+### Page “Contact”
+
+* Email, liens GitHub et LinkedIn.
+* Formulaire sécurisé (si utilisé).
+* Intégration des réseaux sociaux pour faciliter le contact.
+
+### Section “Actu” (optionnelle)
+
+* Pour montrer l’évolution de mes compétences et projets, et améliorer le **SEO** rapidement sur “BTS SIO portfolio”.
+
+---
+
+## Fonctionnalités et technique
+
+* **Responsive** : adapté à tous les écrans.
+* **Animations légères** : fluides mais non envahissantes.
+* **Technologie** : HTML, CSS, JS
+
+---
+
+## Compétences et qualités à mettre en avant
+
+* **Techniques** : C#, SQL Server Management Studio, JavaScript, TypeScript, HTML/CSS, Python, Java (notions).
+* **Qualités personnelles** : créatif, innovant, rapide, sociable, apprentissage rapide, curieux et motivé.
+* **Objectif** : intégrer une entreprise comme développeur et évoluer professionnellement.
+
+---
+
+## Philosophie et pistes d’évolution
+
+* **Évolutivité** : site pensé pour **ajouter de nouveaux projets** facilement.
+* **Structure simple** : mise à jour rare, tous les 2 ans environ.
+* **Ton** : professionnel mais accessible, pas trop technique pour ne pas perdre les recruteurs, juste assez pour montrer la maîtrise.
+* **Disposition en quinconce** : dynamique et esthétique, facilite la lecture et la navigation.
+* **Clarté dans un monde sombre** : le site doit être lisible, agréable, rassurant, et refléter ma personnalité et mon sérieux.
+
+---
+
+Ce texte peut servir de **document de référence pour la création du site**, pour l’écriture de contenu, et pour guider le design et l’architecture technique.

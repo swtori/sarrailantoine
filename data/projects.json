@@ -1,0 +1,18 @@
+[
+  {
+    "id": "domaine-de-gach",
+    "title": "Domaine de gach",
+    "url": "https://domainedegach.com",
+    "image": "assets/projets/domaine-de-gach.jpg",
+    "description": "Site de chambre d'hôte pour le Domaine de gach. Présentation de l'établissement, des chambres et des prestations, avec formulaire de contact et informations pratiques.\n\nRéalisation en HTML, CSS et JavaScript. Site responsive et épuré, pensé pour les voyageurs en recherche d'hébergement.",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": "lusciana",
+    "title": "Lusciana",
+    "url": "https://lusciana.fr",
+    "image": "assets/projets/lusciana.jpg",
+    "description": "Site de ma société de build & development. Présentation de l'activité, des services (conception, développement, déploiement) et des réalisations.\n\nSite vitrine professionnel en HTML, CSS et JavaScript. Mise en avant du positionnement et des compétences de l'entreprise.",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  }
+]
