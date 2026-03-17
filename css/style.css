@@ -942,6 +942,18 @@ img {
   padding: 2rem 0;
 }
 
+.contact-intro {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.contact-intro__text {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
 .contact-grid {
   display: grid;
   gap: 2rem;
@@ -962,8 +974,56 @@ img {
   padding: 0;
 }
 
+.contact-block--card,
+.contact-block--highlight {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.5rem 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.contact-block--highlight {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at top left, var(--accent-muted), transparent 55%),
+              var(--bg-elevated);
+}
+
+.contact-block--highlight::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: radial-gradient(circle at top right, rgba(88, 166, 255, 0.15), transparent 55%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.contact-block--highlight > * {
+  position: relative;
+}
+
 .contact-links li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.contact-links__icon {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--surface);
+  font-size: 1rem;
+}
+
+.contact-links__content {
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-links__label {
@@ -971,6 +1031,10 @@ img {
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 0.2rem;
+}
+
+.contact-links__value {
+  font-weight: 500;
 }
 
 .contact-links a {
@@ -1021,6 +1085,31 @@ img {
 
 .contact-form .btn {
   margin-top: 0.5rem;
+}
+
+.contact-cta {
+  margin-top: 1.25rem;
+}
+
+.contact-block--highlight p {
+  margin: 0 0 0.75rem;
+  color: var(--text-muted);
+}
+
+.contact-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.contact-badge {
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(33, 150, 243, 0.08);
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  color: var(--text-muted);
 }
 
 @media (min-width: 640px) {

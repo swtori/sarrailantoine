@@ -9,8 +9,9 @@ var PROJECTS = [
     title: "Domaine de gach",
     url: "https://domainedegach.com",
     image: "img/domainedegach.png",
-    description: "C'est un site de chambre d'hôte en HTML, CSS et JavaScript.",
-    tags: ["HTML", "CSS", "JS"]
+    description:
+      "C'est un site de chambre d'hôte développé en HTML, CSS, JavaScript et PHP, avec une base de données SQL pour la gestion du contenu.",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "SQL"]
   },
   {
     id: "lusciana",
