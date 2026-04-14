@@ -1035,6 +1035,8 @@ img {
 
 .contact-links__value {
   font-weight: 500;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact-links a {
