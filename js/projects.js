@@ -8,17 +8,21 @@ var PROJECTS = [
     id: "domaine-de-gach",
     title: "Domaine de gach",
     url: "https://domainedegach.com",
+    github: "https://github.com/swtori",
     image: "img/domainedegach.png",
-    description: "C'est un site de chambre d'hôte en HTML, CSS et JavaScript.",
-    tags: ["HTML", "CSS", "JS"]
+    description:
+      "Objectif : Développer un site web dynamique de chambre d'hôte avec une présentation professionnelle et une gestion du contenu.\n\nTechnologies : HTML, CSS, JavaScript, PHP, MySQL/SQL.\n\nFonctionnalités : affichage dynamique des contenus, formulaire de contact, structure responsive, gestion des données via base SQL.",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "SQL"]
   },
   {
     id: "lusciana",
     title: "Lusciana",
     url: "https://lusciana.fr",
+    github: "https://github.com/swtori",
     image: "img/lusciana.png",
-    description: "Site de ma société de build & development. HTML, CSS, JS.",
-    tags: ["HTML", "CSS", "JS"]
+    description:
+      "Objectif : Concevoir un site vitrine pour présenter l'activité de build & development de l'entreprise.\n\nTechnologies : HTML, CSS, JavaScript, PHP, SQL.\n\nFonctionnalités : pages de présentation, navigation claire, adaptation mobile/desktop, base structurée pour les évolutions futures.",
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "SQL"]
   }
 ];
 
@@ -121,6 +125,12 @@ var PROJECTS = [
         '" target="_blank" rel="noopener noreferrer">Voir le site →</a></p>'
       : "";
 
+    var githubBlock = project.github
+      ? '<p class="project-card__link"><a href="' +
+        escapeHtml(project.github) +
+        '" target="_blank" rel="noopener noreferrer">Voir le code source (GitHub) →</a></p>'
+      : "";
+
     card.innerHTML =
       media +
       "<div class=\"project-card__body\">" +
@@ -129,6 +139,7 @@ var PROJECTS = [
       escapeHtml(project.description || "") +
       "</p>" +
       linkBlock +
+      githubBlock +
       tags +
       "</div>";
 

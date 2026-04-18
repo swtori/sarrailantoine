@@ -40,7 +40,7 @@
       "\n\nMessage :\n" +
       (message ? message.value.trim() : "");
     var mailto =
-      "mailto:antoine.sarrail@exemple.fr?subject=" + subject + "&body=" + encodeURIComponent(body);
+      "mailto:sarrailantoine@gmail.com?subject=" + subject + "&body=" + encodeURIComponent(body);
     window.location.href = mailto;
 
     // Option 2 : si vous branchez un backend ou un service (Formspree, Netlify Forms, etc.),

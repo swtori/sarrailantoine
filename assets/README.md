@@ -3,7 +3,7 @@
 Placez ici les fichiers suivants :
 
 - **Photo** – La photo de la page d’accueil est dans **img/Antoine.png**.
-- **CV** – Le CV PDF est dans **img/cvAntoine.pdf** (section CV accueil + page À propos).
+- **CV** – Le CV PDF est dans **img/cvAntoineAlternance.pdf** (section CV accueil + page À propos).
 - **img/** (à la racine du projet) – Captures des projets : **domainedegach.png**, **lusciana.png** (chemins utilisés dans `js/projects.js`).
 
 Si une image manque ou ne charge pas, un bloc de repli affiche le domaine du site, son favicon et un lien « Ouvrir le site ».

@@ -23,7 +23,7 @@ Portfolio professionnel sobre et minimaliste (HTML, CSS, JS) – thème sombre, 
 ## Personnaliser
 
 - **Email / réseaux** : modifier les liens dans `contact.html` et le mailto dans `js/contact.js`.
-- **CV** : `img/cvAntoine.pdf` (section CV accueil + page À propos).
+- **CV** : `img/cvAntoineAlternance.pdf` (section CV accueil + page À propos).
 - **Photo** : `img/Antoine.png` (page d’accueil).
 
 ## Lancer en local

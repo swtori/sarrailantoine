@@ -36,46 +36,52 @@
 
     <section class="contact-content">
       <div class="container">
+        <div class="contact-intro">
+          <p class="contact-intro__text">
+            Un projet, une opportunité ou une simple question&nbsp;? Je suis disponible pour échanger 
+            sur vos besoins en développement web, communication digitale et création de sites internet.
+          </p>
+        </div>
+
         <div class="contact-grid">
-          <div class="contact-block">
-            <h2 class="contact-block__title">Me joindre</h2>
+          <div class="contact-block contact-block--card">
+            <h2 class="contact-block__title">Me contacter directement</h2>
             <ul class="contact-links">
               <li>
-                <span class="contact-links__label">Email</span>
-                <a href="mailto:antoine.sarrail@exemple.fr">antoine.sarrail@exemple.fr</a>
+                <span class="contact-links__icon" aria-hidden="true">✉️</span>
+                <div class="contact-links__content">
+                  <span class="contact-links__label">Email</span>
+                  <a href="mailto:sarrailantoine@gmail.com" class="contact-links__value">sarrailantoine@gmail.com</a>
+                </div>
               </li>
               <li>
-                <span class="contact-links__label">GitHub</span>
-                <a href="https://github.com/swtori" target="_blank" rel="noopener noreferrer">github.com/swtori</a>
+                <span class="contact-links__icon" aria-hidden="true">💻</span>
+                <div class="contact-links__content">
+                  <span class="contact-links__label">GitHub</span>
+                  <a href="https://github.com/swtori" target="_blank" rel="noopener noreferrer" class="contact-links__value">github.com/swtori</a>
+                </div>
               </li>
               <li>
-                <span class="contact-links__label">LinkedIn</span>
-                <a href="https://www.linkedin.com/in/antoine-sarrail-aab821259/" target="_blank" rel="noopener noreferrer">linkedin.com/in/antoine-sarrail-aab821259</a>
+                <span class="contact-links__icon" aria-hidden="true">🔗</span>
+                <div class="contact-links__content">
+                  <span class="contact-links__label">LinkedIn</span>
+                  <a href="https://www.linkedin.com/in/antoine-sarrail-aab821259/" target="_blank" rel="noopener noreferrer" class="contact-links__value" title="Voir mon profil LinkedIn">Mon profil LinkedIn</a>
+                </div>
               </li>
             </ul>
           </div>
 
-          <div class="contact-block contact-block--form">
-            <h2 class="contact-block__title">Formulaire</h2>
-            <p class="contact-form__intro">
-              Vous pouvez m’envoyer un message via le formulaire ci-dessous. 
-              Pour un contact direct et sécurisé, privilégiez l’email.
+          <div class="contact-block contact-block--highlight">
+            <h2 class="contact-block__title">Pourquoi me contacter&nbsp;?</h2>
+            <p>
+              Je conçois des interfaces modernes, sobres et efficaces, avec une attention particulière portée 
+              à l’expérience utilisateur et à la performance.
             </p>
-            <form class="contact-form" id="contact-form" action="#" method="post" novalidate>
-              <div class="form-group">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required autocomplete="name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required autocomplete="email">
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn--primary">Envoyer</button>
-            </form>
+            <p>
+              Que ce soit pour un site vitrine, un projet d’alternance, un stage ou une mission freelance, 
+              je prends le temps de comprendre vos besoins pour proposer des solutions adaptées.
+            </p>
+            <a href="mailto:sarrailantoine@gmail.com" class="btn btn--primary contact-cta">M’écrire un email</a>
           </div>
         </div>
       </div>
@@ -94,6 +100,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/contact.js"></script>
 </body>
 </html>
