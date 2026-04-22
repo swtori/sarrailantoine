@@ -1,15 +1,13 @@
-Domaine de Gach
-https://domainedegach.com
+<<<<<<< HEAD
+Domaine de gach
+domainedegach.com
 
-Site de chambre d'hote en HTML, CSS et JavaScript.
+c'est un site de chambre d'hôte en HTML CSS JS
 
-Lusciana
+
 https://lusciana.fr
-
-Site vitrine de ma societe de build & development.
-Technologies : HTML, CSS et JavaScript.
-
-Speedizycom
-https://speedizycom.com
-
-Actuellement en stage a Carcassonne chez Speedizycom, ou nous creons des sites internet et realisons la communication des entreprises.
+Site de ma société de build & development
+HTML CSS JS
+=======
+actuellement entrain de faire un stage chez speedizycom.com à carcassonne, nous créons des sites internet en réalisant la communication des entreprises
+>>>>>>> 62f4316b95f3813d083027ef874fcc7338943d26
