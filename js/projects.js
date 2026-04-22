@@ -21,7 +21,7 @@ var PROJECTS = [
     github: "https://github.com/swtori",
     image: "img/lusciana.png",
     description:
-      "Objectif : Concevoir un site vitrine pour présenter l'activité de build & development de l'entreprise.\n\nTechnologies : HTML, CSS, JavaScript, PHP, SQL.\n\nFonctionnalités : pages de présentation, navigation claire, adaptation mobile/desktop, base structurée pour les évolutions futures.",
+      "Objectif : Concevoir un site vitrine pour présenter l'activité de build & development de l'entreprise.\n\nTechnologies : HTML, CSS, JavaScript, PHP, SQL.\n\nFonctionnalités : pages de présentation, navigation claire, adaptation mobile / desktop, base structurée pour les évolutions futures.",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "SQL"]
   }
 ];
