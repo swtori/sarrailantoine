@@ -484,7 +484,7 @@ img {
   min-height: 0;
   aspect-ratio: 16 / 9;
   max-height: 360px;
-  overflow: hidden;
+  overflow: hidden; 
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -723,6 +723,18 @@ img {
 }
 
 .cv-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.blog-admin-section {
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.blog-admin-section .container {
   display: flex;
   flex-direction: column;
   align-items: center;

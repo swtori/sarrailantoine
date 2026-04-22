@@ -36,6 +36,40 @@ npx serve .
 
 Ou avec Python : `python -m http.server 8000` puis aller sur `http://localhost:8000`.
 
+## Back-office blog local (PHP + SQLite)
+
+Un module local est disponible dans `backend/` avec :
+
+- Authentification (`admin` / `editor`)
+- Gestion d'articles (brouillon / publié)
+- Gestion des utilisateurs (admin uniquement)
+
+### Structure
+
+- `backend/bootstrap.php` : connexion DB + initialisation automatique
+- `backend/lib/auth.php` : auth, rôles, CSRF, utilitaires
+- `backend/public/` : pages publiques + dashboard admin
+
+### Lancer le blog local
+
+Installez PHP en local, puis lancez :
+
+```bash
+php -S localhost:8080 -t backend/public
+```
+
+Ensuite :
+
+- Blog public : `http://localhost:8080/index.php`
+- Connexion : `http://localhost:8080/login.php`
+
+### Compte par défaut
+
+- Email : `admin@local.test`
+- Mot de passe : `admin123`
+
+Pensez à créer un autre compte admin et à changer ce mot de passe dès les premiers tests.
+
 ## Technologies
 
 HTML5, CSS3, JavaScript (vanilla). Aucune dépendance. Compatible tous navigateurs récents.
