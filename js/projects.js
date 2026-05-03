@@ -9,7 +9,7 @@ var PROJECTS = [
     title: "Domaine de gach",
     url: "https://domainedegach.com",
     github: "https://github.com/swtori",
-    image: "img/domainedegach.png",
+    image: "img/domainedegach.webp",
     description:
       "Objectif : Développer un site web dynamique de chambre d'hôte avec une présentation professionnelle et une gestion du contenu.\n\nTechnologies : HTML, CSS, JavaScript, PHP, MySQL/SQL.\n\nFonctionnalités : affichage dynamique des contenus, formulaire de contact, structure responsive, gestion des données via base SQL.",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "SQL"]
@@ -19,7 +19,7 @@ var PROJECTS = [
     title: "Lusciana",
     url: "https://lusciana.fr",
     github: "https://github.com/swtori",
-    image: "img/lusciana.png",
+    image: "img/lusciana.webp",
     description:
       "Objectif : Concevoir un site vitrine pour présenter l'activité de build & development de l'entreprise.\n\nTechnologies : HTML, CSS, JavaScript, PHP, SQL.\n\nFonctionnalités : pages de présentation, navigation claire, adaptation mobile / desktop, base structurée pour les évolutions futures.",
     tags: ["HTML", "CSS", "JavaScript", "PHP", "SQL"]
