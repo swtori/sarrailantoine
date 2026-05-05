@@ -202,35 +202,13 @@ services:
         restart: always
         networks:
             - backend
-        depends_on:
-            - sarrailantoine-db
         environment:
             SERVER_NAME: ${BLOG_DOMAIN}
-            DB_DRIVER: mysql
-            DB_HOST: sarrailantoine-db
-            DB_PORT: 3306
-            DB_NAME: ${BLOG_DB_NAME}
-            DB_USER: ${BLOG_DB_USER}
-            DB_PASS: ${BLOG_DB_PASS}
+            DB_DRIVER: sqlite
         volumes:
             - ./backend:/app
         ports:
             - "51193:80"
 
-    sarrailantoine-db:
-        image: mariadb:11
-        container_name: sarrailantoine-db
-        restart: always
-        networks:
-            - backend
-        environment:
-            MARIADB_DATABASE: ${BLOG_DB_NAME}
-            MARIADB_USER: ${BLOG_DB_USER}
-            MARIADB_PASSWORD: ${BLOG_DB_PASS}
-            MARIADB_ROOT_PASSWORD: ${BLOG_DB_ROOT_PASS}
-        volumes:
-            - sarrailantoine_db_data:/var/lib/mysql
-
 volumes:
-    sarrailantoine_db_data:
     mongo_data:
