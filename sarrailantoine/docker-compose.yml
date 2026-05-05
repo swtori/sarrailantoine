@@ -215,7 +215,7 @@ services:
         volumes:
             - ./backend:/app
         ports:
-            - "8088:80"
+            - "51193:80"
 
     sarrailantoine-db:
         image: mariadb:11
