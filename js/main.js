@@ -6,6 +6,11 @@
 (function () {
   "use strict";
 
+  // Debug reseau utile quand le site est heberge sur GitHub Pages
+  // et que le back-office tourne sur un VPS externe.
+  // Passe DEBUG_VPS_LINKS a true pour afficher les URLs en console.
+  var DEBUG_VPS_LINKS = false;
+
   // Année dans le footer
   var yearEl = document.getElementById("year");
   if (yearEl) {
@@ -30,5 +35,10 @@
         toggle.setAttribute("aria-label", "Ouvrir le menu");
       });
     });
+  }
+
+  if (DEBUG_VPS_LINKS) {
+    console.log("URL blog public:", "http://72.60.91.85:8088/");
+    console.log("URL back-office:", "http://72.60.91.85:8088/login.php");
   }
 })();

@@ -8,6 +8,9 @@ const DB_FILE = __DIR__ . "/database/app.sqlite";
 const DEFAULT_ADMIN_EMAIL = "admin@local.test";
 const DEFAULT_ADMIN_PASSWORD = "admin123";
 
+// Choix du moteur DB :
+// - local/dev : sqlite (par defaut, fichier backend/database/app.sqlite)
+// - VPS/prod  : mysql (variables d'environnement DB_*)
 $dbDriver = strtolower((string) (getenv("DB_DRIVER") ?: "sqlite"));
 $pdo = createPdo($dbDriver);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -22,6 +25,7 @@ initializeDatabase($pdo, $dbDriver);
 function createPdo(string $dbDriver): PDO
 {
     if ($dbDriver === "mysql") {
+        // Connexion MySQL/MariaDB pour la production (VPS + Docker).
         $dbHost = (string) (getenv("DB_HOST") ?: "127.0.0.1");
         $dbPort = (string) (getenv("DB_PORT") ?: "3306");
         $dbName = (string) (getenv("DB_NAME") ?: "blog");
@@ -35,6 +39,7 @@ function createPdo(string $dbDriver): PDO
         mkdir(__DIR__ . "/database", 0777, true);
     }
 
+    // Connexion SQLite : un simple fichier local suffit.
     return new PDO("sqlite:" . DB_FILE);
 }
 
