@@ -1,0 +1,236 @@
+networks:
+    backend:
+        name: backend
+        driver: bridge
+        external: true
+
+
+services:
+    lusciana:
+        image: itzg/minecraft-server:java21-alpine
+        container_name: lusciana
+        networks:
+            - backend
+        ports:
+            - "25565:25565"
+            - "25575:25575"
+        deploy:
+            resources:
+                limits:
+                    cpus: "3.5" 
+                    memory: "12G"
+                reservations:
+                    cpus: "2"
+                    memory: "9G"
+        environment:
+            EULA: "TRUE"
+            TYPE: "PAPER"
+            MAX_MEMORY: "9G" 
+            INIT_MEMORY: "8G" 
+            USE_AIKAR_FLAGS: "TRUE" 
+            VERSION: "1.21.4"
+            ONLINE_MODE: "TRUE"
+            SERVER_PORT: "25565"
+            MAX_PLAYERS: "20" 
+            VIEW_DISTANCE: "10" 
+            SIMULATION_DISTANCE: "8"
+            ENABLE_RCON: "TRUE"
+            RCON_PASSWORD: "bddf51815e3e0a58238ae34f"
+            RCON_PORT: "25575"
+            OPS: |
+                saatori
+            TZ: "Europe/Paris"
+            LOG_TIMESTAMP: "true"
+            UID: 1001
+            GID: 1001
+            FORCE_REDOWNLAOD: "false"
+        volumes:
+            - ./luna-minecraft:/data
+        restart: always
+        healthcheck:
+            test: ["CMD", "mc-health"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 60s
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "50m"
+                max-file: "2"
+
+
+    mc-backup:
+        build:
+            context: .
+            dockerfile: Dockerfile.backup
+        container_name: mc-backup
+        volumes:
+            - ./luna-minecraft:/data:ro
+            - /home/luna/backups:/backups
+        environment:
+            TZ: Europe/Paris
+        restart: "no"
+
+
+
+    luna-backup-local:
+        image: alpine:latest
+        container_name: luna-backup-local
+        volumes:
+            - ./luna-minecraft:/minecraft:ro
+            - /home/luna/backups:/backups
+            - ./rclone/backup-local.sh:/backup-local.sh:ro
+        environment:
+            - TZ=Europe/Paris
+        entrypoint: sh -c "
+            apk add --no-cache bash rsync coreutils findutils && \
+            bash /backup.sh
+            "
+        restart: "no"
+
+    discord-bot:
+        build:
+            context: ./discord
+            dockerfile: Dockerfile
+        container_name: discord-bot
+        networks:
+            - backend
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.5"
+                    memory: "512M"
+                reservations:
+                    cpus: "0.1"
+                    memory: "256M"
+        environment:
+            - NODE_ENV=production
+            - TZ=Europe/Paris
+        env_file:
+            - ./discord/.env
+        volumes:
+            - ./.env:/home/luna/discord/src/.env
+            - ./discord/tickets.json:/app/tickets.json
+            - ./discord/giveaways.json:/app/giveaways.json
+            - ./discord/config-ticket.json:/app/config-ticket.json
+        restart: always
+        healthcheck:
+            test: ["CMD", "node", "-e", "process.exit(0)"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 30s
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "2"
+
+    discord-dev-bot:
+        build:
+            context: ./discord-dev
+            dockerfile: Dockerfile
+        container_name: discord-dev-bot
+        networks:
+            - backend
+        deploy:
+            resources:
+                limits:
+                    cpus: "0.5"
+                    memory: "512M"
+                reservations:
+                    cpus: "0.1"
+                    memory: "256M"
+        environment:
+            - NODE_ENV=production
+            - TZ=Europe/Paris
+        env_file:
+            - ./discord-dev/.env
+        volumes:
+            - ./discord-dev/tickets.json:/app/tickets.json
+            - ./discord-dev/config-ticket.json:/app/config-ticket.json
+            - ./discord/giveaways.json:/app/giveaways.json
+        restart: always
+        healthcheck:
+            test: ["CMD", "node", "-e", "process.exit(0)"]
+            interval: 30s
+            timeout: 10s
+            retries: 3
+            start_period: 30s
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "10m"
+                max-file: "2"
+
+
+    mongodb:
+        image: mongo
+        container_name: mongodb
+        environment:
+            MONGO_INITDB_ROOT_USERNAME: luna
+            MONGO_INITDB_ROOT_PASSWORD: btKXJg5cSrdh6hWY04PslfyuXsAOhB
+            MONGO_INITDB_DATABASE: lusciana
+        ports:
+            - "27017:27017"
+        volumes:
+            - mongo_data:/data/db
+        restart: always
+        command:
+            - --auth
+            - --wiredTigerCacheSizeGB=2
+        deploy:
+            resources:
+                limits:
+                    cpus: '1.0'
+                    memory: 3G
+        healthcheck:
+            test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+            interval: 60s 
+            timeout: 10s
+            retries: 5
+        logging:
+            driver: "json-file"
+            options:
+                max-size: "5m"
+                max-file: "2"
+
+    sarrailantoine-app:
+        image: dunglas/frankenphp:php8.2
+        container_name: sarrailantoine-app
+        restart: always
+        networks:
+            - backend
+        depends_on:
+            - sarrailantoine-db
+        environment:
+            SERVER_NAME: ${BLOG_DOMAIN}
+            DB_DRIVER: mysql
+            DB_HOST: sarrailantoine-db
+            DB_PORT: 3306
+            DB_NAME: ${BLOG_DB_NAME}
+            DB_USER: ${BLOG_DB_USER}
+            DB_PASS: ${BLOG_DB_PASS}
+        volumes:
+            - ./backend:/app
+        ports:
+            - "8088:80"
+
+    sarrailantoine-db:
+        image: mariadb:11
+        container_name: sarrailantoine-db
+        restart: always
+        networks:
+            - backend
+        environment:
+            MARIADB_DATABASE: ${BLOG_DB_NAME}
+            MARIADB_USER: ${BLOG_DB_USER}
+            MARIADB_PASSWORD: ${BLOG_DB_PASS}
+            MARIADB_ROOT_PASSWORD: ${BLOG_DB_ROOT_PASS}
+        volumes:
+            - sarrailantoine_db_data:/var/lib/mysql
+
+volumes:
+    sarrailantoine_db_data:
+    mongo_data:
