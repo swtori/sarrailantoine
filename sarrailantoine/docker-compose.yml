@@ -203,12 +203,12 @@ services:
         networks:
             - backend
         environment:
-            SERVER_NAME: ${BLOG_DOMAIN}
+            SERVER_NAME: :80
             DB_DRIVER: sqlite
         volumes:
             - ./backend:/app
         ports:
-            - "51193:80"
+            - "8088:80"
 
 volumes:
     mongo_data:
