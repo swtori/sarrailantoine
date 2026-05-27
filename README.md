@@ -6,19 +6,23 @@ Portfolio professionnel sobre et minimaliste (HTML, CSS, JS) – thème sombre, 
 
 - **index.html** – Accueil (photo, accroche, projet mis en avant)
 - **about.html** – À propos (parcours, compétences, CV PDF)
-- **projects.html** – Projets (grille en quinconce, chargés depuis JSON)
+- **projects.html** – Projets (grille en quinconce, données dans `js/projects-data.js`)
 - **contact.html** – Contact (email, GitHub, LinkedIn, formulaire)
 - **css/style.css** – Styles (thème noir/gris/bleu nuit, Inter)
-- **js/main.js** – Navigation, année dynamique
-- **js/projects.js** – Liste des projets (variable `PROJECTS`) et affichage en grille
+- **js/site-config.js** – URLs du blog / VPS (modifiable pour déploiement)
+- **js/main.js** – Navigation, année dynamique, application des liens blog depuis `site-config.js`
+- **js/projects-data.js** – Tableau `PROJECTS` (titres, URLs, images, fiches `projets/*.html`)
+- **js/projects.js** – Grille projets + carrousel accueil
+- **projets/** – Fiches projet (HTML + thème visuel propre à chaque page, CSS dans `css/projets/`)
 - **js/contact.js** – Formulaire de contact (mailto par défaut)
-- **data/** – Optionnel (plus utilisé pour les projets)
+- **data/** – Fichier d’exemple / historique (`projects.json`, non utilisé par défaut par la page projets)
 - **assets/** – Photo, CV PDF, captures des projets (voir `assets/README.md`)
 
 ## Ajouter un projet
 
-1. Éditer **js/projects.js** : ajouter un objet dans la variable `PROJECTS` avec `id`, `title`, `url` (optionnel), `description`, `tags`, et éventuellement `image` (chemin vers une capture).
-2. Si vous ajoutez une image : placer la capture dans **assets/projets/** et mettre le chemin dans `image`.
+1. Éditer **js/projects-data.js** : ajouter un objet avec `id`, `title`, `url`, `github`, `description`, `tags`, `image`, `detailHref` (`projets/…html`), `carousel` (booléen pour l’accueil).
+2. Créer la fiche **`projets/<id>.html`** et la feuille **`css/projets/<id>.css`** pour garder une DA distincte par projet.
+3. Placer les captures dans **`img/`** (ou `assets/projets/`) et renseigner le chemin dans `image`.
 
 ## Personnaliser
 

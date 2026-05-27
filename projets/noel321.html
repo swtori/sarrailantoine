@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fiche projet : compte à rebours Noël en JavaScript.">
+  <title>Noël 321 – décompte | Projet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/noel321.css">
+</head>
+<body class="projet-page projet-noel">
+  <header class="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
+      <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Accueil</a></li>
+        <li><a href="../about.html" class="nav__link">À propos</a></li>
+        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main main--page">
+    <div class="projet-shell">
+      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
+      <header class="projet-hero">
+        <h1>Time spent till Noël</h1>
+        <p class="projet-lead">Petit site statique : un compteur en JavaScript calcule la date du prochain Noël et affiche un décompte (jours, heures, minutes). Idéal pour s’exercer sur <code>Date</code>, le DOM et les mises à jour périodiques.</p>
+        <div class="projet-actions">
+          <a href="https://swtori.github.io/noel321/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir en ligne</a>
+          <a href="https://github.com/swtori" class="btn btn--outline" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </header>
+      <section class="projet-section">
+        <h2>Technique</h2>
+        <ul>
+          <li>Calcul de la prochaine occurrence du 25 décembre.</li>
+          <li>Rafraîchissement de l’affichage (intervalle ou requestAnimationFrame selon version).</li>
+          <li>Styles festifs sans surcharge (lisibilité mobile).</li>
+        </ul>
+      </section>
+      <section class="projet-section">
+        <h2>Aperçu</h2>
+        <div class="projet-gallery">
+          <figure><img src="../img/noel321-preview.webp" width="748" height="433" alt="Compte à rebours Noël" loading="lazy"><figcaption>Interface « Compte à Rebours »</figcaption></figure>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
+      <nav class="footer__nav" aria-label="Liens footer">
+        <a href="../contact.html">Contact</a>
+        <a href="https://github.com/swtori" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/antoine-sarrail-aab821259/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

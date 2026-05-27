@@ -37,7 +37,7 @@
     <section class="projects-section">
       <div class="container">
         <div id="projects-grid" class="projects-grid" role="list">
-          <!-- Projets chargés dynamiquement depuis data/projects.json -->
+          <!-- Projets injectés par js/projects.js (tableau PROJECTS) -->
           <noscript>
             <p class="projects-fallback">Activez JavaScript pour afficher la liste des projets.</p>
           </noscript>
@@ -67,7 +67,9 @@
     </div>
   </footer>
 
+  <script src="js/site-config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/projects-data.js"></script>
   <script src="js/projects.js"></script>
 </body>
 </html>

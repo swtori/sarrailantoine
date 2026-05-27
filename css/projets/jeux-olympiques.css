@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Roboto:wght@400;500&display=swap");
+
+.projet-page.projet-jo .projet-hero {
+  font-family: "Roboto", var(--font);
+  background: linear-gradient(90deg, #0f172a 0%, #1e293b 25%, #172554 50%, #1e293b 75%, #0f172a 100%);
+  color: #f8fafc;
+  border: 1px solid rgba(248, 250, 252, 0.15);
+}
+
+.projet-page.projet-jo .projet-hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.projet-page.projet-jo .projet-hero .projet-stripes {
+  display: flex;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+
+.projet-page.projet-jo .projet-hero .projet-stripes span {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  max-width: 3rem;
+}
+
+.projet-page.projet-jo .projet-stripes span:nth-child(1) {
+  background: #0284c7;
+}
+.projet-page.projet-jo .projet-stripes span:nth-child(2) {
+  background: #1d4ed8;
+}
+.projet-page.projet-jo .projet-stripes span:nth-child(3) {
+  background: #7c3aed;
+}
+.projet-page.projet-jo .projet-stripes span:nth-child(4) {
+  background: #ea580c;
+}
+.projet-page.projet-jo .projet-stripes span:nth-child(5) {
+  background: #16a34a;
+}
+
+.projet-page.projet-jo .projet-section h2 {
+  font-family: "Oswald", sans-serif;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+}
+
+.projet-page.projet-jo .projet-back {
+  color: #94a3b8;
+}
+
+.projet-page.projet-jo .btn--primary {
+  background: #0369a1;
+  border-color: #0ea5e9;
+}
+
+.projet-page.projet-jo .btn--outline {
+  border-color: #cbd5e1;
+  color: #e2e8f0;
+}

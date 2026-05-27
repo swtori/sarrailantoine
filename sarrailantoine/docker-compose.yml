@@ -1,65 +1,40 @@
-networks:
-    backend:
-        name: backend
-        driver: bridge
-        external: true
-
-
 services:
-    lusciana:
-        image: itzg/minecraft-server:java21-alpine
-        container_name: lusciana
-        networks:
-            - backend
-        ports:
-            - "25565:25565"
-            - "25575:25575"
-        deploy:
-            resources:
-                limits:
-                    cpus: "3.5" 
-                    memory: "12G"
-                reservations:
-                    cpus: "2"
-                    memory: "9G"
-        environment:
-            EULA: "TRUE"
-            TYPE: "PAPER"
-            MAX_MEMORY: "9G" 
-            INIT_MEMORY: "8G" 
-            USE_AIKAR_FLAGS: "TRUE" 
-            VERSION: "1.21.4"
-            ONLINE_MODE: "TRUE"
-            SERVER_PORT: "25565"
-            MAX_PLAYERS: "20" 
-            VIEW_DISTANCE: "10" 
-            SIMULATION_DISTANCE: "8"
-            ENABLE_RCON: "TRUE"
-            RCON_PASSWORD: "bddf51815e3e0a58238ae34f"
-            RCON_PORT: "25575"
-            OPS: |
-                saatori
-            TZ: "Europe/Paris"
-            LOG_TIMESTAMP: "true"
-            UID: 1001
-            GID: 1001
-            FORCE_REDOWNLAOD: "false"
-        volumes:
-            - ./luna-minecraft:/data
-        restart: always
-        healthcheck:
-            test: ["CMD", "mc-health"]
-            interval: 30s
-            timeout: 10s
-            retries: 3
-            start_period: 60s
-        logging:
-            driver: "json-file"
-            options:
-                max-size: "50m"
-                max-file: "2"
+  sarrailantoine-app:
+    image: dunglas/frankenphp:php8.2
+    container_name: sarrailantoine-app
+    restart: always
+    networks:
+      - backend
+    depends_on:
+      - sarrailantoine-db
+    environment:
+      SERVER_NAME: ${BLOG_DOMAIN}
+      DB_DRIVER: mysql
+      DB_HOST: sarrailantoine-db
+      DB_PORT: 3306
+      DB_NAME: ${BLOG_DB_NAME}
+      DB_USER: ${BLOG_DB_USER}
+      DB_PASS: ${BLOG_DB_PASS}
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8088:80"
 
+  sarrailantoine-db:
+    image: mariadb:11
+    container_name: sarrailantoine-db
+    restart: always
+    networks:
+      - backend
+    environment:
+      MARIADB_DATABASE: ${BLOG_DB_NAME}
+      MARIADB_USER: ${BLOG_DB_USER}
+      MARIADB_PASSWORD: ${BLOG_DB_PASS}
+      MARIADB_ROOT_PASSWORD: ${BLOG_DB_ROOT_PASS}
+    volumes:
+      - sarrailantoine_db_data:/var/lib/mysql
 
+<<<<<<< Updated upstream
     mc-backup:
         build:
             context: .
@@ -209,6 +184,11 @@ services:
             - ./backend:/app
         ports:
             - "8088:80"
+=======
+networks:
+  backend:
+    external: true
+>>>>>>> Stashed changes
 
 volumes:
-    mongo_data:
+  sarrailantoine_db_data:

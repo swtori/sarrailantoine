@@ -1,0 +1,21 @@
+/* Aligné sur le thème portfolio principal (GitHub sombre) */
+.projet-page.projet-portfolio-sarrail .projet-hero {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.projet-page.projet-portfolio-sarrail .projet-hero h1 {
+  color: var(--text-bright);
+}
+
+.projet-page.projet-portfolio-sarrail .projet-section h2 {
+  color: var(--accent);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.projet-page.projet-portfolio-sarrail .projet-back {
+  color: var(--text-muted);
+}

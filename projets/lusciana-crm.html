@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fiche projet : admin.lusciana.fr — CRM, Docker, VPS, MongoDB.">
+  <title>admin.lusciana.fr – CRM | Projet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/lusciana-crm.css">
+</head>
+<body class="projet-page projet-lusciana-crm">
+  <header class="header">
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
+      <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Accueil</a></li>
+        <li><a href="../about.html" class="nav__link">À propos</a></li>
+        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../contact.html" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main main--page">
+    <div class="projet-shell">
+      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
+      <header class="projet-hero">
+        <h1>Commission Manager</h1>
+        <p class="projet-lead">Application CRM hébergée sur VPS : gestion des agents, commissions, todolist. Conteneurisation Docker, données persistées sur volumes, API MongoDB pour l’application métier.</p>
+        <div class="projet-actions">
+          <a href="https://admin.lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Ouvrir l’admin</a>
+          <a href="lusciana-vitrine.html" class="btn btn--outline">Fiche vitrine</a>
+        </div>
+        <p style="margin-top:1rem"><span class="projet-tag">Docker</span><span class="projet-tag">VPS</span><span class="projet-tag">MongoDB</span><span class="projet-tag">API</span></p>
+      </header>
+      <section class="projet-section">
+        <h2>Fonctionnel</h2>
+        <ul>
+          <li>Authentification et session (écran de connexion dédié).</li>
+          <li>Modules métier : suivi des agents, calcul / suivi des commissions, listes de tâches.</li>
+          <li>Séparation vitrine publique / back-office (sous-domaine <code>admin</code>).</li>
+        </ul>
+      </section>
+      <section class="projet-section">
+        <h2>Capture</h2>
+        <div class="projet-gallery">
+          <figure><img src="../img/lusciana-admin.webp" width="748" height="433" alt="Écran de connexion CRM" loading="lazy"><figcaption>Connexion (MongoDB-API)</figcaption></figure>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
+      <nav class="footer__nav" aria-label="Liens footer">
+        <a href="../contact.html">Contact</a>
+        <a href="https://github.com/swtori" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/antoine-sarrail-aab821259/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../js/site-config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

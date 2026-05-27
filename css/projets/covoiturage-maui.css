@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap");
+
+.projet-page.projet-covoiturage .projet-hero {
+  font-family: "IBM Plex Sans", var(--font);
+  background: linear-gradient(135deg, #0c4a6e 0%, #0e7490 35%, #134e4a 100%);
+  color: #ecfeff;
+  border: 1px solid rgba(34, 211, 238, 0.35);
+}
+
+.projet-page.projet-covoiturage .projet-hero h1 {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.projet-page.projet-covoiturage .projet-section h2 {
+  color: #67e8f9;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.projet-page.projet-covoiturage .projet-back {
+  color: #a5f3fc;
+}
+
+.projet-page.projet-covoiturage .btn--primary {
+  background: #0891b2;
+  border-color: #06b6d4;
+}
+
+.projet-page.projet-covoiturage .btn--outline {
+  border-color: #5eead4;
+  color: #ccfbf1;
+}

@@ -1,23 +1,29 @@
 /**
  * Portfolio Antoine Sarrail – Script principal
- * Navigation, année dynamique, comportements communs
+ * Navigation, année dynamique, liens blog/VPS depuis site-config.js
  */
 
 (function () {
   "use strict";
 
-  // Debug reseau utile quand le site est heberge sur GitHub Pages
-  // et que le back-office tourne sur un VPS externe.
-  // Passe DEBUG_VPS_LINKS a true pour afficher les URLs en console.
-  var DEBUG_VPS_LINKS = false;
+  var cfg = window.SITE_CONFIG || {};
+  var blogPublic = cfg.blogPublicUrl || "";
+  var blogAdmin = cfg.blogAdminUrl || "";
 
-  // Année dans le footer
   var yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // Menu mobile : toggle
+  var blogPublicLink = document.getElementById("blog-public-link");
+  var blogAdminLink = document.getElementById("blog-admin-link");
+  if (blogPublicLink && blogPublic) {
+    blogPublicLink.href = blogPublic;
+  }
+  if (blogAdminLink && blogAdmin) {
+    blogAdminLink.href = blogAdmin;
+  }
+
   var toggle = document.querySelector(".nav__toggle");
   var list = document.querySelector(".nav__list");
   if (toggle && list) {
@@ -27,7 +33,6 @@
       toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
     });
 
-    // Fermer le menu en cliquant sur un lien (mobile)
     list.querySelectorAll(".nav__link").forEach(function (link) {
       link.addEventListener("click", function () {
         list.classList.remove("is-open");
@@ -37,8 +42,8 @@
     });
   }
 
-  if (DEBUG_VPS_LINKS) {
-    console.log("URL blog public:", "http://72.60.91.85:8088/");
-    console.log("URL back-office:", "http://72.60.91.85:8088/login.php");
+  if (cfg.debugVpsLinks) {
+    console.log("URL blog public:", blogPublic);
+    console.log("URL back-office:", blogAdmin);
   }
 })();

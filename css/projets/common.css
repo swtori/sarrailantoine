@@ -1,0 +1,101 @@
+/* Mise en page commune des fiches projet (surchargée par css/projets/*.css) */
+.projet-page .projet-shell {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+.projet-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.projet-hero {
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.projet-hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.2;
+}
+
+.projet-lead {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  max-width: 65ch;
+}
+
+.projet-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.projet-section {
+  margin-bottom: 2.25rem;
+}
+
+.projet-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.projet-section code {
+  font-size: 0.88em;
+  padding: 0.12em 0.4em;
+  border-radius: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+.projet-section p,
+.projet-section li {
+  line-height: 1.65;
+  max-width: 65ch;
+}
+
+.projet-section ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.projet-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.projet-gallery figure {
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.projet-gallery figcaption {
+  padding: 0.5rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.projet-gallery img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 748 / 433;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .projet-page .projet-shell {
+    padding-top: 2rem;
+  }
+}

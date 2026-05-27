@@ -75,7 +75,7 @@
           </div>
           <div class="featured-carousel__nav">
             <button type="button" class="featured-carousel__btn featured-carousel__btn--prev" aria-label="Projet précédent">‹</button>
-            <div class="featured-carousel__dots" role="tablist" aria-label="Choisir un projet"></div>
+            <div class="featured-carousel__dots" role="group" aria-label="Choisir un projet"></div>
             <button type="button" class="featured-carousel__btn featured-carousel__btn--next" aria-label="Projet suivant">›</button>
           </div>
         </div>
@@ -86,11 +86,11 @@
       <div class="container">
         <h2 class="section-title">Espace blog (VPS)</h2>
         <p class="cv-section__text">
-          Le back-office est heberge sur mon VPS (authentification <strong>admin</strong> / <strong>editor</strong>).
+          Le blog et le back-office sont hébergés sur un VPS ; les adresses sont configurées dans <code>js/site-config.js</code>.
         </p>
         <div class="hero__cta">
-          <a href="http://72.60.91.85:8088/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le blog public</a>
-          <a href="http://72.60.91.85:8088/login.php" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Acceder au back-office</a>
+          <a id="blog-public-link" href="http://72.60.91.85:8088/" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Voir le blog public</a>
+          <a id="blog-admin-link" href="http://72.60.91.85:8088/login.php" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Accéder au back-office</a>
         </div>
       </div>
     </section>
@@ -115,7 +115,9 @@
     </div>
   </footer>
 
+  <script src="js/site-config.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/projects-data.js"></script>
   <script src="js/projects.js"></script>
 </body>
 </html>

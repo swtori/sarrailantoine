@@ -1,6 +1,5 @@
 /**
- * Portfolio Antoine Sarrail – Formulaire de contact
- * Comportement basique : validation côté client, pas de backend (option mailto ou service tiers à brancher)
+ * Portfolio Antoine Sarrail – Formulaire de contact (validation + mailto)
  */
 
 (function () {
@@ -8,6 +7,8 @@
 
   var form = document.getElementById("contact-form");
   if (!form) return;
+
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -26,11 +27,15 @@
       }
     });
 
+    if (email && email.value.trim() && !emailRe.test(email.value.trim())) {
+      valid = false;
+      email.setAttribute("aria-invalid", "true");
+    }
+
     if (!valid) {
       return;
     }
 
-    // Option 1 : ouvrir le client mail avec mailto (simple, pas de serveur)
     var subject = encodeURIComponent("Contact portfolio – " + (name ? name.value.trim() : ""));
     var body =
       "Nom : " +
@@ -42,11 +47,5 @@
     var mailto =
       "mailto:sarrailantoine@gmail.com?subject=" + subject + "&body=" + encodeURIComponent(body);
     window.location.href = mailto;
-
-    // Option 2 : si vous branchez un backend ou un service (Formspree, Netlify Forms, etc.),
-    // décommentez et adaptez :
-    // fetch("/api/contact", { method: "POST", body: new FormData(form) })
-    //   .then(function () { alert("Message envoyé."); form.reset(); })
-    //   .catch(function () { alert("Erreur d’envoi."); });
   });
 })();

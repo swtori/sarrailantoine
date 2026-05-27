@@ -8,99 +8,45 @@ const DB_FILE = __DIR__ . "/database/app.sqlite";
 const DEFAULT_ADMIN_EMAIL = "admin@local.test";
 const DEFAULT_ADMIN_PASSWORD = "admin123";
 
-// Choix du moteur DB :
-// - local/dev : sqlite (par defaut, fichier backend/database/app.sqlite)
-// - VPS/prod  : mysql (variables d'environnement DB_*)
-$dbDriver = strtolower((string) (getenv("DB_DRIVER") ?: "sqlite"));
-$pdo = createPdo($dbDriver);
+if (!is_dir(__DIR__ . "/database")) {
+    mkdir(__DIR__ . "/database", 0777, true);
+}
+
+$pdo = new PDO("sqlite:" . DB_FILE);
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+$pdo->exec("PRAGMA foreign_keys = ON");
 
-if ($dbDriver === "sqlite") {
-    $pdo->exec("PRAGMA foreign_keys = ON");
-}
+initializeDatabase($pdo);
 
-initializeDatabase($pdo, $dbDriver);
-
-function createPdo(string $dbDriver): PDO
+function initializeDatabase(PDO $pdo): void
 {
-    if ($dbDriver === "mysql") {
-        // Connexion MySQL/MariaDB pour la production (VPS + Docker).
-        $dbHost = (string) (getenv("DB_HOST") ?: "127.0.0.1");
-        $dbPort = (string) (getenv("DB_PORT") ?: "3306");
-        $dbName = (string) (getenv("DB_NAME") ?: "blog");
-        $dbUser = (string) (getenv("DB_USER") ?: "root");
-        $dbPass = (string) (getenv("DB_PASS") ?: "");
-        $dsn = "mysql:host={$dbHost};port={$dbPort};dbname={$dbName};charset=utf8mb4";
-        return new PDO($dsn, $dbUser, $dbPass);
-    }
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS users (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            email TEXT NOT NULL UNIQUE,
+            password_hash TEXT NOT NULL,
+            role TEXT NOT NULL DEFAULT 'editor',
+            created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+        )"
+    );
 
-    if (!is_dir(__DIR__ . "/database")) {
-        mkdir(__DIR__ . "/database", 0777, true);
-    }
-
-    // Connexion SQLite : un simple fichier local suffit.
-    return new PDO("sqlite:" . DB_FILE);
-}
-
-function initializeDatabase(PDO $pdo, string $dbDriver): void
-{
-    if ($dbDriver === "mysql") {
-        $pdo->exec(
-            "CREATE TABLE IF NOT EXISTS users (
-                id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                name VARCHAR(255) NOT NULL,
-                email VARCHAR(255) NOT NULL UNIQUE,
-                password_hash VARCHAR(255) NOT NULL,
-                role VARCHAR(20) NOT NULL DEFAULT 'editor',
-                created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"
-        );
-
-        $pdo->exec(
-            "CREATE TABLE IF NOT EXISTS posts (
-                id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-                title VARCHAR(255) NOT NULL,
-                slug VARCHAR(255) NOT NULL UNIQUE,
-                excerpt TEXT NULL,
-                content LONGTEXT NOT NULL,
-                status VARCHAR(20) NOT NULL DEFAULT 'draft',
-                author_id INT UNSIGNED NOT NULL,
-                created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                updated_at DATETIME NULL,
-                published_at DATETIME NULL,
-                CONSTRAINT fk_posts_author FOREIGN KEY (author_id)
-                    REFERENCES users(id) ON DELETE CASCADE
-            ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4"
-        );
-    } else {
-        $pdo->exec(
-            "CREATE TABLE IF NOT EXISTS users (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                name TEXT NOT NULL,
-                email TEXT NOT NULL UNIQUE,
-                password_hash TEXT NOT NULL,
-                role TEXT NOT NULL DEFAULT 'editor',
-                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-            )"
-        );
-
-        $pdo->exec(
-            "CREATE TABLE IF NOT EXISTS posts (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                title TEXT NOT NULL,
-                slug TEXT NOT NULL UNIQUE,
-                excerpt TEXT,
-                content TEXT NOT NULL,
-                status TEXT NOT NULL DEFAULT 'draft',
-                author_id INTEGER NOT NULL,
-                created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
-                updated_at TEXT,
-                published_at TEXT,
-                FOREIGN KEY(author_id) REFERENCES users(id) ON DELETE CASCADE
-            )"
-        );
-    }
+    $pdo->exec(
+        "CREATE TABLE IF NOT EXISTS posts (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            title TEXT NOT NULL,
+            slug TEXT NOT NULL UNIQUE,
+            excerpt TEXT,
+            content TEXT NOT NULL,
+            status TEXT NOT NULL DEFAULT 'draft',
+            author_id INTEGER NOT NULL,
+            created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            updated_at TEXT,
+            published_at TEXT,
+            FOREIGN KEY(author_id) REFERENCES users(id) ON DELETE CASCADE
+        )"
+    );
 
     $count = (int) $pdo->query("SELECT COUNT(*) FROM users")->fetchColumn();
     if ($count === 0) {
