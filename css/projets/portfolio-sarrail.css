@@ -1,21 +1,16 @@
-/* Aligné sur le thème portfolio principal (GitHub sombre) */
-.projet-page.projet-portfolio-sarrail .projet-hero {
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
-  color: var(--text);
+.projet-page.projet-portfolio-sarrail {
+  --story-night: #0d1117;
+  --story-deep: #161b22;
+  --story-mid: #21262d;
+  --story-glow: #58a6ff;
+  --story-accent: #58a6ff;
+  --story-mist: #8b949e;
+  --story-paper: #f0f6fc;
+  --story-border: rgba(88, 166, 255, 0.3);
 }
 
-.projet-page.projet-portfolio-sarrail .projet-hero h1 {
-  color: var(--text-bright);
-}
-
-.projet-page.projet-portfolio-sarrail .projet-section h2 {
-  color: var(--accent);
-  font-size: 1rem;
+.projet-page.projet-portfolio-sarrail .story-chapter h2 {
   text-transform: uppercase;
   letter-spacing: 0.04em;
-}
-
-.projet-page.projet-portfolio-sarrail .projet-back {
-  color: var(--text-muted);
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
 }

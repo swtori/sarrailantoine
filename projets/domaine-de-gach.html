@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fiche projet : Domaine de Gach — chambres d’hôtes, EmailJS, SQL, IONOS.">
+  <meta name="description" content="Domaine de Gach — chambres d’hôtes, EmailJS, SQL, IONOS. Projet Antoine Sarrail.">
   <title>Domaine de Gach | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/story.css">
   <link rel="stylesheet" href="../css/projets/domaine-de-gach.css">
 </head>
 <body class="projet-page projet-domaine">
@@ -20,38 +21,156 @@
       <ul class="nav__list">
         <li><a href="../index.html" class="nav__link">Accueil</a></li>
         <li><a href="../about.html" class="nav__link">À propos</a></li>
-        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../projects.html" class="nav__link nav__link--active">Projets</a></li>
         <li><a href="../contact.html" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--page">
-    <div class="projet-shell">
-      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
-      <header class="projet-hero">
-        <h1>Domaine de Gach</h1>
-        <p class="projet-lead">Site vitrine pour chambres d’hôtes : prise de contact via EmailJS, données métier sur base SQL hébergée sur VPS. Référencement naturel, nom de domaine et hébergement gérés chez IONOS.</p>
-        <div class="projet-actions">
+
+  <main class="main main--page projet-story" id="projet-story">
+    <a href="../projects.html" class="story-back">← Retour aux projets</a>
+
+    <header class="story-hero" aria-labelledby="story-title">
+      <div class="story-hero__bg" aria-hidden="true">
+        <img
+          src="../img/domainedegach/index-gach.webp"
+          alt=""
+          width="1901"
+          height="904"
+          fetchpriority="high"
+          decoding="sync"
+        >
+        <div class="story-hero__veil"></div>
+      </div>
+      <div class="story-hero__content">
+        <p class="story-eyebrow">Chambres d’hôtes · Site vitrine</p>
+        <h1 id="story-title">Domaine de Gach</h1>
+        <p class="story-hero__tagline">
+          Vitrine pour un domaine en Occitanie : présentation des chambres, prise de contact fluide
+          et fondations techniques solides (SEO, données, hébergement).
+        </p>
+        <ul class="story-tags" aria-label="Technologies">
+          <li>EmailJS</li>
+          <li>SQL</li>
+          <li>SEO</li>
+          <li>IONOS</li>
+        </ul>
+        <div class="story-hero__actions">
           <a href="https://domainedegach.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
           <a href="https://github.com/swtori" class="btn btn--outline" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
-      </header>
-      <section class="projet-section">
-        <h2>Points clés</h2>
-        <ul>
-          <li>Formulaire sans backend propriétaire sur l’hébergement mutualisé (EmailJS).</li>
-          <li>Modèle de données adapté aux disponibilités / demandes (selon version déployée).</li>
-          <li>Optimisations SEO de base (titres, meta, performance).</li>
-        </ul>
-      </section>
-      <section class="projet-section">
-        <h2>Aperçu</h2>
-        <div class="projet-gallery">
-          <figure><img src="../img/domainedegach.webp" width="748" height="433" alt="Domaine de Gach" loading="lazy"><figcaption>Vitrine</figcaption></figure>
+      </div>
+      <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
+    </header>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-1">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">01 — Contexte</p>
+        <h2 id="ch-1" class="story-chapter__center">Un lieu, une expérience à raconter</h2>
+        <p class="story-chapter__lead">
+          Le site doit transmettre l’atmosphère du domaine : pierre, vignes, calme.
+          La structure met en avant les chambres et facilite la prise de contact sans friction.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Page d’accueil">
+      <div class="story-showcase__wrap">
+        <img
+          src="../img/domainedegach/index-gach.webp"
+          width="1901"
+          height="904"
+          alt="Page d’accueil du site Domaine de Gach"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">02 — Expérience</p>
+          <p>Navigation claire, visuels du domaine et appels à l’action pour réserver ou contacter.</p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Livrables</p>
+        <h2 id="ch-2" class="story-chapter__center">Points techniques clés</h2>
+        <ul class="story-metrics story-metrics--three">
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">EmailJS</span>
+            <span class="story-metric__label">Formulaire de contact sans backend lourd sur l’hébergement mutualisé.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">SQL</span>
+            <span class="story-metric__label">Données métier hébergées sur VPS pour les besoins de gestion.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">SEO & IONOS</span>
+            <span class="story-metric__label">Référencement de base, domaine et hébergement gérés chez IONOS.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-admin">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">04 — Administration</p>
+          <h2 id="ch-admin">Espace de gestion</h2>
+          <p>
+            Interface d’administration pour piloter le contenu et les données liées au domaine :
+            structure pensée pour un usage régulier, distincte de la vitrine publique.
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--tilt">
+          <img
+            src="../img/domainedegach/admin-section.webp"
+            width="1297"
+            height="671"
+            alt="Section administration du site Domaine de Gach"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Back-office — gestion du site</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-url">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">05 — Déploiement</p>
+          <h2 id="ch-url">Sous-domaine admin</h2>
+          <p>
+            L’administration est isolée sur un sous-domaine dédié (<code>admin.domainedegach.com</code>),
+            en complément du site public hébergé chez IONOS.
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--crisp">
+          <img
+            src="../img/domainedegach/url-admin.webp"
+            width="226"
+            height="49"
+            alt="Barre d’adresse — admin.domainedegach.com"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>URL d’accès à l’administration</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="story-footer story-reveal">
+      <div class="story-footer__inner">
+        <p>Projet vitrine — hébergement et maintenance en production.</p>
+        <div class="story-footer__actions">
+          <a href="https://domainedegach.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer">domainedegach.com</a>
+          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
@@ -64,5 +183,6 @@
   </footer>
   <script src="../js/site-config.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/projet-story.js" defer></script>
 </body>
 </html>

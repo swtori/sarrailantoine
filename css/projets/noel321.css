@@ -1,42 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Nunito:wght@400;600;700&display=swap");
 
 .projet-page.projet-noel {
-  --noel-red: #c41e3a;
-  --noel-green: #1a7f37;
-  --snow: #f0f9ff;
+  --story-night: #1a1f2e;
+  --story-deep: #0f3d2e;
+  --story-mid: #2d1b28;
+  --story-glow: #c41e3a;
+  --story-accent: #7dd3a0;
+  --story-mist: #fca5a5;
+  --story-paper: #f0f9ff;
+  --story-border: rgba(255, 255, 255, 0.2);
+  --story-serif: "Mountains of Christmas", cursive;
+  --story-sans: "Nunito", var(--font);
 }
 
-.projet-page.projet-noel .projet-hero {
-  font-family: "Nunito", var(--font);
-  background: linear-gradient(160deg, #0f3d2e 0%, #1a1f2e 40%, #2d1b28 100%);
-  color: var(--snow);
-  border: 2px dashed rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 0 4px rgba(196, 30, 58, 0.15);
-}
-
-.projet-page.projet-noel .projet-hero h1 {
-  font-family: "Mountains of Christmas", cursive;
-  font-size: clamp(1.75rem, 5vw, 2.5rem);
-  color: #fff;
+.projet-page.projet-noel .story-hero h1 {
   text-shadow: 0 2px 12px rgba(196, 30, 58, 0.4);
 }
 
-.projet-page.projet-noel .projet-section h2 {
-  color: #7dd3a0;
-  font-family: "Mountains of Christmas", cursive;
-  font-size: 1.4rem;
-}
-
-.projet-page.projet-noel .projet-back {
-  color: #fca5a5;
-}
-
-.projet-page.projet-noel .btn--primary {
-  background: var(--noel-red);
-  border-color: var(--noel-red);
-}
-
-.projet-page.projet-noel .btn--outline {
-  border-color: #86efac;
-  color: #bbf7d0;
+.projet-page.projet-noel .story-showcase__wrap {
+  border-style: dashed;
 }

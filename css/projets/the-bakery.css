@@ -1,31 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&display=swap");
 
-.projet-page.projet-bakery .projet-hero {
-  font-family: "Nunito", var(--font);
-  background: linear-gradient(180deg, #422006 0%, #7c2d12 45%, #431407 100%);
-  color: #fff7ed;
-  border: 3px solid #fbbf24;
+.projet-page.projet-bakery {
+  --story-night: #2a1508;
+  --story-deep: #422006;
+  --story-mid: #7c2d12;
+  --story-glow: #ea580c;
+  --story-accent: #fcd34d;
+  --story-mist: #fde68a;
+  --story-paper: #fff7ed;
+  --story-border: rgba(251, 191, 36, 0.4);
+  --story-serif: "Nunito", var(--font);
+  --story-sans: "Nunito", var(--font);
 }
 
-.projet-page.projet-bakery .projet-hero h1 {
+.projet-page.projet-bakery .story-hero h1 {
   font-weight: 800;
-  color: #fef3c7;
-}
-
-.projet-page.projet-bakery .projet-section h2 {
-  color: #fcd34d;
-}
-
-.projet-page.projet-bakery .projet-back {
-  color: #fde68a;
-}
-
-.projet-page.projet-bakery .btn--primary {
-  background: #ea580c;
-  border-color: #fb923c;
-}
-
-.projet-page.projet-bakery .btn--outline {
-  border-color: #fbbf24;
-  color: #fef3c7;
 }

@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fiche projet : admin.lusciana.fr — CRM, Docker, VPS, MongoDB.">
+  <meta name="description" content="admin.lusciana.fr — CRM, Docker, MongoDB, API sur VPS.">
   <title>admin.lusciana.fr – CRM | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/story.css">
   <link rel="stylesheet" href="../css/projets/lusciana-crm.css">
 </head>
 <body class="projet-page projet-lusciana-crm">
@@ -20,39 +21,116 @@
       <ul class="nav__list">
         <li><a href="../index.html" class="nav__link">Accueil</a></li>
         <li><a href="../about.html" class="nav__link">À propos</a></li>
-        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../projects.html" class="nav__link nav__link--active">Projets</a></li>
         <li><a href="../contact.html" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--page">
-    <div class="projet-shell">
-      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
-      <header class="projet-hero">
-        <h1>Commission Manager</h1>
-        <p class="projet-lead">Application CRM hébergée sur VPS : gestion des agents, commissions, todolist. Conteneurisation Docker, données persistées sur volumes, API MongoDB pour l’application métier.</p>
-        <div class="projet-actions">
+
+  <main class="main main--page projet-story" id="projet-story">
+    <a href="../projects.html" class="story-back">← Retour aux projets</a>
+
+    <header class="story-hero" aria-labelledby="story-title">
+      <div class="story-hero__bg" aria-hidden="true">
+        <img src="../img/lusciana/lusciana-admin.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <div class="story-hero__veil"></div>
+      </div>
+      <div class="story-hero__content">
+        <p class="story-eyebrow">Back-office · Lusciana</p>
+        <h1 id="story-title">Commission Manager</h1>
+        <p class="story-hero__tagline">
+          CRM interne sur <strong>admin.lusciana.fr</strong> : agents, commissions, todolist.
+          Conteneurs Docker, MongoDB et API métier sur le même VPS que l’écosystème Lusciana.
+        </p>
+        <ul class="story-tags" aria-label="Technologies">
+          <li>Docker</li>
+          <li>VPS</li>
+          <li>MongoDB</li>
+          <li>API</li>
+        </ul>
+        <div class="story-hero__actions">
           <a href="https://admin.lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Ouvrir l’admin</a>
           <a href="lusciana-vitrine.html" class="btn btn--outline">Fiche vitrine</a>
         </div>
-        <p style="margin-top:1rem"><span class="projet-tag">Docker</span><span class="projet-tag">VPS</span><span class="projet-tag">MongoDB</span><span class="projet-tag">API</span></p>
-      </header>
-      <section class="projet-section">
-        <h2>Fonctionnel</h2>
-        <ul>
-          <li>Authentification et session (écran de connexion dédié).</li>
-          <li>Modules métier : suivi des agents, calcul / suivi des commissions, listes de tâches.</li>
-          <li>Séparation vitrine publique / back-office (sous-domaine <code>admin</code>).</li>
-        </ul>
-      </section>
-      <section class="projet-section">
-        <h2>Capture</h2>
-        <div class="projet-gallery">
-          <figure><img src="../img/lusciana-admin.webp" width="748" height="433" alt="Écran de connexion CRM" loading="lazy"><figcaption>Connexion (MongoDB-API)</figcaption></figure>
+      </div>
+      <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
+    </header>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-1">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">01 — Séparation</p>
+          <h2 id="ch-1">Public vs interne</h2>
+          <p>
+            La vitrine <strong>lusciana.fr</strong> reste accessible au grand public.
+            Le CRM vit sur un sous-domaine dédié, avec authentification et données isolées.
+          </p>
         </div>
-      </section>
-    </div>
+        <figure class="story-split__visual story-frame story-frame--tilt">
+          <img src="../img/lusciana/lusciana-admin.webp" width="748" height="433" alt="Écran de connexion CRM" loading="lazy" decoding="async">
+          <figcaption>Connexion sécurisée</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Interface">
+      <div class="story-showcase__wrap">
+        <img src="../img/lusciana/lusciana-admin.webp" width="1920" height="1080" alt="Vue large écran de connexion CRM" loading="lazy" decoding="async">
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">02 — Accès</p>
+          <p>Point d’entrée vers les modules métier : agents, commissions, tâches.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Fonctionnel</p>
+        <h2 id="ch-2" class="story-chapter__center">Modules & infrastructure</h2>
+        <ul class="story-metrics">
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Auth</span>
+            <span class="story-metric__label">Session et écran de connexion dédié.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Métier</span>
+            <span class="story-metric__label">Agents, commissions, todolist opérationnelle.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Docker</span>
+            <span class="story-metric__label">Services conteneurisés, redémarrage et volumes persistants.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">MongoDB</span>
+            <span class="story-metric__label">API et persistance des données applicatives.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal">
+      <div class="story-chapter__inner story-card-cta">
+        <p class="story-eyebrow">04 — Écosystème</p>
+        <h2>Vitrine & CRM, même VPS</h2>
+        <p>Retrouvez la partie publique du projet Lusciana : boutique, SEO et infra Cloudflare.</p>
+        <a href="lusciana-vitrine.html" class="story-card-cta__link">
+          <span class="story-card-cta__title">Fiche lusciana.fr</span>
+          <span class="story-card-cta__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="story-footer story-reveal">
+      <div class="story-footer__inner">
+        <p>Application métier en production sur VPS.</p>
+        <div class="story-footer__actions">
+          <a href="https://admin.lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">admin.lusciana.fr</a>
+          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
@@ -65,5 +143,6 @@
   </footer>
   <script src="../js/site-config.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/projet-story.js" defer></script>
 </body>
 </html>

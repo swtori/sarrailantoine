@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fiche projet : lusciana.fr — vitrine, boutique, SEO, Cloudflare, VPS.">
+  <meta name="description" content="Lusciana.fr — vitrine et boutique : build & development, SEO, Cloudflare, VPS. Projet par Antoine Sarrail.">
   <title>Lusciana.fr – vitrine & boutique | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/story.css">
   <link rel="stylesheet" href="../css/projets/lusciana-vitrine.css">
 </head>
 <body class="projet-page projet-lusciana-vitrine">
@@ -20,41 +21,195 @@
       <ul class="nav__list">
         <li><a href="../index.html" class="nav__link">Accueil</a></li>
         <li><a href="../about.html" class="nav__link">À propos</a></li>
-        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../projects.html" class="nav__link nav__link--active">Projets</a></li>
         <li><a href="../contact.html" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--page">
-    <div class="projet-shell">
-      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
-      <header class="projet-hero">
-        <h1>Lusciana.fr</h1>
-        <p class="projet-lead">Site vitrine et boutique pour l’entreprise : visibilité, tunnel d’achat ou catalogue, référencement. Nom de domaine, enregistrements DNS sur Cloudflare (proxy / DNS only selon les sous-domaines) et hébergement sur VPS.</p>
-        <div class="projet-actions">
-          <a href="https://lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
-          <a href="lusciana-crm.html" class="btn btn--outline">Fiche CRM associée</a>
-        </div>
-      </header>
-      <section class="projet-section">
-        <h2>Livrables & compétences</h2>
-        <ul>
-          <li>Mise en place du référencement (structure, titres, performances de base).</li>
-          <li>Exploitation des tableaux de bord analytics (trafic, bande passante, visites).</li>
-          <li>Cartographie DNS : apex, sous-domaines applicatifs, routage vers le VPS.</li>
+
+  <main class="main main--page projet-story" id="projet-story">
+    <a href="../projects.html" class="story-back projet-back">← Retour aux projets</a>
+
+    <header class="story-hero" aria-labelledby="story-hero-title">
+      <div class="story-hero__bg" aria-hidden="true">
+        <img
+          src="../img/lusciana/lusciana-index.webp"
+          alt=""
+          width="1896"
+          height="896"
+          fetchpriority="high"
+          decoding="sync"
+        >
+        <div class="story-hero__veil"></div>
+      </div>
+      <div class="story-hero__content">
+        <p class="story-eyebrow">Build &amp; development · Projet phare</p>
+        <h1 id="story-hero-title">Lusciana.fr</h1>
+        <p class="story-hero__tagline">
+          Vitrine et boutique pour une société de développement : présenter l’activité,
+          structurer l’offre et ancrer la marque sur le web avec une stack maîtrisée de bout en bout.
+        </p>
+        <ul class="story-tags" aria-label="Technologies">
+          <li>PHP</li>
+          <li>SEO</li>
+          <li>Cloudflare</li>
+          <li>VPS</li>
         </ul>
-      </section>
-      <section class="projet-section">
-        <h2>Captures (preuves d’exploitation)</h2>
-        <div class="projet-gallery">
-          <figure><img src="../img/lusciana.webp" width="748" height="433" alt="Aperçu vitrine Lusciana" loading="lazy"><figcaption>Vitrine</figcaption></figure>
-          <figure><img src="../img/lusciana-analytics.webp" width="748" height="433" alt="Analytics Cloudflare lusciana.fr" loading="lazy"><figcaption>Visiteurs uniques (30 j.)</figcaption></figure>
-          <figure><img src="../img/lusciana-stats-compte.webp" width="748" height="433" alt="Statistiques compte" loading="lazy"><figcaption>Vue compte (requêtes / bande passante)</figcaption></figure>
-          <figure><img src="../img/lusciana-dns.webp" width="748" height="433" alt="Enregistrements DNS" loading="lazy"><figcaption>DNS & sous-domaines</figcaption></figure>
+        <div class="story-hero__actions">
+          <a href="https://lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site en ligne</a>
+          <a href="lusciana-crm.html" class="btn btn--outline">Écosystème CRM</a>
         </div>
-      </section>
-    </div>
+      </div>
+      <div class="story-hero__scroll" aria-hidden="true">
+        <span>Découvrir le projet</span>
+      </div>
+    </header>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-identite">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">01 — Identité</p>
+        <h2 id="ch-identite" class="story-chapter__center">Une vitrine qui porte la marque</h2>
+        <p class="story-chapter__lead">
+          Lusciana est une entreprise de <strong>build &amp; development</strong>.
+          Le site traduit une posture professionnelle, rassure les visiteurs et ouvre la voie vers la boutique
+          ou les prises de contact — avec une direction visuelle lisible sur mobile comme sur desktop.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Expérience boutique">
+      <div class="story-showcase__wrap">
+        <img
+          src="../img/lusciana/lusciana-boutique.webp"
+          width="1898"
+          height="900"
+          alt="Page boutique Lusciana — Spawn Floating Island"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">02 — Expérience</p>
+          <p>Boutique en ligne : fiches produits, paiement sécurisé et parcours d’achat clair.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-livrables">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Livrables</p>
+        <h2 id="ch-livrables" class="story-chapter__center">Ce que le projet démontre</h2>
+        <ul class="story-metrics">
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">SEO</span>
+            <span class="story-metric__label">Structure sémantique, titres, performances de base et indexation.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Analytics</span>
+            <span class="story-metric__label">Lecture du trafic, bande passante et visites via les tableaux de bord.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">DNS</span>
+            <span class="story-metric__label">Apex, sous-domaines applicatifs et routage vers le VPS.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Hébergement</span>
+            <span class="story-metric__label">Déploiement sur serveur dédié, cohabitation avec l’écosystème interne.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-perf">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">04 — Performance</p>
+          <h2 id="ch-perf">Suivi du trafic</h2>
+          <p>
+            Cloudflare Analytics : visiteurs uniques, tendances sur 30 jours et indicateurs
+            pour ajuster cache, DNS et charge serveur.
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--crisp">
+          <img
+            src="../img/lusciana/lusciana-analytics.png"
+            width="850"
+            height="233"
+            alt="Graphique visiteurs uniques sur 30 jours — Cloudflare"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Visiteurs uniques — 30 jours</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-stats">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">05 — Compte</p>
+          <h2 id="ch-stats">Mesurer pour piloter</h2>
+          <p>
+            Vue globale du compte Cloudflare : requêtes, bande passante et tendances.
+            Ces indicateurs guident les arbitrages (cache, DNS, charge serveur).
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--crisp">
+          <img
+            src="../img/lusciana/lusciana-stats-compte.webp"
+            width="1302"
+            height="820"
+            alt="Statistiques compte Cloudflare — requêtes et bande passante"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Vue compte (requêtes / bande passante)</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-infra">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">06 — Infrastructure</p>
+          <h2 id="ch-infra">Du domaine au serveur</h2>
+          <p>
+            Les enregistrements DNS relient le nom de domaine au VPS : apex public,
+            sous-domaines pour les applications (dont <code>admin</code>), proxy ou DNS only selon les besoins.
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--tilt">
+          <img src="../img/lusciana/lusciana-dns.webp" width="748" height="433" alt="Tableau des enregistrements DNS Cloudflare" loading="lazy" decoding="async">
+          <figcaption>DNS &amp; sous-domaines</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-suite">
+      <div class="story-chapter__inner story-card-cta">
+        <p class="story-eyebrow">07 — Suite logique</p>
+        <h2 id="ch-suite">Vitrine publique, back-office séparé</h2>
+        <p>
+          Le site client vit sur <strong>lusciana.fr</strong>. La gestion interne (agents, commissions, tâches)
+          est isolée sur <strong>admin.lusciana.fr</strong> — Docker, MongoDB et API dédiée.
+        </p>
+        <a href="lusciana-crm.html" class="story-card-cta__link">
+          <span class="story-card-cta__title">Découvrir le CRM</span>
+          <span class="story-card-cta__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="story-footer story-reveal">
+      <div class="story-footer__inner">
+        <p>Projet réalisé dans le cadre du portfolio BTS SIO SLAM.</p>
+        <div class="story-footer__actions">
+          <a href="https://lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">lusciana.fr</a>
+          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
@@ -65,7 +220,9 @@
       </nav>
     </div>
   </footer>
+
   <script src="../js/site-config.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/projet-story.js" defer></script>
 </body>
 </html>

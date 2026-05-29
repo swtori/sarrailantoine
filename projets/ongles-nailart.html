@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fiche projet : vitrine nail art — DA, SEO, responsive.">
+  <meta name="description" content="Vitrine nail art — DA rose & crème, SEO, responsive.">
   <title>Ongles – nail art | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/story.css">
   <link rel="stylesheet" href="../css/projets/ongles-nailart.css">
 </head>
 <body class="projet-page projet-ongles">
@@ -20,37 +21,99 @@
       <ul class="nav__list">
         <li><a href="../index.html" class="nav__link">Accueil</a></li>
         <li><a href="../about.html" class="nav__link">À propos</a></li>
-        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../projects.html" class="nav__link nav__link--active">Projets</a></li>
         <li><a href="../contact.html" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--page">
-    <div class="projet-shell">
-      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
-      <header class="projet-hero">
-        <h1>Ongles <span>— vitrine nail art</span></h1>
-        <p class="projet-lead">Site exclusivement esthétique pour une entreprise de prestation nail art : DA vitrine, référencement SEO naturel et expérience responsive centrée sur la mise en avant des réalisations.</p>
-        <div class="projet-actions">
+
+  <main class="main main--page projet-story" id="projet-story">
+    <a href="../projects.html" class="story-back">← Retour aux projets</a>
+
+    <header class="story-hero" aria-labelledby="story-title">
+      <div class="story-hero__bg" aria-hidden="true">
+        <img src="../img/ongles/ongles-preview.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <div class="story-hero__veil"></div>
+      </div>
+      <div class="story-hero__content">
+        <p class="story-eyebrow">Vitrine · Nail art</p>
+        <h1 id="story-title">Ongles <span class="story-title-accent">— nail art</span></h1>
+        <p class="story-hero__tagline">
+          Site esthétique pour une activité de prestation ongulaire : mettre en valeur les réalisations,
+          rassurer la cliente et faciliter la prise de contact.
+        </p>
+        <ul class="story-tags" aria-label="Technologies">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SEO</li>
+          <li>Responsive</li>
+        </ul>
+        <div class="story-hero__actions">
           <a href="https://github.com/swtori" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Dépôt / mises à jour</a>
         </div>
-      </header>
-      <section class="projet-section">
-        <h2>Axes de travail</h2>
-        <ul>
-          <li>Identité visuelle douce (rose, crème, contrastes maîtrisés).</li>
-          <li>Structure des pages orientée conversion (prise de contact, galerie).</li>
-          <li>Balises et contenus pensés pour le référencement naturel.</li>
-        </ul>
-      </section>
-      <section class="projet-section">
-        <h2>Aperçu</h2>
-        <div class="projet-gallery">
-          <figure><img src="../img/ongles-preview.webp" width="748" height="433" alt="Aperçu vitrine CM Beauty ongles" loading="lazy"><figcaption>Hero & navigation</figcaption></figure>
+      </div>
+      <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
+    </header>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-1">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">01 — Identité</p>
+          <h2 id="ch-1">Douceur & précision</h2>
+          <p>
+            Tons rose et crème, typographie élégante et mise en avant des créations
+            pour traduire le soin apporté à chaque prestation.
+          </p>
         </div>
-      </section>
-    </div>
+        <figure class="story-split__visual story-frame story-frame--tilt">
+          <img src="../img/ongles/ongles-preview.webp" width="748" height="433" alt="Aperçu vitrine CM Beauty ongles" loading="lazy" decoding="async">
+          <figcaption>Hero & navigation</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Immersion">
+      <div class="story-showcase__wrap">
+        <img src="../img/ongles/ongles-preview.webp" width="1920" height="1080" alt="Vue large vitrine ongles" loading="lazy" decoding="async">
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">02 — Conversion</p>
+          <p>Structure orientée galerie et prise de rendez-vous.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Axes de travail</p>
+        <h2 id="ch-2" class="story-chapter__center">DA & référencement</h2>
+        <ul class="story-metrics story-metrics--three">
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">DA</span>
+            <span class="story-metric__label">Palette douce, contrastes maîtrisés, hiérarchie lisible.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Pages</span>
+            <span class="story-metric__label">Galerie, services et contact au cœur du parcours.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">SEO</span>
+            <span class="story-metric__label">Balises et contenus pensés pour le référencement naturel.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="story-footer story-reveal">
+      <div class="story-footer__inner">
+        <p>Vitrine nail art — projet orienté design & visibilité.</p>
+        <div class="story-footer__actions">
+          <a href="https://github.com/swtori" class="btn btn--primary" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
@@ -63,5 +126,6 @@
   </footer>
   <script src="../js/site-config.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/projet-story.js" defer></script>
 </body>
 </html>

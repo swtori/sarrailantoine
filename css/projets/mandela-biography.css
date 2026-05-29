@@ -1,55 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=DM+Sans:wght@400;500&display=swap");
 
 .projet-page.projet-mandela {
-  --projet-gold: #c9a227;
-  --projet-ink: #1a1510;
-  --projet-paper: #f4efe6;
+  --story-night: #1a1510;
+  --story-deep: #2a2318;
+  --story-mid: #3d2f1a;
+  --story-glow: #c9a227;
+  --story-accent: #c9a227;
+  --story-mist: #c9a227;
+  --story-paper: #f4efe6;
+  --story-border: rgba(201, 162, 39, 0.35);
+  --story-serif: "Cormorant Garamond", Georgia, serif;
+  --story-sans: "DM Sans", var(--font);
 }
 
-.projet-page.projet-mandela .projet-hero {
-  background: linear-gradient(135deg, #2a2318 0%, #1a1510 50%, #3d2f1a 100%);
-  color: var(--projet-paper);
-  border: 1px solid rgba(201, 162, 39, 0.35);
-  font-family: "DM Sans", var(--font);
-}
-
-.projet-page.projet-mandela .projet-hero h1 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-weight: 600;
-  color: #fff;
-}
-
-.projet-page.projet-mandela .projet-hero h1 span {
-  color: var(--projet-gold);
+.projet-page.projet-mandela .story-title-accent {
   font-style: italic;
 }
 
-.projet-page.projet-mandela .projet-lead {
-  color: rgba(244, 239, 230, 0.88);
-}
-
-.projet-page.projet-mandela .projet-section h2 {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  color: var(--projet-gold);
-  font-size: 1.35rem;
-}
-
-.projet-page.projet-mandela .projet-section p,
-.projet-page.projet-mandela .projet-section li {
-  color: var(--text);
-}
-
-.projet-page.projet-mandela .projet-back {
-  color: var(--projet-gold);
-}
-
 .projet-page.projet-mandela .btn--primary {
-  background: var(--projet-gold);
-  color: var(--projet-ink);
-  border-color: var(--projet-gold);
-}
-
-.projet-page.projet-mandela .btn--outline {
-  border-color: var(--projet-gold);
-  color: var(--projet-gold);
+  color: var(--story-night);
 }

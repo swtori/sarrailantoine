@@ -1,44 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap");
 
-.projet-page.projet-lusciana-crm .projet-hero {
-  font-family: "Outfit", var(--font);
-  background: linear-gradient(145deg, #1e1033 0%, #2d1b4e 45%, #1a1428 100%);
-  color: #f3e8ff;
-  border: 2px solid rgba(167, 139, 250, 0.45);
+.projet-page.projet-lusciana-crm {
+  --story-night: #120a1f;
+  --story-deep: #1e1033;
+  --story-mid: #2d1b4e;
+  --story-glow: #7c3aed;
+  --story-accent: #c4b5fd;
+  --story-mist: #ddd6fe;
+  --story-paper: #f3e8ff;
+  --story-border: rgba(167, 139, 250, 0.4);
+  --story-serif: "Outfit", var(--font);
+  --story-sans: "Outfit", var(--font);
 }
 
-.projet-page.projet-lusciana-crm .projet-hero h1 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.projet-page.projet-lusciana-crm .projet-section h2 {
-  color: #c4b5fd;
-  font-size: 1rem;
+.projet-page.projet-lusciana-crm .story-chapter h2 {
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.projet-page.projet-lusciana-crm .projet-back {
-  color: #ddd6fe;
-}
-
-.projet-page.projet-lusciana-crm .btn--primary {
-  background: #7c3aed;
-  border-color: #7c3aed;
-}
-
-.projet-page.projet-lusciana-crm .btn--outline {
-  border-color: #a78bfa;
-  color: #e9d5ff;
-}
-
-.projet-page.projet-lusciana-crm .projet-tag {
-  display: inline-block;
-  padding: 0.2rem 0.55rem;
-  margin: 0.15rem 0.15rem 0 0;
-  font-size: 0.75rem;
-  border-radius: 6px;
-  background: rgba(124, 58, 237, 0.25);
-  border: 1px solid rgba(167, 139, 250, 0.4);
+  letter-spacing: 0.06em;
+  font-size: clamp(1.1rem, 3vw, 1.35rem);
 }

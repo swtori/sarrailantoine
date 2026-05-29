@@ -1,48 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Quicksand:wght@400;500;600&display=swap");
 
 .projet-page.projet-ongles {
-  --rose: #e8b4bc;
-  --rose-deep: #b76e79;
-  --cream: #fff8f8;
+  --story-night: #120c0e;
+  --story-deep: #1f1416;
+  --story-mid: #3d2529;
+  --story-glow: #b76e79;
+  --story-accent: #e8b4bc;
+  --story-mist: #e8b4bc;
+  --story-paper: #fff8f8;
+  --story-border: rgba(231, 180, 188, 0.35);
+  --story-serif: "Playfair Display", Georgia, serif;
+  --story-sans: "Quicksand", var(--font);
 }
 
-.projet-page.projet-ongles .projet-hero {
-  background: radial-gradient(ellipse 120% 80% at 20% 0%, #3d2529 0%, #1f1416 55%, #120c0e 100%);
-  color: var(--cream);
-  border: 1px solid rgba(231, 180, 188, 0.35);
-  font-family: "Quicksand", var(--font);
-}
-
-.projet-page.projet-ongles .projet-hero h1 {
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.projet-page.projet-ongles .projet-hero h1 span {
-  color: var(--rose);
-}
-
-.projet-page.projet-ongles .projet-lead {
-  color: rgba(255, 248, 248, 0.9);
-}
-
-.projet-page.projet-ongles .projet-section h2 {
-  font-family: "Playfair Display", Georgia, serif;
-  color: var(--rose-deep);
-}
-
-.projet-page.projet-ongles .projet-back {
-  color: var(--rose);
-}
-
-.projet-page.projet-ongles .btn--primary {
-  background: linear-gradient(135deg, var(--rose-deep), #8e4a55);
-  border-color: transparent;
-  color: #fff;
-}
-
-.projet-page.projet-ongles .btn--outline {
-  border-color: var(--rose);
-  color: var(--rose);
+.projet-page.projet-ongles .story-title-accent {
+  color: var(--story-accent);
 }

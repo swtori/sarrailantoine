@@ -108,7 +108,7 @@
       : "";
 
     var githubBlock = project.github
-      ? '<p class="project-card__link"><a href="' +
+      ? '<p class="project-card__link project-card__link--github"><a href="' +
         escapeHtml(project.github) +
         '" target="_blank" rel="noopener noreferrer">Code source (GitHub) →</a></p>'
       : "";

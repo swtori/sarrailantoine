@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fiche projet : site vitrine biographique Nelson Mandela — DA, intégration, GitHub Pages.">
+  <meta name="description" content="Nelson Mandela — biographie vitrine, DA or & sombre, GitHub Pages.">
   <title>Nelson Mandela – biographie | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/story.css">
   <link rel="stylesheet" href="../css/projets/mandela-biography.css">
 </head>
 <body class="projet-page projet-mandela">
@@ -20,42 +21,100 @@
       <ul class="nav__list">
         <li><a href="../index.html" class="nav__link">Accueil</a></li>
         <li><a href="../about.html" class="nav__link">À propos</a></li>
-        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../projects.html" class="nav__link nav__link--active">Projets</a></li>
         <li><a href="../contact.html" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--page">
-    <div class="projet-shell">
-      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
-      <header class="projet-hero">
-        <h1>Nelson Mandela <span>— biographie</span></h1>
-        <p class="projet-lead">Site exclusivement esthétique : direction artistique vitrine, hiérarchie typographique et parcours de lecture pour une biographie documentée accessible en ligne.</p>
-        <div class="projet-actions">
-          <a href="https://steevenngouala05-lgtm.github.io/mandela-biography/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site en ligne</a>
+
+  <main class="main main--page projet-story" id="projet-story">
+    <a href="../projects.html" class="story-back">← Retour aux projets</a>
+
+    <header class="story-hero" aria-labelledby="story-title">
+      <div class="story-hero__bg" aria-hidden="true">
+        <img src="../img/mandela-biography/nelson-mandela.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <div class="story-hero__veil"></div>
+      </div>
+      <div class="story-hero__content">
+        <p class="story-eyebrow">Biographie · Vitrine</p>
+        <h1 id="story-title">Nelson Mandela <span class="story-title-accent">— biographie</span></h1>
+        <p class="story-hero__tagline">
+          Site centré sur l’immersion visuelle : or et sombre, typographie éditoriale
+          et parcours de lecture pour un contenu biographique accessible en ligne.
+        </p>
+        <ul class="story-tags" aria-label="Technologies">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>DA</li>
+          <li>GitHub Pages</li>
+        </ul>
+        <div class="story-hero__actions">
+          <a href="https://steevenngouala05-lgtm.github.io/mandela-biography/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
           <a href="https://github.com/steevenngouala05-lgtm/mandela-biography" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Dépôt GitHub</a>
         </div>
-      </header>
-      <section class="projet-section">
-        <h2>Contexte & objectifs</h2>
-        <p>Mettre en valeur un contenu biographique par le design : contrastes or / sombre, citations lisibles, navigation sobre. Priorité à l’immersion visuelle plutôt qu’à des effets techniques superflus.</p>
-      </section>
-      <section class="projet-section">
-        <h2>Réalisation</h2>
-        <ul>
-          <li>Intégration HTML/CSS responsive.</li>
-          <li>DA cohérente avec le ton mémoriel du sujet.</li>
-          <li>Déploiement statique (GitHub Pages).</li>
-        </ul>
-      </section>
-      <section class="projet-section">
-        <h2>Aperçu</h2>
-        <div class="projet-gallery">
-          <figure><img src="../img/nelson-mandela.webp" width="748" height="433" alt="Aperçu du site Nelson Mandela" loading="lazy"><figcaption>Capture d’écran du hero</figcaption></figure>
+      </div>
+      <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
+    </header>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-1">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">01 — Intention</p>
+          <h2 id="ch-1">Le ton mémoriel</h2>
+          <p>
+            Mettre en valeur un récit biographique par le design : contrastes or / sombre,
+            citations lisibles, navigation sobre. L’immersion prime sur les effets techniques.
+          </p>
         </div>
-      </section>
-    </div>
+        <figure class="story-split__visual story-frame story-frame--tilt">
+          <img src="../img/mandela-biography/nelson-mandela.webp" width="748" height="433" alt="Hero site Nelson Mandela" loading="lazy" decoding="async">
+          <figcaption>Hero — capture d’écran</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Immersion">
+      <div class="story-showcase__wrap">
+        <img src="../img/mandela-biography/nelson-mandela.webp" width="1920" height="1080" alt="Vue large site Mandela" loading="lazy" decoding="async">
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">02 — Lecture</p>
+          <p>Hiérarchie typographique et rythme de scroll pensés pour la biographie.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Réalisation</p>
+        <h2 id="ch-2" class="story-chapter__center">Intégration & déploiement</h2>
+        <ul class="story-metrics story-metrics--three">
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">HTML/CSS</span>
+            <span class="story-metric__label">Intégration responsive, structure sémantique.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">DA</span>
+            <span class="story-metric__label">Palette et typo cohérentes avec le sujet traité.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">GitHub Pages</span>
+            <span class="story-metric__label">Hébergement statique, accessible publiquement.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="story-footer story-reveal">
+      <div class="story-footer__inner">
+        <p>Projet collaboratif — vitrine biographique en ligne.</p>
+        <div class="story-footer__actions">
+          <a href="https://steevenngouala05-lgtm.github.io/mandela-biography/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Site en ligne</a>
+          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
@@ -68,5 +127,6 @@
   </footer>
   <script src="../js/site-config.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/projet-story.js" defer></script>
 </body>
 </html>

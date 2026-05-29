@@ -1,33 +1,52 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap");
 
-.projet-page.projet-lusciana-vitrine .projet-hero {
-  font-family: "Inter", var(--font);
-  background: linear-gradient(135deg, #0c1929 0%, #132f4c 50%, #0d2137 100%);
-  color: #e8f4ff;
-  border: 1px solid rgba(88, 166, 255, 0.35);
+/* Fond hero : fichier source en pleine résolution (pas de scale CSS) */
+.projet-page.projet-lusciana-vitrine .story-hero__bg img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  transform: none;
+  image-rendering: auto;
 }
 
-.projet-page.projet-lusciana-vitrine .projet-hero h1 {
-  font-family: "Source Serif 4", Georgia, serif;
-  font-weight: 600;
-  color: #fff;
+.projet-page.projet-lusciana-vitrine .story-hero__veil {
+  background:
+    linear-gradient(180deg, rgba(10, 20, 32, 0.25) 0%, rgba(10, 20, 32, 0.75) 55%, var(--bg) 100%),
+    radial-gradient(ellipse 80% 50% at 70% 15%, color-mix(in srgb, var(--story-glow) 12%, transparent), transparent 60%);
 }
 
-.projet-page.projet-lusciana-vitrine .projet-section h2 {
-  color: #58a6ff;
-  font-family: "Source Serif 4", Georgia, serif;
+.projet-page.projet-lusciana-vitrine .story-showcase__wrap img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: var(--story-deep);
 }
 
-.projet-page.projet-lusciana-vitrine .projet-back {
-  color: #79b8ff;
+.projet-page.projet-lusciana-vitrine .story-frame--crisp img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
-.projet-page.projet-lusciana-vitrine .btn--primary {
-  background: #1f6feb;
-  border-color: #1f6feb;
+.projet-page.projet-lusciana-vitrine .story-frame--crisp {
+  background: #f6f8fa;
 }
 
-.projet-page.projet-lusciana-vitrine .btn--outline {
-  border-color: #58a6ff;
-  color: #79b8ff;
+.projet-page.projet-lusciana-vitrine {
+  --story-night: #0a1420;
+  --story-deep: #0c1929;
+  --story-mid: #132f4c;
+  --story-glow: #1f6feb;
+  --story-accent: #58a6ff;
+  --story-mist: #79b8ff;
+  --story-paper: #e8f4ff;
+  --story-border: rgba(88, 166, 255, 0.35);
+  --story-serif: "Source Serif 4", Georgia, serif;
+  --story-sans: "Inter", var(--font);
 }

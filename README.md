@@ -22,7 +22,7 @@ Portfolio professionnel sobre et minimaliste (HTML, CSS, JS) – thème sombre, 
 
 1. Éditer **js/projects-data.js** : ajouter un objet avec `id`, `title`, `url`, `github`, `description`, `tags`, `image`, `detailHref` (`projets/…html`), `carousel` (booléen pour l’accueil).
 2. Créer la fiche **`projets/<id>.html`** et la feuille **`css/projets/<id>.css`** pour garder une DA distincte par projet.
-3. Placer les captures dans **`img/`** (ou `assets/projets/`) et renseigner le chemin dans `image`.
+3. Placer les captures dans **`img/<id-projet>/`** (ex. `img/lusciana/…`) et renseigner le chemin dans `image` (CV et photo restent à la racine de `img/`).
 
 ## Personnaliser
 

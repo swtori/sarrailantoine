@@ -1,33 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap");
 
-.projet-page.projet-domaine .projet-hero {
-  font-family: "Work Sans", var(--font);
-  background: linear-gradient(165deg, #1a2e1f 0%, #243828 40%, #1e3322 100%);
-  color: #f0fdf4;
-  border: 1px solid rgba(74, 222, 128, 0.25);
+.projet-page.projet-domaine .story-hero__bg img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
+  transform: none;
 }
 
-.projet-page.projet-domaine .projet-hero h1 {
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 600;
-  color: #ecfccb;
+.projet-page.projet-domaine .story-showcase__wrap img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  aspect-ratio: auto;
+  object-fit: contain;
+  object-position: center;
+  background: var(--story-deep);
 }
 
-.projet-page.projet-domaine .projet-section h2 {
-  color: #86efac;
-  font-family: "Fraunces", Georgia, serif;
+.projet-page.projet-domaine .story-frame--crisp img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
 }
 
-.projet-page.projet-domaine .projet-back {
-  color: #bbf7d0;
+.projet-page.projet-domaine .story-frame--crisp {
+  background: #f6f8fa;
 }
 
-.projet-page.projet-domaine .btn--primary {
-  background: #166534;
-  border-color: #22c55e;
-}
-
-.projet-page.projet-domaine .btn--outline {
-  border-color: #86efac;
-  color: #dcfce7;
+.projet-page.projet-domaine {
+  --story-night: #141f16;
+  --story-deep: #1a2e1f;
+  --story-mid: #243828;
+  --story-glow: #166534;
+  --story-accent: #86efac;
+  --story-mist: #bbf7d0;
+  --story-paper: #f0fdf4;
+  --story-border: rgba(74, 222, 128, 0.25);
+  --story-serif: "Fraunces", Georgia, serif;
+  --story-sans: "Work Sans", var(--font);
 }

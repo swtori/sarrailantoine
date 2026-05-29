@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Fiche projet : ce portfolio — GitHub Pages, API, VPS.">
+  <meta name="description" content="Portfolio BTS SIO SLAM — GitHub Pages, API, VPS, blog.">
   <title>Ce portfolio | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
+  <link rel="stylesheet" href="../css/projets/story.css">
   <link rel="stylesheet" href="../css/projets/portfolio-sarrail.css">
 </head>
 <body class="projet-page projet-portfolio-sarrail">
@@ -20,38 +21,108 @@
       <ul class="nav__list">
         <li><a href="../index.html" class="nav__link">Accueil</a></li>
         <li><a href="../about.html" class="nav__link">À propos</a></li>
-        <li><a href="../projects.html" class="nav__link">Projets</a></li>
+        <li><a href="../projects.html" class="nav__link nav__link--active">Projets</a></li>
         <li><a href="../contact.html" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <main class="main main--page">
-    <div class="projet-shell">
-      <a href="../projects.html" class="projet-back">← Retour aux projets</a>
-      <header class="projet-hero">
-        <h1>Portfolio BTS SIO SLAM</h1>
-        <p class="projet-lead">Front statique sur GitHub Pages (HTML/CSS/JS vanilla). Un module blog / articles avec gestion des utilisateurs tourne sur VPS : base de données, authentification et API pour publier régulièrement du contenu.</p>
-        <div class="projet-actions">
-          <a href="https://swtori.github.io/sarrailantoine/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
-          <a href="https://github.com/swtori/sarrailantoine" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Dépôt</a>
-        </div>
-      </header>
-      <section class="projet-section">
-        <h2>Architecture</h2>
-        <ul>
-          <li>Pages statiques + données projets dans <code>js/projects-data.js</code>.</li>
-          <li>Configuration externalisée (<code>js/site-config.js</code>) pour les liens VPS.</li>
-          <li>Back-office distant : articles, rôles, API REST (hors dépôt GitHub).</li>
+
+  <main class="main main--page projet-story" id="projet-story">
+    <a href="../projects.html" class="story-back">← Retour aux projets</a>
+
+    <header class="story-hero" aria-labelledby="story-title">
+      <div class="story-hero__bg" aria-hidden="true">
+        <img src="../img/portfolio-sarrail/portfolio-sarrail-preview.png" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <div class="story-hero__veil"></div>
+      </div>
+      <div class="story-hero__content">
+        <p class="story-eyebrow">BTS SIO SLAM · Meta-projet</p>
+        <h1 id="story-title">Ce portfolio</h1>
+        <p class="story-hero__tagline">
+          Front statique sur GitHub Pages, couplé à un back-office sur VPS :
+          articles, utilisateurs et API pour documenter mon parcours en continu.
+        </p>
+        <ul class="story-tags" aria-label="Technologies">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>API</li>
+          <li>VPS</li>
         </ul>
-      </section>
-      <section class="projet-section">
-        <h2>Aperçu</h2>
-        <div class="projet-gallery">
-          <figure><img src="../img/project-portfolio.png" width="748" height="433" alt="Aperçu portfolio" loading="lazy"><figcaption>Accueil (thème sombre)</figcaption></figure>
+        <div class="story-hero__actions">
+          <a href="https://swtori.github.io/sarrailantoine/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
+          <a href="https://github.com/swtori/sarrailantoine" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Dépôt GitHub</a>
         </div>
-      </section>
-    </div>
+      </div>
+      <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
+    </header>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-1">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">01 — Architecture</p>
+          <h2 id="ch-1">Deux mondes, une expérience</h2>
+          <p>
+            Le portfolio public reste léger et rapide (pages statiques, données projets en JS).
+            Le contenu éditorial dynamique vit sur le VPS : authentification, rôles, publication d’articles.
+          </p>
+          <p>
+            Configuration externalisée via <code>site-config.js</code> pour lier proprement front et back-office.
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--tilt">
+          <img src="../img/portfolio-sarrail/portfolio-sarrail-preview.png" width="748" height="433" alt="Accueil du portfolio" loading="lazy" decoding="async">
+          <figcaption>Thème sombre — accueil</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Aperçu">
+      <div class="story-showcase__wrap">
+        <img src="../img/portfolio-sarrail/portfolio-sarrail-preview.png" width="1920" height="1080" alt="Vue large du portfolio" loading="lazy" decoding="async">
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">02 — Présentation</p>
+          <p>Fiches projet immersives, carrousel et grille — ce site documente aussi sa propre construction.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Stack</p>
+        <h2 id="ch-2" class="story-chapter__center">Composants principaux</h2>
+        <ul class="story-metrics">
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">GitHub Pages</span>
+            <span class="story-metric__label">Hébergement du front statique, déploiement continu depuis le dépôt.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">projects-data.js</span>
+            <span class="story-metric__label">Source unique pour la grille et le carrousel d’accueil.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Back-office VPS</span>
+            <span class="story-metric__label">Blog PHP, SQLite, gestion des utilisateurs et articles.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Fiches story</span>
+            <span class="story-metric__label">Pages projet en narration visuelle (comme celle-ci).</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="story-footer story-reveal">
+      <div class="story-footer__inner">
+        <p>Vous êtes en train de parcourir le résultat de ce projet.</p>
+        <div class="story-footer__actions">
+          <a href="https://swtori.github.io/sarrailantoine/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Portfolio en ligne</a>
+          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+        </div>
+      </div>
+    </footer>
   </main>
+
   <footer class="footer">
     <div class="container footer__inner">
       <p class="footer__copy">© <span id="year"></span> Antoine Sarrail</p>
@@ -64,5 +135,6 @@
   </footer>
   <script src="../js/site-config.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/projet-story.js" defer></script>
 </body>
 </html>

@@ -1,61 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 .projet-page.projet-portfolios {
-  --grid-a: #00d4aa;
-  --grid-b: #6366f1;
-  --grid-c: #f472b6;
+  --story-night: #0a0a0f;
+  --story-deep: #0a0a0f;
+  --story-mid: #18181b;
+  --story-glow: #6366f1;
+  --story-accent: #00d4aa;
+  --story-mist: #a1a1aa;
+  --story-paper: #e4e4e7;
+  --story-border: rgba(99, 102, 241, 0.35);
+  --story-serif: "Space Grotesk", var(--font);
+  --story-sans: "Space Grotesk", var(--font);
 }
 
-.projet-page.projet-portfolios .projet-hero {
-  font-family: "Space Grotesk", var(--font);
-  background: #0a0a0f;
-  color: #e4e4e7;
-  border: 1px solid #27272a;
-  position: relative;
-  overflow: hidden;
-}
-
-.projet-page.projet-portfolios .projet-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 40%, rgba(99, 102, 241, 0.12) 50%, transparent 60%);
-  pointer-events: none;
-}
-
-.projet-page.projet-portfolios .projet-hero h1 {
-  position: relative;
-  background: linear-gradient(90deg, var(--grid-a), var(--grid-b), var(--grid-c));
+.projet-page.projet-portfolios .story-hero h1 {
+  background: linear-gradient(90deg, #00d4aa, #6366f1, #f472b6);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.projet-page.projet-portfolios .projet-section h2 {
-  font-family: "Space Grotesk", var(--font);
-  color: var(--grid-a);
+.projet-page.projet-portfolios .story-chapter h2 {
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  font-size: 0.85rem;
-}
-
-.projet-page.projet-portfolios .projet-back {
-  color: var(--grid-b);
-}
-
-.projet-page.projet-portfolios .btn--primary {
-  background: var(--grid-b);
-  border-color: var(--grid-b);
-}
-
-.projet-page.projet-portfolios .btn--outline {
-  border-color: var(--grid-a);
-  color: var(--grid-a);
-}
-
-.projet-page.projet-portfolios .link-stack a {
-  display: block;
-  padding: 0.35rem 0;
-  font-family: "Space Grotesk", monospace;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
