@@ -329,29 +329,56 @@
 }
 
 .lc-tree__list ul {
-  margin: 0;
-  padding: 0 0 0 1.15rem;
+  margin: 0.12rem 0 0.28rem;
+  padding: 0 0 0 1rem;
   list-style: none;
-  border-left: 1px solid rgba(196, 181, 253, 0.2);
 }
 
 .lc-tree__node {
-  position: relative;
-  padding: 0.2rem 0 0.2rem 0.5rem;
+  padding: 0.12rem 0;
 }
 
-.lc-tree__node::before {
-  content: "";
-  position: absolute;
-  left: -1.15rem;
-  top: 0.85em;
-  width: 0.75rem;
-  height: 1px;
-  background: rgba(196, 181, 253, 0.25);
+.lc-tree__badge {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--story-mist);
+  opacity: 0.85;
 }
 
-.lc-tree__node--root::before {
-  display: none;
+.lc-tree__mongo-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem 1.25rem;
+  margin-top: 0.35rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(167, 139, 250, 0.12);
+}
+
+.lc-tree__mongo-list .lc-tree__node {
+  padding: 0;
+}
+
+.lc-tree__name--collection {
+  font-size: 0.74rem;
+  color: var(--story-mist);
+  padding: 0.15rem 0;
+}
+
+.lc-tree__name--collection::before {
+  content: "●";
+  color: var(--story-glow);
+  font-size: 0.45rem;
+  vertical-align: middle;
+}
+
+@media (max-width: 520px) {
+  .lc-tree__mongo-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 .lc-tree__name {
