@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Site Jeux olympiques — DA événementielle, Figma, HTML/CSS responsive.">
-  <title>Jeux olympiques – vitrine | Projet</title>
+  <meta name="description" content="Site vitrine BMX Freestyle JO Paris 2024 — HTML/CSS selon un cahier des charges.">
+  <title>BMX Freestyle JO — Site vitrine | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,25 +32,29 @@
 
     <header class="story-hero" aria-labelledby="story-title">
       <div class="story-hero__bg" aria-hidden="true">
-        <img src="../img/jeux-olympiques/project-jo.png" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <img class="story-hero__poster" src="../img/jeux-olympiques/jo-palmares.webp" alt="" width="1898" height="1076" decoding="async">
+        <video class="story-hero__video" autoplay muted loop playsinline preload="metadata" poster="../img/jeux-olympiques/jo-palmares.webp">
+          <source src="../img/jeux-olympiques/jo-demo.mp4" type="video/mp4">
+        </video>
         <div class="story-hero__veil"></div>
       </div>
       <div class="story-hero__content">
-        <p class="story-eyebrow">DA · Vitrine événementielle</p>
+        <p class="story-eyebrow">HTML · CSS · Site vitrine</p>
         <div class="story-hero__ribbon" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-        <h1 id="story-title">Jeux olympiques</h1>
+        <h1 id="story-title">BMX Freestyle JO</h1>
         <p class="story-hero__tagline">
-          Site thématique centré sur l’esthétique : maquette Figma, hiérarchie visuelle forte
-          et intégration responsive (projet pédagogique, sans revendication de marques officielles).
+          Site vitrine thématique autour du BMX Freestyle aux Jeux olympiques de Paris 2024,
+          réalisé selon un <strong>cahier des charges</strong> pour une vitrine simple : accueil,
+          règles de l’épreuve et palmarès.
         </p>
         <ul class="story-tags" aria-label="Technologies">
           <li>HTML</li>
           <li>CSS</li>
-          <li>Figma</li>
-          <li>DA</li>
+          <li>Site vitrine</li>
+          <li>Cahier des charges</li>
         </ul>
         <div class="story-hero__actions">
-          <a href="https://github.com/swtori" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Code (GitHub)</a>
+          <a href="https://github.com/swtori/Bmx-Freestyle" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Code (GitHub)</a>
         </div>
       </div>
       <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
@@ -59,56 +63,148 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-1">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">01 — Direction artistique</p>
-          <h2 id="ch-1">L’énergie du mouvement</h2>
+          <p class="story-eyebrow">01 — Cahier des charges</p>
+          <h2 id="ch-1">Une vitrine simple et claire</h2>
           <p>
-            Palette inspirée des anneaux, typographie condensée et rythme visuel rapide
-            pour évoquer la compétition et la diversité des disciplines.
+            Le site a été conçu à partir d’un <strong>cahier des charges pour site vitrine</strong> :
+            présenter l’épreuve, ses règles et les résultats officiels, sans fonctionnalités complexes.
+          </p>
+          <p>
+            Périmètre retenu : navigation légère entre quelques pages statiques, contenu lisible
+            et identité visuelle sombre inspirée de l’univers olympique (projet pédagogique,
+            sans revendication de marques officielles).
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt">
-          <img src="../img/jeux-olympiques/project-jo.png" width="748" height="433" alt="Mockup site Jeux olympiques" loading="lazy" decoding="async">
-          <figcaption>Intégration HTML/CSS</figcaption>
+          <img src="../img/jeux-olympiques/jo-regles.webp" width="1898" height="1079" alt="Page Règles du BMX Freestyle" loading="lazy" decoding="async">
+          <figcaption>Page Règles — format, critères et parcours</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="story-showcase story-reveal" aria-label="Immersion">
-      <div class="story-showcase__wrap">
-        <img src="../img/jeux-olympiques/project-jo.png" width="1920" height="1080" alt="Vue large site JO" loading="lazy" decoding="async">
-        <div class="story-showcase__caption">
-          <p class="story-eyebrow">02 — Parcours</p>
-          <p>Navigation par discipline et grilles responsive.</p>
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">02 — Contenu</p>
+          <h2 id="ch-2">Règles et palmarès JO 2024</h2>
+          <p>
+            La page <strong>Règles</strong> détaille le format de compétition, les critères
+            d’évaluation des juges et les modules du parcours Park.
+          </p>
+          <p>
+            La page <strong>Palmarès</strong> affiche les résultats officiels hommes et femmes
+            du BMX Freestyle Park — Jeux olympiques de Paris 2024.
+          </p>
         </div>
+        <figure class="story-split__visual story-frame">
+          <img src="../img/jeux-olympiques/jo-palmares.webp" width="1898" height="1076" alt="Page Palmarès JO 2024 BMX Freestyle Park" loading="lazy" decoding="async">
+          <figcaption>Palmarès — podium hommes et femmes</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+    <section class="story-chapter story-reveal" aria-labelledby="ch-3">
       <div class="story-chapter__inner">
-        <p class="story-eyebrow story-chapter__center">03 — Livrables</p>
-        <h2 id="ch-2" class="story-chapter__center">De Figma au navigateur</h2>
-        <ul class="story-metrics story-metrics--three">
+        <p class="story-eyebrow story-chapter__center">03 — Technique</p>
+        <h2 id="ch-3" class="story-chapter__center">Intégration statique</h2>
+        <p class="story-chapter__lead">
+          Projet structuré en pages HTML, feuilles CSS modulaires (<code>base</code>,
+          <code>home</code>, <code>pages</code>) et assets (images, vidéo de fond), avec une
+          navigation commune en JavaScript léger.
+        </p>
+        <div class="jo-tech-layout story-reveal">
+        <figure class="jo-tree">
+          <div class="jo-tree__window">
+            <div class="jo-tree__titlebar" aria-hidden="true">
+              <span class="jo-tree__dots"><i></i><i></i><i></i></span>
+              <span class="jo-tree__title">BMX-FREESTYLE</span>
+            </div>
+            <ul class="jo-tree__list" role="tree" aria-label="Arborescence du projet">
+              <li class="jo-tree__node jo-tree__node--root" role="treeitem" aria-expanded="true">
+                <span class="jo-tree__name jo-tree__name--folder">BMX-FREESTYLE</span>
+                <ul role="group">
+                  <li class="jo-tree__node" role="treeitem" aria-expanded="true">
+                    <span class="jo-tree__name jo-tree__name--folder">assets</span>
+                    <ul role="group">
+                      <li class="jo-tree__node" role="treeitem" aria-expanded="true">
+                        <span class="jo-tree__name jo-tree__name--folder">images</span>
+                        <ul role="group">
+                          <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--img">abc.png</span></li>
+                          <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--img">jo.png</span></li>
+                          <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--img">regle1.png</span></li>
+                          <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--img">regle2.png</span></li>
+                          <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--img">regle3.png</span></li>
+                        </ul>
+                      </li>
+                      <li class="jo-tree__node" role="treeitem" aria-expanded="true">
+                        <span class="jo-tree__name jo-tree__name--folder">videos</span>
+                        <ul role="group">
+                          <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--video">bg.mp4</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="jo-tree__node" role="treeitem" aria-expanded="true">
+                    <span class="jo-tree__name jo-tree__name--folder">css</span>
+                    <ul role="group">
+                      <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--css">base.css</span></li>
+                      <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--css">home.css</span></li>
+                      <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--css">pages.css</span></li>
+                    </ul>
+                  </li>
+                  <li class="jo-tree__node" role="treeitem" aria-expanded="true">
+                    <span class="jo-tree__name jo-tree__name--folder">js</span>
+                    <ul role="group">
+                      <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--js">nav.js</span></li>
+                    </ul>
+                  </li>
+                  <li class="jo-tree__node" role="treeitem" aria-expanded="true">
+                    <span class="jo-tree__name jo-tree__name--folder">pages</span>
+                    <ul role="group">
+                      <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--html">palmares.html</span></li>
+                      <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--html">regles.html</span></li>
+                    </ul>
+                  </li>
+                  <li class="jo-tree__node" role="treeitem"><span class="jo-tree__name jo-tree__name--html jo-tree__name--entry">index.html</span></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </figure>
+        <ul class="jo-tech-layout__metrics story-metrics">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Figma</span>
-            <span class="story-metric__label">Planches couleurs, typo et composants réutilisables.</span>
+            <span class="story-metric__value">Pages</span>
+            <span class="story-metric__label">Accueil, règles et palmarès — parcours vitrine court.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Responsive</span>
-            <span class="story-metric__label">Grilles fluides et adaptation mobile / desktop.</span>
+            <span class="story-metric__value">CSS</span>
+            <span class="story-metric__label">Thème sombre, cartes et mise en page responsive.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Assets</span>
-            <span class="story-metric__label">Optimisation des visuels et contrastes accessibles.</span>
+            <span class="story-metric__value">CDC</span>
+            <span class="story-metric__label">Livrable aligné sur un cahier des charges site vitrine.</span>
           </li>
         </ul>
+        </div>
+        <p class="jo-tech-layout__caption">Arborescence HTML, CSS, assets images et vidéo</p>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Vue du site">
+      <div class="story-showcase__wrap">
+        <img src="../img/jeux-olympiques/jo-regles.webp" width="1898" height="1079" alt="Vue large — règles du BMX Freestyle" loading="lazy" decoding="async">
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">04 — Résultat</p>
+          <p>Site vitrine opérationnel : contenu olympique BMX Freestyle, intégré en HTML/CSS.</p>
+        </div>
       </div>
     </section>
 
     <footer class="story-footer story-reveal">
       <div class="story-footer__inner">
-        <p>Projet DA & intégration — vitrine événementielle.</p>
+        <p>Site vitrine BMX Freestyle JO — cahier des charges, pages statiques HTML/CSS.</p>
         <div class="story-footer__actions">
-          <a href="https://github.com/swtori" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
+          <a href="https://github.com/swtori/Bmx-Freestyle" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
           <a href="../contact.html" class="btn btn--outline">Me contacter</a>
         </div>
       </div>

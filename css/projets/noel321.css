@@ -17,6 +17,17 @@
   text-shadow: 0 2px 12px rgba(196, 30, 58, 0.4);
 }
 
+.projet-page.projet-noel .story-hero__bg img {
+  object-position: center 40%;
+  filter: brightness(1.15) contrast(1.05) saturate(1.08);
+}
+
+.projet-page.projet-noel .story-hero__veil {
+  background:
+    linear-gradient(90deg, rgba(26, 31, 46, 0.55) 0%, rgba(26, 31, 46, 0.12) 42%, transparent 62%),
+    linear-gradient(180deg, rgba(45, 27, 40, 0.05) 0%, rgba(26, 31, 46, 0.45) 78%, var(--bg) 100%);
+}
+
 .projet-page.projet-noel .story-showcase__wrap {
   border-style: dashed;
 }

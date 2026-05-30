@@ -47,8 +47,8 @@ var PROJECTS = [
     detailHref: "projets/the-bakery.html",
     carousel: false,
     description:
-      "Jeu desktop Python en équipe : cahier des charges, logique de jeu et code modulaire.",
-    tags: ["Python", "Desktop", "Travail d’équipe"]
+      "Jeu Python en équipe : identification des besoins, cahier des charges, suivi du projet et développement desktop.",
+    tags: ["Python", "Mode projet", "Cahier des charges", "Travail d’équipe"]
   },
   {
     id: "app-covoiturage-maui",
@@ -58,54 +58,54 @@ var PROJECTS = [
     detailHref: "projets/covoiturage-maui.html",
     carousel: true,
     description:
-      "App .NET MAUI multiplateforme : authentification, trajets, réservation et base de données.",
-    tags: ["C#", ".NET MAUI", "SQL", "Mobile"]
+      "Application mobile C# .NET MAUI réalisée seul : BDD, authentification, gestion des covoiturages (CDC), tests et déploiement.",
+    tags: ["C#", ".NET MAUI", "SQL", "Projet solo", "Mobile"]
   },
   {
     id: "site-jeux-olympiques",
-    title: "Site thématique Jeux olympiques",
-    github: "https://github.com/swtori",
-    image: "img/jeux-olympiques/project-jo.png",
+    title: "BMX Freestyle JO — site vitrine",
+    github: "https://github.com/swtori/Bmx-Freestyle",
+    image: "img/jeux-olympiques/jo-palmares.webp",
     detailHref: "projets/jeux-olympiques.html",
     carousel: false,
     description:
-      "Vitrine événementielle responsive : DA Figma et navigation par disciplines.",
-    tags: ["HTML", "CSS", "Figma", "DA"]
+      "Site vitrine HTML/CSS (CDC) : BMX Freestyle JO Paris 2024 — règles, palmarès et pages statiques.",
+    tags: ["HTML", "CSS", "Site vitrine", "Cahier des charges"]
   },
   {
     id: "ongles-nailart",
-    title: "Ongles – vitrine nail art",
+    title: "CM Beauty – vitrine onglerie",
     github: "https://github.com/swtori",
-    image: "img/ongles/ongles-preview.webp",
+    image: "img/ongles/ongles-accueil.webp",
     detailHref: "projets/ongles-nailart.html",
     carousel: false,
     description:
-      "Vitrine nail art responsive : DA soignée et référencement SEO naturel.",
-    tags: ["HTML", "CSS", "SEO", "Responsive"]
+      "Site vitrine pour une cliente onglerie : besoins, références esthétiques, mode projet et service en ligne fonctionnel.",
+    tags: ["HTML", "CSS", "Mode projet", "Présence en ligne"]
   },
   {
     id: "portfolios-builders",
     title: "Portfolios builders (série GitHub Pages)",
     url: "https://swtori.github.io/spinophore",
     github: "https://github.com/swtori",
-    image: "img/portfolios-builders/portfolios-builders-preview.png",
+    image: "img/portfolios-builders/pb-spinophore.webp",
     detailHref: "projets/portfolios-builders.html",
     carousel: true,
     description:
-      "Série de portfolios builders sur GitHub Pages : x_Ced_x, _Shusui, spinophore, Hqky.",
-    tags: ["HTML", "CSS", "GitHub Pages", "SEO"]
+      "Quatre sites vitrine pour builders : besoins, portfolios, SEO léger, mode projet en équipe et déploiement GitHub Pages.",
+    tags: ["HTML", "GitHub Pages", "Mode projet", "SEO"]
   },
   {
     id: "mandela-biography",
     title: "Nelson Mandela – biographie (vitrine)",
     url: "https://steevenngouala05-lgtm.github.io/mandela-biography/",
     github: "https://github.com/steevenngouala05-lgtm/mandela-biography",
-    image: "img/mandela-biography/nelson-mandela.webp",
+    image: "img/mandela-biography/mandela-hero.webp",
     detailHref: "projets/mandela-biography.html",
     carousel: true,
     description:
-      "Vitrine biographique : direction artistique, typographie et parcours de lecture.",
-    tags: ["HTML", "CSS", "DA", "GitHub Pages"]
+      "Site biographique : besoins, design moderne, mode projet, déploiement et hébergement pour une présence en ligne valorisée.",
+    tags: ["HTML", "CSS", "Mode projet", "Hébergement"]
   },
   {
     id: "noel321",
@@ -120,15 +120,15 @@ var PROJECTS = [
     tags: ["JavaScript", "HTML", "CSS"]
   },
   {
-    id: "lusciana-crm",
+    id: "admin-lusciana-crm",
     title: "admin.lusciana.fr – CRM & commissions",
     url: "https://admin.lusciana.fr",
     github: "https://github.com/swtori",
-    image: "img/lusciana/lusciana-admin.webp",
+    image: "img/adminlusciana/admin-preview.webp",
     detailHref: "projets/lusciana-crm.html",
     carousel: true,
     description:
-      "CRM agents et commissions : Docker, MongoDB et API sécurisée sur VPS.",
-    tags: ["Docker", "VPS", "MongoDB", "API"]
+      "CRM équipe et commissions : API REST MVC PHP, MongoDB, Docker, VPS Hostinger — backend, MCD/MLD et déploiement.",
+    tags: ["PHP", "MVC", "Docker", "Mode projet"]
   }
 ];

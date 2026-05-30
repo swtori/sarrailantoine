@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="admin.lusciana.fr — CRM, Docker, MongoDB, API sur VPS.">
+  <meta name="description" content="admin.lusciana.fr — CRM API REST MVC PHP, MongoDB, arborescence backend, MCD/MLD, Docker, VPS Hostinger.">
   <title>admin.lusciana.fr – CRM | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,25 +32,28 @@
 
     <header class="story-hero" aria-labelledby="story-title">
       <div class="story-hero__bg" aria-hidden="true">
-        <img src="../img/lusciana/lusciana-admin.webp" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
+        <img src="../img/adminlusciana/admin-hero.webp" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
         <div class="story-hero__veil"></div>
       </div>
       <div class="story-hero__content">
-        <p class="story-eyebrow">Back-office · Lusciana</p>
-        <h1 id="story-title">Commission Manager</h1>
+        <p class="story-eyebrow">CRM · Back-office · VPS</p>
+        <h1 id="story-title">admin.lusciana.fr</h1>
         <p class="story-hero__tagline">
-          CRM interne sur <strong>admin.lusciana.fr</strong> : agents, commissions, todolist.
-          Conteneurs Docker, MongoDB et API métier sur le même VPS que l’écosystème Lusciana.
+          CRM web complet pour la gestion d’équipe et des commissions : architecture MVC,
+          API REST JSON en PHP, persistance MongoDB, frontend SPA, conteneurs Docker,
+          déploiement sur VPS Hostinger et versionning GitHub.
         </p>
         <ul class="story-tags" aria-label="Technologies">
+          <li>PHP</li>
+          <li>MVC</li>
           <li>Docker</li>
-          <li>VPS</li>
           <li>MongoDB</li>
-          <li>API</li>
+          <li>JWT</li>
+          <li>VPS</li>
         </ul>
         <div class="story-hero__actions">
           <a href="https://admin.lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Ouvrir l’admin</a>
-          <a href="lusciana-vitrine.html" class="btn btn--outline">Fiche vitrine</a>
+          <a href="https://github.com/swtori" class="btn btn--outline" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
       <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
@@ -59,70 +62,392 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-1">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">01 — Séparation</p>
-          <h2 id="ch-1">Public vs interne</h2>
+          <p class="story-eyebrow">01 — Application</p>
+          <h2 id="ch-1">Équipe, commissions & rôles</h2>
           <p>
-            La vitrine <strong>lusciana.fr</strong> reste accessible au grand public.
-            Le CRM vit sur un sous-domaine dédié, avec authentification et données isolées.
+            <strong>Création d’un CRM web complet</strong> sur <strong>admin.lusciana.fr</strong> :
+            gestion des utilisateurs, organisation des <strong>rôles et habilitations</strong>,
+            suivi des agents, commissions et tâches (todolist).
+          </p>
+          <p>
+            <a href="https://admin.lusciana.fr" target="_blank" rel="noopener noreferrer">Ouvrir admin.lusciana.fr →</a>
           </p>
         </div>
-        <figure class="story-split__visual story-frame story-frame--tilt">
-          <img src="../img/lusciana/lusciana-admin.webp" width="748" height="433" alt="Écran de connexion CRM" loading="lazy" decoding="async">
-          <figcaption>Connexion sécurisée</figcaption>
+        <figure class="story-split__visual story-frame lc-ui-frame story-frame--tilt">
+          <img src="../img/adminlusciana/admin-commissions.webp" width="1222" height="1079" alt="Liste des commissions — cartes projets Commission Manager" loading="lazy" decoding="async">
+          <figcaption>Liste des commissions — données MongoDB via l’API</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="story-showcase story-reveal" aria-label="Interface">
-      <div class="story-showcase__wrap">
-        <img src="../img/lusciana/lusciana-admin.webp" width="1920" height="1080" alt="Vue large écran de connexion CRM" loading="lazy" decoding="async">
+    <section class="story-showcase story-reveal" aria-label="Écran de connexion">
+      <div class="story-showcase__wrap lc-showcase--ui">
+        <img src="../img/adminlusciana/admin-login.webp" width="629" height="360" alt="Écran de connexion Commission Manager — admin@lusciana.fr, API MongoDB" loading="lazy" decoding="async">
         <div class="story-showcase__caption">
-          <p class="story-eyebrow">02 — Accès</p>
-          <p>Point d’entrée vers les modules métier : agents, commissions, tâches.</p>
+          <p class="story-eyebrow">Accès</p>
+          <p>Connexion JWT — chargement des données depuis l’API serveur MongoDB.</p>
         </div>
       </div>
     </section>
 
-    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+    <section class="story-chapter story-chapter--alt story-reveal lc-mvc-chapter" aria-labelledby="ch-2">
       <div class="story-chapter__inner">
-        <p class="story-eyebrow story-chapter__center">03 — Fonctionnel</p>
-        <h2 id="ch-2" class="story-chapter__center">Modules & infrastructure</h2>
-        <ul class="story-metrics">
+        <p class="story-eyebrow story-chapter__center">02 — Backend</p>
+        <h2 id="ch-2" class="story-chapter__center">MVC orienté API REST</h2>
+        <figure class="lc-mvc-hero story-frame">
+          <img src="../img/adminlusciana/admin-mvc-diagram.webp" width="1536" height="1024" alt="Schéma MVC orienté API REST — Controller PHP, Repositories MongoDB, JsonResponse et frontend app.js" loading="lazy" decoding="async">
+          <figcaption>MVC API — Controller → Model (repos/services) → JSON → frontend</figcaption>
+        </figure>
+        <div class="lc-mvc-copy">
+          <p>
+            Le backend est une <strong>API REST JSON en PHP</strong> — pas de templates HTML côté serveur.
+            Le «&nbsp;V&nbsp;» (View) est remplacé par des réponses JSON&nbsp;; le frontend
+            (<code>pages/assets/app.js</code>) gère toute l’UI.
+          </p>
+          <p><strong>Point d’entrée :</strong> requête HTTP → <code>public/index.php</code> →
+            <code>bootstrap.php</code> → <code>App::run()</code> (config, MongoDB, CORS, routage, JSON).</p>
+          <div class="lc-table-wrap" role="region" aria-label="Les trois couches MVC">
+            <table class="lc-table lc-table--readable">
+              <thead>
+                <tr>
+                  <th scope="col">Couche</th>
+                  <th scope="col">Rôle</th>
+                  <th scope="col">Dans le projet</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Controller</strong></td>
+                  <td>Requête HTTP, auth/rôles, validation, appel repo/service, <code>JsonResponse</code></td>
+                  <td><code>backend/src/controllers/</code></td>
+                </tr>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td>Données métier — documents MongoDB (tableaux associatifs), pas de classes Model dédiées</td>
+                  <td>Collections <code>todos</code>, <code>users</code>, <code>agents</code>, …</td>
+                </tr>
+                <tr>
+                  <td><strong>View</strong></td>
+                  <td>Absente côté PHP → JSON pour le frontend</td>
+                  <td><code>Http/JsonResponse.php</code>, <code>MongoSerializer</code></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>
+            En pratique&nbsp;: <strong>Repositories/</strong> (CRUD MongoDB) et
+            <strong>Services/</strong> (AuthService, import historique, engagement agents).
+            Routes câblées à la main dans <code>App::registerRoutes()</code>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-3">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">03 — Structure & flux</p>
+        <h2 id="ch-3" class="story-chapter__center">Exploration du backend</h2>
+        <p class="story-chapter__lead">
+          Arborescence condensée du dépôt, flux d’une requête type et exemple concret de création de tâche.
+        </p>
+        <div class="lc-tech-layout story-reveal">
+          <figure class="lc-tree">
+            <div class="lc-tree__window">
+              <div class="lc-tree__titlebar" aria-hidden="true">
+                <span class="lc-tree__dots"><i></i><i></i><i></i></span>
+                <span class="lc-tree__title">lusciana-admin</span>
+              </div>
+              <ul class="lc-tree__list" role="tree" aria-label="Arborescence lusciana-admin">
+                <li class="lc-tree__node lc-tree__node--root" role="treeitem" aria-expanded="true">
+                  <span class="lc-tree__name lc-tree__name--folder">lusciana-admin</span>
+                  <ul role="group">
+                    <li class="lc-tree__node" role="treeitem" aria-expanded="true">
+                      <span class="lc-tree__name lc-tree__name--folder">Frontend (UI)</span>
+                      <ul role="group">
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--html">pages/index.html</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--html">admin/index.html</span></li>
+                        <li class="lc-tree__node" role="treeitem" aria-expanded="true">
+                          <span class="lc-tree__name lc-tree__name--folder">pages/assets</span>
+                          <ul role="group">
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--js">app.js</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--css">app.css</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--css">todos-board.css</span></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="lc-tree__node" role="treeitem" aria-expanded="true">
+                      <span class="lc-tree__name lc-tree__name--folder">Backend (API PHP)</span>
+                      <ul role="group">
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--php lc-tree__name--entry">public/index.php</span></li>
+                        <li class="lc-tree__node" role="treeitem" aria-expanded="true">
+                          <span class="lc-tree__name lc-tree__name--folder">src</span>
+                          <ul role="group">
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--php">App.php</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--folder">Http/</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--folder">controllers/</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--folder">services/</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--folder">Repositories/</span></li>
+                            <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name lc-tree__name--folder">config/</span></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="lc-tree__node" role="treeitem" aria-expanded="true">
+                      <span class="lc-tree__name lc-tree__name--folder">MongoDB</span>
+                      <ul role="group">
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">users</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">agents</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">commissions</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">expenses</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">todos</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">agent_engagement_events</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">login_events</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">refresh_tokens</span></li>
+                        <li class="lc-tree__node" role="treeitem"><span class="lc-tree__name">import_runs</span></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </figure>
+          <div class="lc-tech-side">
+            <ol class="lc-flow" aria-label="Flux GET /api/todos">
+              <li><span>GET /api/todos</span> + Bearer JWT</li>
+              <li><span>App::run()</span> → dispatch</li>
+              <li><span>TodosController</span> → authenticate</li>
+              <li><span>TodoRepository</span> → MongoDB</li>
+              <li><span>JsonResponse</span> → frontend</li>
+            </ol>
+            <div class="lc-panel">
+              <p class="lc-panel__title">Exemple — création d’une tâche</p>
+              <ol class="lc-panel__list">
+                <li><code>AuthService::requireRole()</code> — JWT + rôle builder min.</li>
+                <li><code>Validator</code> — title, status obligatoires.</li>
+                <li><code>TodoRepository::insert()</code> — écriture MongoDB.</li>
+                <li><code>MongoSerializer::normalize()</code> — BSON → JSON.</li>
+                <li><code>JsonResponse</code> — 201 <code>{ message, item }</code>.</li>
+              </ol>
+              <p class="lc-panel__note">Pas de classe Todo PHP&nbsp;: le modèle = document MongoDB + règles controller/service.</p>
+            </div>
+            <ul class="story-metrics lc-tech-metrics">
+              <li class="story-metric">
+                <span class="story-metric__value">Onglets UI</span>
+                <span class="story-metric__label">Dashboard, Commissions, Agents, Analyst, Users, Todos, Data, Compte.</span>
+              </li>
+              <li class="story-metric">
+                <span class="story-metric__value">Rôles</span>
+                <span class="story-metric__label">guest → builder → manager → admin → superadmin.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="lc-tech-layout__caption">Navigateur (<code>app.js</code>) → <code>/api/*</code> → Controller → Repository/Service → MongoDB → JSON</p>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-4">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">04 — Données</p>
+        <h2 id="ch-4" class="story-chapter__center">MCD — modèle conceptuel</h2>
+        <p class="story-chapter__lead">
+          Base <strong>MongoDB</strong> documentaire (nom dans <code>.env</code>) — 9 collections actives.
+          Pas de clés étrangères SGBD&nbsp;; références logiques via <code>ObjectId</code> ou pseudo (commissions).
+        </p>
+        <ul class="lc-entities" aria-label="Entités principales">
+          <li class="lc-entity">
+            <h3>Utilisateur</h3>
+            <p><code>id</code>, <code>name</code>, <code>email</code> (UK), <code>passwordHash</code>, <code>role</code>, <code>isActive</code>, <code>tokenVersion</code>, <code>agentId</code>, <code>assignedAgentIds[]</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Agent</h3>
+            <p><code>pseudo</code> (UK), <code>category</code>, <code>discord</code>, <code>commissionRate</code>, <code>isCurrentTeamMember</code>, IBAN, adresse, <code>legacyImport</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Commission</h3>
+            <p><code>buildName</code>, <code>buildSize</code>, <code>worldName</code>, <code>price</code>, <code>selectedAgents[]</code>, <code>realizedBy[]</code>, <code>priceDistribution</code>, <code>createdBy</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Tâche</h3>
+            <p><code>title</code>, <code>description</code>, <code>status</code>, <code>archived</code>, <code>deadline</code>, <code>assignedTo</code>, <code>createdBy</code>, <code>updatedBy</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Dépense</h3>
+            <p><code>label</code>, <code>amount</code>, <code>currency</code>, <code>date</code>, <code>createdBy</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Événement engagement</h3>
+            <p><code>agentId</code>, <code>type</code>, <code>note</code>, <code>occurredAt</code>, <code>createdByUserId</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Jeton rafraîchissement</h3>
+            <p><code>tokenId</code>, <code>userId</code>, <code>tokenHash</code>, <code>expiresAt</code>, <code>revokedAt</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Événement connexion</h3>
+            <p><code>userId</code>, <code>occurredAt</code>, <code>ipAddress</code>, <code>userAgent</code></p>
+          </li>
+          <li class="lc-entity">
+            <h3>Import run</h3>
+            <p><code>key</code> (UK), hashes agents/commissions, compteurs, <code>completedAt</code></p>
+          </li>
+        </ul>
+        <div class="lc-table-wrap lc-table-wrap--spaced" role="region" aria-label="Associations Merise">
+          <table class="lc-table lc-table--compact">
+            <thead>
+              <tr>
+                <th scope="col">Association</th>
+                <th scope="col">A</th>
+                <th scope="col">Card.</th>
+                <th scope="col">B</th>
+                <th scope="col">Card.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Lier</td><td>Utilisateur</td><td>0,1</td><td>Agent</td><td>0,1</td></tr>
+              <tr><td>Accéder</td><td>Utilisateur</td><td>0,N</td><td>Agent</td><td>0,N</td></tr>
+              <tr><td>Créer</td><td>Utilisateur</td><td>1,N</td><td>Commission / Dépense / Tâche</td><td>0,N</td></tr>
+              <tr><td>Participer</td><td>Agent</td><td>0,N</td><td>Commission</td><td>0,N</td></tr>
+              <tr><td>Engagement</td><td>Agent</td><td>1,N</td><td>Événement engagement</td><td>0,N</td></tr>
+              <tr><td>Session</td><td>Utilisateur</td><td>1,N</td><td>Refresh token</td><td>0,N</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="lc-enums" aria-label="Énumérations métier">
+          <li><strong>Rôle</strong> guest → builder → manager → admin → superadmin</li>
+          <li><strong>Catégorie agent</strong> client · apprentice · builder · manager</li>
+          <li><strong>Statut tâche</strong> todo · in_progress · done</li>
+          <li><strong>Type engagement</strong> meeting_absence · survey_no_response · task_missed · other_inactivity</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-5">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">05 — MLD</p>
+        <h2 id="ch-5" class="story-chapter__center">Implémentation MongoDB</h2>
+        <p class="story-chapter__lead">
+          Schéma logique tel qu’il existe dans le code — clés métier, FK logiques et champs dénormalisés.
+        </p>
+        <div class="lc-collections">
+          <details class="lc-collection" open>
+            <summary><code>users</code></summary>
+            <p><code>_id</code> ObjectId PK · <code>email</code> UK · <code>role</code> enum · <code>agentId</code> → agents · <code>assignedAgentIds[]</code> · <code>tokenVersion</code> invalidation JWT</p>
+          </details>
+          <details class="lc-collection">
+            <summary><code>agents</code></summary>
+            <p><code>pseudo</code> UK · <code>category</code> · <code>paymentMethods[]</code> · <code>commissionRate</code> · <code>legacyImport</code> objet import Excel</p>
+          </details>
+          <details class="lc-collection">
+            <summary><code>commissions</code></summary>
+            <p><code>selectedAgents[]</code> / <code>realizedBy[]</code> par pseudo · <code>priceDistribution</code> { pseudo: montant } · <code>createdBy</code> → users · clé import&nbsp;: (<code>legacyImport.source</code>, month, row, column, type)</p>
+          </details>
+          <details class="lc-collection">
+            <summary><code>expenses</code> · <code>todos</code></summary>
+            <p><code>expenses</code>&nbsp;: label, amount, currency (EUR), date, createdBy.<br>
+              <code>todos</code>&nbsp;: title obligatoire, status enum, <code>assignedTo</code> texte libre, createdBy/updatedBy + noms dénormalisés.</p>
+          </details>
+          <details class="lc-collection">
+            <summary><code>agent_engagement_events</code> · <code>login_events</code></summary>
+            <p>Engagements négatifs (absence, retard…) liés à <code>agentId</code>. Historique connexions par <code>userId</code>.</p>
+          </details>
+          <details class="lc-collection">
+            <summary><code>refresh_tokens</code> · <code>import_runs</code></summary>
+            <p>JWT refresh (<code>tokenId</code> UK, hash bcrypt). Trace import historique (<code>key</code> ex. lusciana-historical-import, md5 NDJSON).</p>
+          </details>
+          <details class="lc-collection lc-collection--sql">
+            <summary>Équivalent relationnel (migration SQL)</summary>
+            <pre class="lc-sql" aria-label="Schéma SQL équivalent"><code>users(_id PK, email UK, role, agentId FK→agents, …)
+user_assigned_agents(userId, agentId)
+commissions(_id PK, createdBy FK→users, …)
+commission_selected_agents(commissionId, agentPseudo)
+todos(_id PK, createdBy FK, updatedBy FK, …)
+agent_engagement_events(agentId FK, …)
+refresh_tokens(tokenId UK, userId FK, …)</code></pre>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-6">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">06 — Patrimoine informatique</p>
+          <h2 id="ch-6">Ressources, continuité & exploitation</h2>
+          <p>
+            Recensement et identification des <strong>ressources numériques</strong>, exploitation
+            des référentiels, normes et standards, mise en place et vérification des
+            <strong>niveaux d’habilitation</strong>.
+          </p>
+          <p>
+            Vérification de la <strong>continuité du service</strong>, gestion des <strong>sauvegardes</strong>,
+            collecte et orientation des demandes, traitement des incidents et évolutions
+            (assistance, applicatif et système).
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame lc-ui-frame story-frame--tilt">
+          <img src="../img/adminlusciana/admin-tasks.webp" width="1157" height="581" alt="Todo list Kanban — colonnes Ouvert, En cours, Terminé" loading="lazy" decoding="async">
+          <figcaption>Todo list — board Kanban et statistiques d’équipe</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-7">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">07 — Projet & mise en production</p>
+          <h2 id="ch-7">Mode projet, tests & déploiement</h2>
+          <p>
+            <strong>Mode projet</strong> : analyse des objectifs, planification des tâches,
+            suivi et analyse des écarts. <strong>Tests d’intégration et d’acceptation</strong>,
+            <strong>déploiement du service</strong> sur <strong>VPS Hostinger</strong>
+            et accompagnement des utilisateurs.
+          </p>
+          <p>
+            Environnement d’apprentissage : GitHub, Docker, stack technique — veille et montée
+            en compétences (backend, MVC, déploiement VPS).
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame lc-ui-frame">
+          <img src="../img/adminlusciana/admin-analytics.webp" width="1164" height="628" alt="Onglet Data Analyst — CA, taxe Lusciana, part équipe et dépenses" loading="lazy" decoding="async">
+          <figcaption>Data Analyst — rentrées, sorties et saisie des dépenses</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-8">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">08 — Points concernés</p>
+        <h2 id="ch-8" class="story-chapter__center">Compétences mobilisées</h2>
+        <p class="story-chapter__lead">
+          Patrimoine informatique, conduite de projet, service aux utilisateurs et organisation
+          du développement professionnel sur une stack en production.
+        </p>
+        <ul class="story-metrics lc-metrics--four">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Auth</span>
-            <span class="story-metric__label">Session et écran de connexion dédié.</span>
+            <span class="story-metric__value">Patrimoine</span>
+            <span class="story-metric__label">Ressources, normes, habilitations, continuité, sauvegardes, incidents et demandes.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Métier</span>
-            <span class="story-metric__label">Agents, commissions, todolist opérationnelle.</span>
+            <span class="story-metric__value">Mode projet</span>
+            <span class="story-metric__label">Objectifs, planification, suivi des tâches et analyse des écarts.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Docker</span>
-            <span class="story-metric__label">Services conteneurisés, redémarrage et volumes persistants.</span>
+            <span class="story-metric__value">Service</span>
+            <span class="story-metric__label">Tests, déploiement, mise à disposition et accompagnement des utilisateurs.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">MongoDB</span>
-            <span class="story-metric__label">API et persistance des données applicatives.</span>
+            <span class="story-metric__value">Dév. pro</span>
+            <span class="story-metric__label">GitHub, Docker, PHP/MVC, veille backend et déploiement VPS.</span>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="story-chapter story-chapter--alt story-reveal">
-      <div class="story-chapter__inner story-card-cta">
-        <p class="story-eyebrow">04 — Écosystème</p>
-        <h2>Vitrine & CRM, même VPS</h2>
-        <p>Retrouvez la partie publique du projet Lusciana : boutique, SEO et infra Cloudflare.</p>
-        <a href="lusciana-vitrine.html" class="story-card-cta__link">
-          <span class="story-card-cta__title">Fiche lusciana.fr</span>
-          <span class="story-card-cta__arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    </section>
-
     <footer class="story-footer story-reveal">
       <div class="story-footer__inner">
-        <p>Application métier en production sur VPS.</p>
+        <p>CRM admin.lusciana.fr — API REST MVC, MongoDB, Docker, VPS Hostinger, GitHub.</p>
         <div class="story-footer__actions">
           <a href="https://admin.lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">admin.lusciana.fr</a>
           <a href="../contact.html" class="btn btn--outline">Me contacter</a>

@@ -25,3 +25,35 @@
   letter-spacing: 0.06em;
   font-size: 0.9rem;
 }
+
+.pb-metrics--four {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .pb-metrics--four {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .pb-metrics--four {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pb-metrics--four .story-metric__value {
+  font-size: 0.95rem;
+  line-height: 1.25;
+}
+
+.projet-page.projet-portfolios .story-split__text a {
+  font-weight: 500;
+  color: var(--story-accent);
+}
+
+.projet-page.projet-portfolios .story-split__text a:hover {
+  color: var(--story-paper);
+}

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The Bakery — jeu Python desktop, travail d’équipe, cahier des charges.">
+  <meta name="description" content="The Bakery — jeu Python desktop, cadrage des besoins, cahier des charges et suivi de projet en équipe.">
   <title>The Bakery – Python | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,12 +39,13 @@
         <p class="story-eyebrow">Python · Desktop · Jeu 2D</p>
         <h1 id="story-title">The Bakery</h1>
         <p class="story-hero__tagline">
-          Jeu développé en équipe : cahier des charges, logique de jeu, assets graphiques
-          et architecture modulaire en Python.
+          Projet mené en équipe : d’abord identifier les besoins, structurer le travail
+          avec un cahier des charges clair, puis développer le jeu en Python.
         </p>
         <ul class="story-tags" aria-label="Technologies">
           <li>Python</li>
-          <li>Desktop</li>
+          <li>Mode projet</li>
+          <li>Cahier des charges</li>
           <li>Travail d’équipe</li>
         </ul>
         <div class="story-hero__actions">
@@ -57,54 +58,85 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-1">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">01 — Concept</p>
-          <h2 id="ch-1">Un jeu, une équipe</h2>
+          <p class="story-eyebrow">01 — Cadrage</p>
+          <h2 id="ch-1">Identifier les besoins</h2>
           <p>
-            Projet scolaire mené en groupe : définition des règles, répartition des rôles
-            et itérations sur la jouabilité avant l’implémentation finale.
+            En amont du développement, nous avons commencé par clarifier ce dont le projet avait
+            besoin : objectifs pédagogiques, contraintes techniques (desktop, Python), règles de jeu,
+            livrables attendus et répartition des rôles dans l’équipe.
+          </p>
+          <p>
+            Cette phase a permis d’aligner tout le groupe sur le même périmètre avant d’écrire
+            une ligne de code.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt">
-          <img src="../img/the-bakery/project-the-bakery.png" width="748" height="433" alt="Direction artistique The Bakery" loading="lazy" decoding="async">
-          <figcaption>Direction artistique du jeu</figcaption>
+          <img src="../img/the-bakery/bakery-cadrage.webp" width="1536" height="1024" alt="Cadrage des besoins — The Bakery" loading="lazy" decoding="async">
+          <figcaption>Recenser besoins, contraintes et livrables avant le code</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="story-showcase story-reveal" aria-label="Visuel">
-      <div class="story-showcase__wrap">
-        <img src="../img/the-bakery/project-the-bakery.png" width="1920" height="1080" alt="Vue large The Bakery" loading="lazy" decoding="async">
-        <div class="story-showcase__caption">
-          <p class="story-eyebrow">02 — Univers</p>
-          <p>Palette chaude, interface lisible et boucle de jeu pensée pour le desktop.</p>
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-2">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">02 — Planification</p>
+          <h2 id="ch-2">Cahier des charges structuré</h2>
+          <p>
+            Les activités ont été planifiées à partir d’un <strong>cahier des charges propre</strong> :
+            fonctionnalités attendues, architecture modulaire, assets graphiques, jalons et critères
+            d’acceptation pour valider chaque étape.
+          </p>
+          <p>
+            Ce document a servi de référence commune pour coder, tester et livrer le jeu de façon cohérente.
+          </p>
         </div>
+        <figure class="story-split__visual story-frame">
+          <img src="../img/the-bakery/bakery-cdc.webp" width="1536" height="1024" alt="Cahier des charges — The Bakery" loading="lazy" decoding="async">
+          <figcaption>Spécifications, jalons et critères d’acceptation</figcaption>
+        </figure>
       </div>
     </section>
 
-    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+    <section class="story-chapter story-reveal" aria-labelledby="ch-3">
       <div class="story-chapter__inner">
-        <p class="story-eyebrow story-chapter__center">03 — Méthodologie</p>
-        <h2 id="ch-2" class="story-chapter__center">Organisation du travail</h2>
+        <p class="story-eyebrow story-chapter__center">03 — Suivi de projet</p>
+        <h2 id="ch-3" class="story-chapter__center">Indicateurs et écarts</h2>
+        <p class="story-chapter__lead">
+          Lorsque un suivi de projet a été mis en place, nous avons évalué les indicateurs
+          (avancement, tâches restantes, respect des jalons) et analysé les écarts par rapport
+          au planning initial pour réajuster le travail en équipe.
+        </p>
         <ul class="story-metrics story-metrics--three">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Équipe</span>
-            <span class="story-metric__label">Rôles, revues de code et coordination entre pairs.</span>
+            <span class="story-metric__value">Besoins</span>
+            <span class="story-metric__label">Recenser le périmètre, les contraintes et les livrables avant le développement.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Gameplay</span>
-            <span class="story-metric__label">Boucle de jeu, états et gestion des ressources graphiques.</span>
+            <span class="story-metric__value">CDC</span>
+            <span class="story-metric__label">Cahier des charges structuré : fonctionnalités, jalons et critères d’acceptation.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Livrables</span>
-            <span class="story-metric__label">Cahier des charges, notice de lancement et doc utilisateur.</span>
+            <span class="story-metric__value">Suivi</span>
+            <span class="story-metric__label">Indicateurs de suivi et analyse des écarts, lorsque le pilotage du projet a été effectué.</span>
           </li>
         </ul>
       </div>
     </section>
 
+    <section class="story-showcase story-reveal" aria-label="Visuel du jeu">
+      <div class="story-showcase__wrap">
+        <img src="../img/the-bakery/bakery-suivi.webp" width="1536" height="1024" alt="Suivi de projet — indicateurs et écarts, The Bakery" loading="lazy" decoding="async">
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">04 — Réalisation</p>
+          <p>Jeu 2D desktop : logique Python, assets et interface issus du cadrage et du CDC.</p>
+        </div>
+      </div>
+    </section>
+
     <footer class="story-footer story-reveal">
       <div class="story-footer__inner">
-        <p>Projet Python — jeu desktop en équipe.</p>
+        <p>Projet Python — démarche projet avant développement (cadrage, CDC, suivi).</p>
         <div class="story-footer__actions">
           <a href="https://github.com/swtori" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
           <a href="../contact.html" class="btn btn--outline">Me contacter</a>
