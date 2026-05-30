@@ -9,6 +9,26 @@
   transform: none;
 }
 
+.projet-page.projet-domaine .story-frame--gach-admin {
+  transform: rotate(-1.2deg) scale(1.2);
+  transform-origin: center right;
+}
+
+.projet-page.projet-domaine .story-frame--gach-admin:hover {
+  transform: rotate(0deg) scale(1.2);
+}
+
+@media (max-width: 767px) {
+  .projet-page.projet-domaine .story-frame--gach-admin {
+    transform: rotate(-1.2deg) scale(1.05);
+    transform-origin: center center;
+  }
+
+  .projet-page.projet-domaine .story-frame--gach-admin:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+}
+
 .projet-page.projet-domaine .story-showcase__wrap img {
   width: 100%;
   height: auto;
@@ -28,6 +48,126 @@
 
 .projet-page.projet-domaine .story-frame--crisp {
   background: #f6f8fa;
+}
+
+/* Mock navigateur — section déploiement (remplace la capture pixelisée) */
+.projet-page.projet-domaine .gach-browser {
+  margin: 0;
+  width: 100%;
+  max-width: 22rem;
+}
+
+.projet-page.projet-domaine .gach-browser__window {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--story-border);
+  background: linear-gradient(165deg, #1e2f22 0%, var(--story-deep) 55%, #121a14 100%);
+  box-shadow:
+    0 28px 56px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 0 40px color-mix(in srgb, var(--story-glow) 18%, transparent);
+}
+
+.projet-page.projet-domaine .gach-browser__chrome {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.85rem 0.9rem 0.75rem;
+  background: color-mix(in srgb, #0f1611 90%, var(--story-mid));
+  border-bottom: 1px solid var(--story-border);
+}
+
+.projet-page.projet-domaine .gach-browser__dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.projet-page.projet-domaine .gach-browser__dots span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--story-mist) 35%, #3d4f42);
+}
+
+.projet-page.projet-domaine .gach-browser__dots span:nth-child(1) {
+  background: #4ade80;
+  opacity: 0.85;
+}
+
+.projet-page.projet-domaine .gach-browser__url {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  background: #0a100c;
+  border: 1px solid color-mix(in srgb, var(--story-accent) 25%, transparent);
+  font-family: ui-monospace, "Cascadia Code", "Consolas", monospace;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.projet-page.projet-domaine .gach-browser__lock {
+  flex-shrink: 0;
+  color: var(--story-accent);
+}
+
+.projet-page.projet-domaine .gach-browser__path {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--story-paper);
+}
+
+.projet-page.projet-domaine .gach-browser__domain {
+  color: var(--story-paper);
+  font-weight: 500;
+}
+
+.projet-page.projet-domaine .gach-browser__route {
+  color: color-mix(in srgb, var(--story-mist) 70%, transparent);
+}
+
+.projet-page.projet-domaine .gach-browser__body {
+  padding: 1.35rem 1.1rem 1.5rem;
+  text-align: center;
+}
+
+.projet-page.projet-domaine .gach-browser__badge {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--story-night);
+  background: linear-gradient(135deg, var(--story-mist), var(--story-accent));
+}
+
+.projet-page.projet-domaine .gach-browser__hint {
+  margin: 0.85rem 0 0;
+  font-size: 0.82rem;
+  color: color-mix(in srgb, var(--story-paper) 55%, transparent);
+  line-height: 1.5;
+}
+
+.projet-page.projet-domaine .gach-browser figcaption {
+  margin-top: 0.75rem;
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  border: none;
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .projet-page.projet-domaine .story-split--reverse .gach-browser {
+    margin-inline-end: auto;
+  }
 }
 
 .projet-page.projet-domaine {

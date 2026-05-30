@@ -1,16 +1,294 @@
+/* Ce portfolio — case study éditorial */
+
 .projet-page.projet-portfolio-sarrail {
-  --story-night: #0d1117;
-  --story-deep: #161b22;
-  --story-mid: #21262d;
-  --story-glow: #58a6ff;
+  --story-night: #010409;
+  --story-deep: #0d1117;
+  --story-mid: #161b22;
+  --story-glow: #388bfd;
   --story-accent: #58a6ff;
   --story-mist: #8b949e;
   --story-paper: #f0f6fc;
-  --story-border: rgba(88, 166, 255, 0.3);
+  --story-border: rgba(88, 166, 255, 0.28);
+  --story-serif: "Syne", Georgia, serif;
+  --story-sans: "Inter", var(--font);
+  --ps-mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  --ps-ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.projet-page.projet-portfolio-sarrail .story-chapter h2 {
+/* Hero immersif */
+.projet-page.projet-portfolio-sarrail .ps-hero .story-hero__bg {
+  overflow: hidden;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-hero__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  transform: none;
+  z-index: 0;
+  filter: brightness(1.12) saturate(1.08);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-hero .story-hero__veil {
+  z-index: 1;
+  background:
+    linear-gradient(
+      105deg,
+      rgba(1, 4, 9, 0.78) 0%,
+      rgba(1, 4, 9, 0.42) 42%,
+      rgba(1, 4, 9, 0.08) 68%,
+      transparent 88%
+    ),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.55) 78%, var(--bg) 100%),
+    radial-gradient(ellipse 60% 50% at 75% 35%, rgba(56, 139, 253, 0.14), transparent 58%);
+}
+
+.projet-page.projet-portfolio-sarrail .story-hero__content h1 {
+  font-family: var(--story-serif);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* Intro */
+.projet-page.projet-portfolio-sarrail .ps-intro {
+  padding-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+/* Pont GitHub ↔ VPS */
+.projet-page.projet-portfolio-sarrail .ps-bridge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1.25rem !important;
+  padding-top: 1rem;
+  border-top: 1px solid var(--story-border);
+  font-family: var(--ps-mono);
+  font-size: 0.8rem;
+  color: var(--story-accent) !important;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-cap {
+  font-family: var(--ps-mono);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
-  font-size: clamp(1.1rem, 3vw, 1.35rem);
+  padding: 0.15rem 0.45rem;
+  margin-right: 0.35rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--story-glow) 22%, transparent);
+  color: var(--story-accent);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-frame {
+  transition: transform 0.55s var(--ps-ease), box-shadow 0.55s ease;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-frame:hover {
+  box-shadow:
+    0 32px 64px rgba(0, 0, 0, 0.5),
+    0 0 48px color-mix(in srgb, var(--story-glow) 12%, transparent);
+}
+
+/* Showcase pleine largeur */
+.projet-page.projet-portfolio-sarrail .ps-showcase .story-showcase__wrap img {
+  object-fit: contain;
+  background: var(--story-deep);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-metrics .story-metric {
+  transition: transform 0.4s var(--ps-ease), border-color 0.35s ease;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-metrics .story-metric:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--story-accent) 40%, transparent);
+}
+
+/* Blog : texte à gauche, image à droite */
+@media (min-width: 900px) {
+  .projet-page.projet-portfolio-sarrail .ps-blog .story-split__text {
+    order: 1;
+  }
+
+  .projet-page.projet-portfolio-sarrail .ps-blog .story-split__visual {
+    order: 2;
+  }
+}
+
+/* Back-office : split sans chevauchement */
+.projet-page.projet-portfolio-sarrail .ps-auth__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-auth__text h2 {
+  font-family: var(--story-serif);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-auth__url {
+  display: block;
+  margin: 0.25rem 0 1rem;
+  font-family: var(--ps-mono);
+  font-size: clamp(0.72rem, 2vw, 0.85rem);
+  color: var(--story-accent);
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-auth__url:hover {
+  color: var(--story-paper);
+  text-decoration: underline;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-auth .story-frame img {
+  object-fit: contain;
+  background: var(--story-night);
+}
+
+/* Bandeau DA */
+.projet-page.projet-portfolio-sarrail .ps-da {
+  padding: 0 clamp(1rem, 4vw, 3rem) clamp(2rem, 5vw, 3rem);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-da__wrap {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--story-border);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-da__wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  max-height: min(70vh, 520px);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-da__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(180deg, transparent, rgba(1, 4, 9, 0.92));
+}
+
+.projet-page.projet-portfolio-sarrail .ps-da__caption p {
+  margin: 0.25rem 0 0;
+  color: var(--story-paper);
+}
+
+/* Blocs code */
+.projet-page.projet-portfolio-sarrail .ps-code {
+  max-width: 44rem;
+  margin: 1.5rem auto 0;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-mld-code {
+  max-width: min(72rem, 100%);
+  width: 100%;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-code__block--mld {
+  overflow: visible;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-mld-line {
+  display: block;
+  white-space: nowrap;
+  font-size: clamp(0.58rem, 1.05vw, 0.74rem);
+  line-height: 1.65;
+}
+
+@media (max-width: 520px) {
+  .projet-page.projet-portfolio-sarrail .ps-mld-line {
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+.projet-page.projet-portfolio-sarrail .ps-code__label {
+  margin: 0 0 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--story-mist);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-code__block {
+  margin: 0;
+  padding: 1.1rem 1.2rem;
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--story-border);
+  background: var(--story-night);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.projet-page.projet-portfolio-sarrail .ps-code__block code {
+  font-family: var(--ps-mono);
+  font-size: clamp(0.74rem, 1.8vw, 0.86rem);
+  line-height: 1.55;
+  color: var(--story-paper);
+  white-space: pre;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-code__block--terminal code {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 0.72rem;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-healthy {
+  color: #3fb950;
+  font-weight: 600;
+}
+
+.projet-page.projet-portfolio-sarrail .ps-docker {
+  display: grid;
+  gap: 1.15rem;
+  max-width: 56rem;
+  margin: 1.5rem auto 0;
+}
+
+@media (min-width: 900px) {
+  .projet-page.projet-portfolio-sarrail .ps-docker {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .projet-page.projet-portfolio-sarrail .ps-docker .ps-code {
+    margin: 0;
+    max-width: none;
+  }
+}
+
+/* Révélations renforcées sur les captures */
+.projet-page.projet-portfolio-sarrail .story-reveal[data-ps-reveal="scale"]:not(.is-visible) .story-frame {
+  transform: scale(0.96) translateY(20px);
+  opacity: 0.55;
+}
+
+.projet-page.projet-portfolio-sarrail .story-reveal[data-ps-reveal="scale"].is-visible .story-frame {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  transition: transform 0.8s var(--ps-ease), opacity 0.8s var(--ps-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projet-page.projet-portfolio-sarrail [data-ps-reveal="scale"].story-reveal:not(.is-visible) .story-frame {
+    transform: none;
+    opacity: 1;
+  }
 }

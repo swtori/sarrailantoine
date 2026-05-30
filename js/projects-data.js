@@ -20,7 +20,7 @@ var PROJECTS = [
     title: "Domaine de Gach – chambres d’hôtes",
     url: "https://domainedegach.com",
     github: "https://github.com/swtori",
-    image: "img/domainedegach/index-gach.webp",
+    image: "img/domainedegach/domainedegach.webp",
     detailHref: "projets/domaine-de-gach.html",
     carousel: true,
     description:
@@ -32,12 +32,12 @@ var PROJECTS = [
     title: "Ce portfolio (articles & API)",
     url: "https://swtori.github.io/sarrailantoine/",
     github: "https://github.com/swtori/sarrailantoine",
-    image: "img/portfolio-sarrail/portfolio-sarrail-preview.png",
+    image: "img/portfolio-sarrail/portfolio-sarrail-preview.webp",
     detailHref: "projets/portfolio-sarrail.html",
     carousel: true,
     description:
       "Portfolio GitHub Pages couplé à un back-office VPS : articles, utilisateurs et API.",
-    tags: ["HTML", "CSS", "JavaScript", "API", "VPS"]
+    tags: ["HTML", "CSS", "JavaScript", "FrankenPHP", "SQLite", "Docker", "VPS"]
   },
   {
     id: "the-bakery-python",

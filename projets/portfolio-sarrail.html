@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio BTS SIO SLAM — GitHub Pages, API, VPS, blog.">
+  <meta name="description" content="Portfolio BTS SIO SLAM — GitHub Pages, FrankenPHP, Docker, blog SQLite.">
   <title>Ce portfolio | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Syne:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/projets/common.css">
   <link rel="stylesheet" href="../css/projets/story.css">
@@ -30,94 +30,271 @@
   <main class="main main--page projet-story" id="projet-story">
     <a href="../projects.html" class="story-back">← Retour aux projets</a>
 
-    <header class="story-hero" aria-labelledby="story-title">
-      <div class="story-hero__bg" aria-hidden="true">
-        <img src="../img/portfolio-sarrail/portfolio-sarrail-preview.png" alt="" width="1920" height="1080" fetchpriority="high" decoding="async">
-        <div class="story-hero__veil"></div>
+    <header class="story-hero ps-hero" aria-labelledby="story-title">
+      <div class="story-hero__bg ps-hero__bg" aria-hidden="true">
+        <img
+          class="ps-hero__bg-img"
+          src="../img/portfolio-sarrail/indexBackground.webp"
+          alt=""
+          width="1304"
+          height="717"
+          fetchpriority="high"
+          decoding="async"
+        >
+        <div class="story-hero__veil ps-hero__veil"></div>
       </div>
       <div class="story-hero__content">
         <p class="story-eyebrow">BTS SIO SLAM · Meta-projet</p>
         <h1 id="story-title">Ce portfolio</h1>
         <p class="story-hero__tagline">
-          Front statique sur GitHub Pages, couplé à un back-office sur VPS :
-          articles, utilisateurs et API pour documenter mon parcours en continu.
+          Front statique sur GitHub Pages, back-office FrankenPHP sur VPS —
+          une expérience en deux temps, documentée en continu.
         </p>
         <ul class="story-tags" aria-label="Technologies">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
-          <li>API</li>
-          <li>VPS</li>
+          <li>FrankenPHP</li>
+          <li>SQLite</li>
+          <li>Docker</li>
         </ul>
         <div class="story-hero__actions">
           <a href="https://swtori.github.io/sarrailantoine/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
-          <a href="https://github.com/swtori/sarrailantoine" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Dépôt GitHub</a>
+          <a href="http://72.60.91.85:8088/login.php" class="btn btn--outline" data-blog-admin target="_blank" rel="noopener noreferrer">Back-office</a>
+          <a href="https://github.com/swtori/sarrailantoine" class="btn btn--outline" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
-      <div class="story-hero__scroll" aria-hidden="true"><span>Découvrir le projet</span></div>
+      <div class="story-hero__scroll" aria-hidden="true"><span>Explorer</span></div>
     </header>
 
-    <section class="story-chapter story-reveal" aria-labelledby="ch-1">
+    <section class="ps-intro story-chapter story-reveal" aria-labelledby="ps-intro-title">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">Narration visuelle</p>
+        <h2 id="ps-intro-title" class="story-chapter__center">Du pixel au conteneur</h2>
+        <p class="story-chapter__lead">Grille en quinconce — texte, captures et infra entrelacés.</p>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" data-ps-reveal="scale" aria-labelledby="ch-1">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
           <p class="story-eyebrow">01 — Architecture</p>
           <h2 id="ch-1">Deux mondes, une expérience</h2>
-          <p>
-            Le portfolio public reste léger et rapide (pages statiques, données projets en JS).
-            Le contenu éditorial dynamique vit sur le VPS : authentification, rôles, publication d’articles.
-          </p>
-          <p>
-            Configuration externalisée via <code>site-config.js</code> pour lier proprement front et back-office.
-          </p>
+          <p>Pages statiques légères côté public. Éditorial, auth et rôles sur le VPS.</p>
+          <p><code>site-config.js</code> synchronise les URLs front ↔ back-office.</p>
+          <p class="ps-bridge"><span>GitHub Pages</span> ↔ <span>VPS :8088</span></p>
         </div>
-        <figure class="story-split__visual story-frame story-frame--tilt">
-          <img src="../img/portfolio-sarrail/portfolio-sarrail-preview.png" width="748" height="433" alt="Accueil du portfolio" loading="lazy" decoding="async">
-          <figcaption>Thème sombre — accueil</figcaption>
+        <figure class="story-split__visual story-frame story-frame--tilt ps-frame">
+          <img
+            src="../img/portfolio-sarrail/portfolio-sarrail-preview.webp"
+            width="748"
+            height="433"
+            alt="Page d’accueil du portfolio en thème sombre"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption><span class="ps-cap">Front</span> Accueil GitHub Pages</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="story-showcase story-reveal" aria-label="Aperçu">
+    <section class="story-showcase story-reveal ps-showcase" aria-label="Grille projets" data-ps-reveal="fade">
       <div class="story-showcase__wrap">
-        <img src="../img/portfolio-sarrail/portfolio-sarrail-preview.png" width="1920" height="1080" alt="Vue large du portfolio" loading="lazy" decoding="async">
+        <img
+          src="../img/portfolio-sarrail/project-portfolio.webp"
+          width="1536"
+          height="1024"
+          alt="Grille de projets en quinconce et fiches story"
+          loading="lazy"
+          decoding="async"
+        >
         <div class="story-showcase__caption">
-          <p class="story-eyebrow">02 — Présentation</p>
-          <p>Fiches projet immersives, carrousel et grille — ce site documente aussi sa propre construction.</p>
+          <p class="story-eyebrow">02 — Expérience</p>
+          <p><span class="ps-cap">UX</span> Grille en quinconce &amp; fiches immersives</p>
         </div>
       </div>
     </section>
 
-    <section class="story-chapter story-reveal" aria-labelledby="ch-2">
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-stack">
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">03 — Stack</p>
-        <h2 id="ch-2" class="story-chapter__center">Composants principaux</h2>
-        <ul class="story-metrics">
+        <h2 id="ch-stack" class="story-chapter__center">Composants du système</h2>
+        <ul class="story-metrics ps-metrics">
           <li class="story-metric story-reveal">
             <span class="story-metric__value">GitHub Pages</span>
-            <span class="story-metric__label">Hébergement du front statique, déploiement continu depuis le dépôt.</span>
+            <span class="story-metric__label">Front statique</span>
           </li>
           <li class="story-metric story-reveal">
             <span class="story-metric__value">projects-data.js</span>
-            <span class="story-metric__label">Source unique pour la grille et le carrousel d’accueil.</span>
+            <span class="story-metric__label">Carrousel &amp; grille</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Back-office VPS</span>
-            <span class="story-metric__label">Blog PHP, SQLite, gestion des utilisateurs et articles.</span>
+            <span class="story-metric__value">FrankenPHP</span>
+            <span class="story-metric__label">Blog PHP</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Fiches story</span>
-            <span class="story-metric__label">Pages projet en narration visuelle (comme celle-ci).</span>
+            <span class="story-metric__value">SQLite</span>
+            <span class="story-metric__label">Données locales</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" data-ps-reveal="scale" aria-labelledby="ch-blog">
+      <div class="story-chapter__inner story-split ps-blog">
+        <div class="story-split__text">
+          <p class="story-eyebrow">Blog public</p>
+          <h2 id="ch-blog">Articles en lecture</h2>
+          <p>Le blog expose les publications côté visiteur — interface claire, liste des contenus éditoriaux.</p>
+        </div>
+        <figure class="story-split__visual story-frame ps-frame">
+          <img
+            src="../img/portfolio-sarrail/BlogLocal.webp"
+            width="1016"
+            height="502"
+            alt="Interface du blog — vue publique des articles"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption><span class="ps-cap">Blog</span> Vue publique des articles</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" data-ps-reveal="scale" aria-labelledby="ch-login">
+      <div class="story-chapter__inner story-split story-split--reverse ps-auth">
+        <figure class="story-split__visual story-frame ps-frame">
+          <img
+            src="../img/portfolio-sarrail/connexionBlogLocal.webp"
+            width="1029"
+            height="425"
+            alt="Écran de connexion administrateur du blog"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption><span class="ps-cap">Auth</span> Connexion administrateur</figcaption>
+        </figure>
+        <div class="story-split__text ps-auth__text">
+          <p class="story-eyebrow">06 — Back-office</p>
+          <h2 id="ch-login">Back-office live</h2>
+          <p>Authentification PHP, gestion des comptes et des publications.</p>
+          <a href="http://72.60.91.85:8088/login.php" class="ps-auth__url" data-blog-admin target="_blank" rel="noopener noreferrer">http://72.60.91.85:8088/login.php</a>
+          <a href="http://72.60.91.85:8088/login.php" class="btn btn--primary" data-blog-admin target="_blank" rel="noopener noreferrer">Ouvrir le back-office</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" data-ps-reveal="scale" aria-labelledby="ch-dash">
+      <div class="story-chapter__inner story-split">
+        <div class="story-split__text">
+          <p class="story-eyebrow">Pilotage</p>
+          <h2 id="ch-dash">Tableau de bord</h2>
+          <p>Statistiques et vue d’ensemble pour suivre l’activité du blog depuis l’administration.</p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--tilt ps-frame">
+          <img
+            src="../img/portfolio-sarrail/Dashboard.webp"
+            width="1329"
+            height="679"
+            alt="Dashboard du blog — statistiques"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption><span class="ps-cap">Pilotage</span> Dashboard</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" data-ps-reveal="scale" aria-labelledby="ch-users">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">Administration</p>
+          <h2 id="ch-users">Gestion des utilisateurs</h2>
+          <p>Interface dédiée aux comptes : rôles, accès et maintenance des profils administrateurs.</p>
+        </div>
+        <figure class="story-split__visual story-frame ps-frame">
+          <img
+            src="../img/portfolio-sarrail/GestionUser.webp"
+            width="1304"
+            height="704"
+            alt="Interface de gestion des utilisateurs"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption><span class="ps-cap">Admin</span> Gestion des utilisateurs</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="ps-da story-reveal" aria-label="MCD de la base de données du blog">
+      <div class="ps-da__wrap" data-ps-reveal="fade">
+        <img
+          src="../img/portfolio-sarrail/Generated_image.webp"
+          width="1536"
+          height="1024"
+          alt="MCD de la base de données du blog — cardinalités 0,1 et 1,n"
+          loading="lazy"
+          decoding="async"
+        >
+        <div class="ps-da__caption">
+          <p class="story-eyebrow">Modèle conceptuel de données</p>
+          <p><span class="ps-cap">MCD</span> Base de données du blog</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-mld">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">04 — Modèle de données</p>
+        <h2 id="ch-mld" class="story-chapter__center">MLD du blog</h2>
+        <p class="story-chapter__lead"><code>users</code> · <code>posts</code> · clé <code>author_id</code></p>
+        <div class="ps-code ps-mld-code">
+          <p class="ps-code__label">MLD — Blog (relations)</p>
+          <pre class="ps-code__block ps-code__block--mld"><code><span class="ps-mld-line">users (#id, name, email, password_hash, role, created_at)</span><span class="ps-mld-line">posts (#id, title, slug, excerpt, content, status, author_id, created_at, updated_at, published_at)</span></code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-docker">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">05 — Déploiement</p>
+        <h2 id="ch-docker" class="story-chapter__center">FrankenPHP · Docker</h2>
+        <p class="story-chapter__lead">
+          Conteneur <code>sarrailantoine-app</code> — FrankenPHP 8.2, SQLite, volume
+          <code>/home/luna/sarrailantoine/backend</code>, port <code>8088:80</code>.
+        </p>
+        <div class="ps-docker">
+          <div class="ps-code">
+            <p class="ps-code__label">docker-compose.yml — extrait</p>
+            <pre class="ps-code__block"><code>sarrailantoine-app:
+  image: dunglas/frankenphp:php8.2
+  container_name: sarrailantoine-app
+  restart: always
+  networks:
+    - backend
+  environment:
+    SERVER_NAME: :80
+    DB_DRIVER: sqlite
+  volumes:
+    - /home/luna/sarrailantoine/backend:/app
+  ports:
+    - "8088:80"</code></pre>
+          </div>
+          <div class="ps-code">
+            <p class="ps-code__label">docker ps — VPS</p>
+            <pre class="ps-code__block ps-code__block--terminal"><code>445f7d745535   dunglas/frankenphp:php8.2   2 weeks ago   Up 6 hours (<span class="ps-healthy">healthy</span>)   0.0.0.0:8088-&gt;80/tcp   sarrailantoine-app</code></pre>
+          </div>
+        </div>
       </div>
     </section>
 
     <footer class="story-footer story-reveal">
       <div class="story-footer__inner">
-        <p>Vous êtes en train de parcourir le résultat de ce projet.</p>
+        <p>Vous parcourez le résultat de ce meta-projet.</p>
         <div class="story-footer__actions">
           <a href="https://swtori.github.io/sarrailantoine/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Portfolio en ligne</a>
-          <a href="../contact.html" class="btn btn--outline">Me contacter</a>
+          <a href="http://72.60.91.85:8088/login.php" class="btn btn--outline" data-blog-admin target="_blank" rel="noopener noreferrer">Back-office</a>
+          <a href="../contact.html" class="btn btn--outline">Contact</a>
         </div>
       </div>
     </footer>

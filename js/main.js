@@ -24,6 +24,18 @@
     blogAdminLink.href = blogAdmin;
   }
 
+  document.querySelectorAll("[data-blog-admin]").forEach(function (el) {
+    if (blogAdmin) {
+      el.href = blogAdmin;
+    }
+  });
+
+  document.querySelectorAll("[data-blog-public]").forEach(function (el) {
+    if (blogPublic) {
+      el.href = blogPublic;
+    }
+  });
+
   var toggle = document.querySelector(".nav__toggle");
   var list = document.querySelector(".nav__list");
   if (toggle && list) {

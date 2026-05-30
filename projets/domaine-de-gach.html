@@ -112,17 +112,41 @@
       </div>
     </section>
 
-    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-admin">
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-db">
+      <div class="story-chapter__inner story-split story-split--reverse">
+        <div class="story-split__text">
+          <p class="story-eyebrow">04 — Données</p>
+          <h2 id="ch-db">Schéma SQL</h2>
+          <p>
+            Base <code>gachDb</code> sur VPS : clients, chambres, réservations (clés étrangères et cascades)
+            et comptes d’administration pour le back-office.
+          </p>
+        </div>
+        <figure class="story-split__visual story-frame story-frame--crisp">
+          <img
+            src="../img/domainedegach/gach-db.webp"
+            width="753"
+            height="955"
+            alt="Script SQL gachDb — tables CLIENTS, CHAMBRES, RESERVATIONS et USERS"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Fichier <code>gachDb.sql</code></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-admin">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">04 — Administration</p>
+          <p class="story-eyebrow">05 — Administration</p>
           <h2 id="ch-admin">Espace de gestion</h2>
           <p>
             Interface d’administration pour piloter le contenu et les données liées au domaine :
             structure pensée pour un usage régulier, distincte de la vitrine publique.
           </p>
         </div>
-        <figure class="story-split__visual story-frame story-frame--tilt">
+        <figure class="story-split__visual story-frame story-frame--tilt story-frame--gach-admin">
           <img
             src="../img/domainedegach/admin-section.webp"
             width="1297"
@@ -139,22 +163,34 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-url">
       <div class="story-chapter__inner story-split story-split--reverse">
         <div class="story-split__text">
-          <p class="story-eyebrow">05 — Déploiement</p>
+          <p class="story-eyebrow">06 — Déploiement</p>
           <h2 id="ch-url">Sous-domaine admin</h2>
           <p>
-            L’administration est isolée sur un sous-domaine dédié (<code>admin.domainedegach.com</code>),
-            en complément du site public hébergé chez IONOS.
+            L’administration est isolée du site public (<code>domainedegach.com/admin</code>),
+            hébergée sur le VPS en complément de la vitrine IONOS.
           </p>
         </div>
-        <figure class="story-split__visual story-frame story-frame--crisp">
-          <img
-            src="../img/domainedegach/url-admin.webp"
-            width="226"
-            height="49"
-            alt="Barre d’adresse — admin.domainedegach.com"
-            loading="lazy"
-            decoding="async"
-          >
+        <figure class="story-split__visual gach-browser" aria-label="Accès administration — admin.domainedegach.com">
+          <div class="gach-browser__window">
+            <div class="gach-browser__chrome">
+              <div class="gach-browser__dots" aria-hidden="true">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="gach-browser__url" role="img" aria-label="https://domainedegach.com/admin">
+                <svg class="gach-browser__lock" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 11V8a5 5 0 0 1 10 0v3" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+                  <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.75"/>
+                </svg>
+                <span class="gach-browser__path">
+                  <span class="gach-browser__domain">domainedegach.com</span><span class="gach-browser__route">/admin</span>
+                </span>
+              </div>
+            </div>
+            <div class="gach-browser__body">
+              <span class="gach-browser__badge">Back-office</span>
+              <p class="gach-browser__hint">Espace réservé à la gestion du domaine</p>
+            </div>
+          </div>
           <figcaption>URL d’accès à l’administration</figcaption>
         </figure>
       </div>
