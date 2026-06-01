@@ -878,6 +878,7 @@ img {
   overflow: hidden;
   background: var(--surface);
   position: relative;
+  aspect-ratio: 748 / 433;
 }
 
 .project-card__media-link {
@@ -893,8 +894,9 @@ img {
 
 .project-card__media img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   display: block;
 }
 

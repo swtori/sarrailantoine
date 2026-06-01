@@ -43,7 +43,7 @@ var PROJECTS = [
     id: "the-bakery-python",
     title: "The Bakery – jeu Python (desktop)",
     github: "https://github.com/swtori",
-    image: "img/the-bakery/project-the-bakery.png",
+    image: "img/the-bakery/project-the-bakery.webp",
     detailHref: "projets/the-bakery.html",
     carousel: false,
     description:
@@ -54,7 +54,7 @@ var PROJECTS = [
     id: "app-covoiturage-maui",
     title: "Application MAUI – covoiturage",
     github: "https://github.com/swtori",
-    image: "img/covoiturage-maui/project-maui-covoiturage.png",
+    image: "img/covoiturage-maui/project-maui-covoiturage.webp",
     detailHref: "projets/covoiturage-maui.html",
     carousel: true,
     description:
@@ -65,7 +65,7 @@ var PROJECTS = [
     id: "site-jeux-olympiques",
     title: "BMX Freestyle JO — site vitrine",
     github: "https://github.com/swtori/Bmx-Freestyle",
-    image: "img/jeux-olympiques/jo-palmares.webp",
+    image: "img/jeux-olympiques/jo-preview.webp",
     detailHref: "projets/jeux-olympiques.html",
     carousel: false,
     description:
@@ -76,7 +76,7 @@ var PROJECTS = [
     id: "ongles-nailart",
     title: "CM Beauty – vitrine onglerie",
     github: "https://github.com/swtori",
-    image: "img/ongles/ongles-accueil.webp",
+    image: "img/ongles/ongles-preview.webp",
     detailHref: "projets/ongles-nailart.html",
     carousel: false,
     description:
@@ -88,7 +88,7 @@ var PROJECTS = [
     title: "Portfolios builders (série GitHub Pages)",
     url: "https://swtori.github.io/spinophore",
     github: "https://github.com/swtori",
-    image: "img/portfolios-builders/pb-spinophore.webp",
+    image: "img/portfolios-builders/portfolios-builders-preview.webp",
     detailHref: "projets/portfolios-builders.html",
     carousel: true,
     description:
@@ -100,7 +100,7 @@ var PROJECTS = [
     title: "Nelson Mandela – biographie (vitrine)",
     url: "https://steevenngouala05-lgtm.github.io/mandela-biography/",
     github: "https://github.com/steevenngouala05-lgtm/mandela-biography",
-    image: "img/mandela-biography/mandela-hero.webp",
+    image: "img/mandela-biography/nelson-mandela.webp",
     detailHref: "projets/mandela-biography.html",
     carousel: true,
     description:
