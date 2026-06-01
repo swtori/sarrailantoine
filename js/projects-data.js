@@ -41,7 +41,7 @@ var PROJECTS = [
   },
   {
     id: "the-bakery-python",
-    title: "The Bakery – jeu Python (desktop)",
+    title: "Bakery Clicker – jeu Python (desktop)",
     github: "https://github.com/swtori",
     image: "img/the-bakery/project-the-bakery.webp",
     detailHref: "projets/the-bakery.html",
