@@ -44,11 +44,11 @@
         <div class="story-hero__veil ps-hero__veil"></div>
       </div>
       <div class="story-hero__content">
-        <p class="story-eyebrow">BTS SIO SLAM · Meta-projet</p>
+        <p class="story-eyebrow">BTS SIO SLAM · Portfolio personnel</p>
         <h1 id="story-title">Ce portfolio</h1>
         <p class="story-hero__tagline">
-          Front statique sur GitHub Pages, back-office FrankenPHP sur VPS —
-          une expérience en deux temps, documentée en continu.
+          Développement d’un site web portfolio personnel développeur :
+          GitHub Pages, SEO basique, versioning et présentation des compétences BTS SIO SLAM.
         </p>
         <ul class="story-tags" aria-label="Technologies">
           <li>HTML</li>
@@ -70,10 +70,16 @@
     <section class="story-chapter story-reveal" data-ps-reveal="scale" aria-labelledby="ch-1">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">01 — Architecture</p>
-          <h2 id="ch-1">Deux mondes, une expérience</h2>
-          <p>Pages statiques légères côté public. Éditorial, auth et rôles sur le VPS.</p>
-          <p><code>site-config.js</code> synchronise les URLs front ↔ back-office.</p>
+          <p class="story-eyebrow">01 — Contexte</p>
+          <h2 id="ch-1">Professionnaliser mon image en ligne</h2>
+          <p>
+            Ce portfolio est né d’un besoin simple : montrer mes projets et mes créations
+            de façon plus professionnelle, pour refléter qui je suis et ce que je fais.
+          </p>
+          <p>
+            J’ai commencé par une base claire avec ma présentation, mes projets et ma page contact,
+            puis j’ai hébergé le site sur GitHub Pages avec un versioning régulier sur GitHub.
+          </p>
           <p class="ps-bridge"><span>GitHub Pages</span> ↔ <span>VPS :8088</span></p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt ps-frame">
@@ -93,25 +99,41 @@
     <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-stack">
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">03 — Stack</p>
-        <h2 id="ch-stack" class="story-chapter__center">Composants du système</h2>
+        <h2 id="ch-stack" class="story-chapter__center">Ce que le projet démontre</h2>
         <ul class="story-metrics ps-metrics">
           <li class="story-metric story-reveal">
             <span class="story-metric__value">GitHub Pages</span>
-            <span class="story-metric__label">Front statique</span>
+            <span class="story-metric__label">Hébergement du portfolio public</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">projects-data.js</span>
-            <span class="story-metric__label">Carrousel &amp; grille</span>
+            <span class="story-metric__value">SEO basique</span>
+            <span class="story-metric__label">Structure de pages et visibilité web de base</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">FrankenPHP</span>
-            <span class="story-metric__label">Blog PHP</span>
+            <span class="story-metric__value">Organisation des versions</span>
+            <span class="story-metric__label">Versioning continu via GitHub</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">SQLite</span>
-            <span class="story-metric__label">Données locales</span>
+            <span class="story-metric__value">BTS SIO SLAM</span>
+            <span class="story-metric__label">Présentation de mes compétences et réalisations</span>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <section class="story-chapter story-reveal" aria-labelledby="ch-story">
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">04 — Évolution</p>
+        <h2 id="ch-story" class="story-chapter__center">Du portfolio statique au back-office</h2>
+        <p class="story-chapter__lead">
+          Plus tard, j’ai voulu publier des articles. J’ai donc ajouté une base de données
+          et construit un backend en architecture MVC pour gérer les utilisateurs et les publications.
+        </p>
+        <p>
+          Cette partie est hébergée sur un VPS dans un conteneur Docker, avec l’image Caddy/FrankenPHP.
+          Le projet combine ainsi une vitrine publique simple sur GitHub Pages et un espace d’administration
+          dédié pour la gestion du contenu.
+        </p>
       </div>
     </section>
 
@@ -152,7 +174,7 @@
         <div class="story-split__text ps-auth__text">
           <p class="story-eyebrow">06 — Back-office</p>
           <h2 id="ch-login">Back-office live</h2>
-          <p>Authentification PHP, gestion des comptes et des publications.</p>
+          <p>Authentification PHP, gestion des comptes et des publications avec plusieurs rôles (par exemple <code>editor</code> et <code>admin</code>).</p>
           <a href="http://72.60.91.85:8088/login.php" class="ps-auth__url" data-blog-admin target="_blank" rel="noopener noreferrer">http://72.60.91.85:8088/login.php</a>
           <a href="http://72.60.91.85:8088/login.php" class="btn btn--primary" data-blog-admin target="_blank" rel="noopener noreferrer">Ouvrir le back-office</a>
         </div>
@@ -185,7 +207,7 @@
         <div class="story-split__text">
           <p class="story-eyebrow">Administration</p>
           <h2 id="ch-users">Gestion des utilisateurs</h2>
-          <p>Interface dédiée aux comptes : rôles, accès et maintenance des profils administrateurs.</p>
+          <p>Interface dédiée aux comptes : rôles (notamment <code>editor</code> et <code>admin</code>), accès et maintenance des profils.</p>
         </div>
         <figure class="story-split__visual story-frame ps-frame">
           <img

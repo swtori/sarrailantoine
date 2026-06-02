@@ -50,6 +50,77 @@
   background: #f6f8fa;
 }
 
+/* SQL + MCD en quinconce (décalage type grille projets) */
+.projet-page.projet-domaine .gach-data-intro {
+  margin: 0 auto 0.5rem;
+  max-width: 52ch;
+  font-size: 0.98rem;
+  color: var(--text-muted);
+}
+
+.projet-page.projet-domaine .gach-data-quinconce {
+  display: grid;
+  gap: 1.75rem;
+  margin: 2.25rem auto 0;
+  max-width: 1080px;
+  padding: 0 0.25rem;
+}
+
+.projet-page.projet-domaine .gach-data-quinconce__item {
+  margin: 0;
+  width: 100%;
+}
+
+.projet-page.projet-domaine .gach-data-quinconce__item--mcd {
+  margin-top: 0.75rem;
+  margin-left: 1.25rem;
+}
+
+.projet-page.projet-domaine .story-frame--tilt-alt {
+  transform: rotate(0.35deg);
+  transition: transform 0.5s ease;
+}
+
+.projet-page.projet-domaine .story-frame--tilt-alt:hover {
+  transform: rotate(0deg) scale(1.01);
+}
+
+@media (min-width: 768px) {
+  .projet-page.projet-domaine .gach-data-quinconce {
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 2rem 2.5rem;
+    align-items: start;
+  }
+
+  .projet-page.projet-domaine .gach-data-quinconce__item--sql {
+    max-width: 94%;
+    justify-self: start;
+  }
+
+  .projet-page.projet-domaine .gach-data-quinconce__item--mcd {
+    margin-top: 4.5rem;
+    margin-left: 0;
+    max-width: 100%;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 767px) {
+  .projet-page.projet-domaine .story-frame--tilt-alt {
+    transform: rotate(0.8deg);
+  }
+
+  .projet-page.projet-domaine .story-frame--tilt-alt:hover {
+    transform: rotate(0deg) scale(1.01);
+  }
+
+.projet-page.projet-domaine .gach-data-quinconce__item--mcd img {
+  background: #ffffff;
+  padding: 0.45rem;
+  filter: brightness(1.14) contrast(1.12);
+}
+}
+
 /* Mock navigateur — section déploiement (remplace la capture pixelisée) */
 .projet-page.projet-domaine .gach-browser {
   margin: 0;

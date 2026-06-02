@@ -50,3 +50,17 @@
   --story-serif: "Source Serif 4", Georgia, serif;
   --story-sans: "Inter", var(--font);
 }
+
+@media (min-width: 1000px) {
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 > .story-metric:nth-child(-n + 3) {
+    grid-column: span 2;
+  }
+
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 > .story-metric:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+}

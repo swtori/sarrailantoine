@@ -36,17 +36,17 @@
         <div class="story-hero__veil"></div>
       </div>
       <div class="story-hero__content">
-        <p class="story-eyebrow">C# · .NET MAUI · Mobile</p>
+        <p class="story-eyebrow">C# · .NET MAUI · Mobile · Projet SLAM</p>
         <h1 id="story-title">Covoiturage MAUI</h1>
         <p class="story-hero__tagline">
-          Application mobile en C# avec .NET MAUI : base de données, authentification et gestion
-          des covoiturages selon un cahier des charges — projet développé seul, de la conception au déploiement.
+          Développement d’une application mobile lourde de gestion de covoiturage en C# .NET MAUI :
+          gestion du projet, dépendances NuGet, découpage fonctionnel et corrections UI/métier.
         </p>
         <ul class="story-tags" aria-label="Technologies">
           <li>C#</li>
           <li>.NET MAUI</li>
-          <li>SQL</li>
-          <li>Projet solo</li>
+          <li>NuGet</li>
+          <li>SQL Server</li>
           <li>Mobile</li>
         </ul>
         <div class="story-hero__actions">
@@ -59,16 +59,16 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-1">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">01 — Application</p>
-          <h2 id="ch-1">Mobile, données et authentification</h2>
+          <p class="story-eyebrow">01 — Contexte</p>
+          <h2 id="ch-1">Projet mobile à partir d’un CDC</h2>
           <p>
-            Création d’une <strong>application mobile en C# avec .NET MAUI</strong>, incluant
-            une base de données et un <strong>système d’authentification</strong> pour sécuriser
-            l’accès et identifier conducteurs et passagers.
+            Cette application a été créée à partir d’un cahier des charges donné par
+            Mme Sophie Brouard, ma professeure de SLAM. L’objectif était de réaliser
+            une application mobile complète en C# avec .NET MAUI.
           </p>
           <p>
-            L’architecture repose sur une persistance SQL cohérente avec les écrans XAML :
-            comptes, sessions et données métier gérées de bout en bout.
+            J’ai utilisé SQL Server Management Studio pour la base de données, afin de gérer
+            la persistance des informations liées aux utilisateurs, trajets et réservations.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt">
@@ -81,15 +81,16 @@
     <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-2">
       <div class="story-chapter__inner story-split story-split--reverse">
         <div class="story-split__text">
-          <p class="story-eyebrow">02 — Métier</p>
-          <h2 id="ch-2">Gestion des covoiturages</h2>
+          <p class="story-eyebrow">02 — Fonctionnalités</p>
+          <h2 id="ch-2">Découpage et logique métier</h2>
           <p>
-            L’application permet la <strong>gestion de covoiturages</strong> : création,
-            consultation et organisation des trajets pour mettre en relation les utilisateurs.
+            L’application a été découpée en fonctionnalités claires :
+            <strong>authentification, gestion des trajets et réservation</strong>,
+            pour garder un projet lisible et maintenable.
           </p>
           <p>
-            Le développement respecte un <strong>cahier des charges défini</strong> : fonctionnalités
-            attendues, parcours utilisateur et critères d’acceptation suivis tout au long du projet.
+            J’ai aussi corrigé différents bugs UI et logique métier au fur et à mesure
+            pour stabiliser l’expérience utilisateur sur mobile.
           </p>
         </div>
         <figure class="story-split__visual story-frame">
@@ -101,24 +102,24 @@
 
     <section class="story-chapter story-reveal" aria-labelledby="ch-3">
       <div class="story-chapter__inner">
-        <p class="story-eyebrow story-chapter__center">03 — Réalisation</p>
-        <h2 id="ch-3" class="story-chapter__center">Développement, tests et déploiement</h2>
+        <p class="story-eyebrow story-chapter__center">03 — Montée en compétences</p>
+        <h2 id="ch-3" class="story-chapter__center">Apprentissage C# / .NET MAUI</h2>
         <p class="story-chapter__lead">
-          Projet mené <strong>en autonomie</strong> : conception, développement des fonctionnalités,
-          tests, déploiement et mise à disposition d’un <strong>service fonctionnel pour les utilisateurs</strong>.
+          Ce projet m’a permis d’apprendre concrètement le développement mobile en C# .NET MAUI :
+          gestion des dépendances NuGet, structuration des écrans et évolution graphique de l’application.
         </p>
         <ul class="story-metrics story-metrics--three">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Conception</span>
-            <span class="story-metric__label">Modèle de données, écrans XAML et architecture MAUI définis seul.</span>
+            <span class="story-metric__value">Gestion projet</span>
+            <span class="story-metric__label">Suivi des tâches MAUI, des dépendances NuGet et de l’avancement global.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Dev</span>
-            <span class="story-metric__label">Fonctionnalités, base de données et authentification selon le cahier des charges.</span>
+            <span class="story-metric__value">Découpage</span>
+            <span class="story-metric__label">Auth, trajets et réservation séparés pour une logique métier claire.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Livraison</span>
-            <span class="story-metric__label">Tests, déploiement et application utilisable par les utilisateurs finaux.</span>
+            <span class="story-metric__value">Corrections</span>
+            <span class="story-metric__label">Ajustements réguliers sur l’interface et les règles métier.</span>
           </li>
         </ul>
       </div>
@@ -129,14 +130,14 @@
         <img src="../img/covoiturage-maui/project-maui-covoiturage.png" width="1920" height="1080" alt="Application MAUI covoiturage — vue d’ensemble" loading="lazy" decoding="async">
         <div class="story-showcase__caption">
           <p class="story-eyebrow">04 — Résultat</p>
-          <p>Application mobile opérationnelle : trajets, authentification et données persistantes.</p>
+          <p>Application mobile MAUI en C# avec SQL Server, structurée autour de l’auth, des trajets et des réservations.</p>
         </div>
       </div>
     </section>
 
     <footer class="story-footer story-reveal">
       <div class="story-footer__inner">
-        <p>Projet .NET MAUI — application mobile de covoiturage réalisée seul (CDC, tests, déploiement).</p>
+        <p>Projet mobile MAUI réalisé à partir d’un CDC — C#, SQL Server, NuGet et logique métier de covoiturage.</p>
         <div class="story-footer__actions">
           <a href="https://github.com/swtori" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir sur GitHub</a>
           <a href="../contact.html" class="btn btn--outline">Me contacter</a>

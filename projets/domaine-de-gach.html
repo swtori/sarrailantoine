@@ -43,17 +43,18 @@
         <div class="story-hero__veil"></div>
       </div>
       <div class="story-hero__content">
-        <p class="story-eyebrow">Chambres d’hôtes · Site vitrine</p>
+        <p class="story-eyebrow">Chambres d’hôtes · Site vitrine · 01/01/2026 au 15/04/2026</p>
         <h1 id="story-title">Domaine de Gach</h1>
         <p class="story-hero__tagline">
-          Vitrine pour un domaine en Occitanie : présentation des chambres, prise de contact fluide
-          et fondations techniques solides (SEO, données, hébergement).
+          Développement de <strong>domainedegach.com</strong> en HTML vanilla : site vitrine moderne,
+          refonte de l’ancien site, mise en ligne sur IONOS et évolution continue selon les demandes clients.
         </p>
         <ul class="story-tags" aria-label="Technologies">
+          <li>HTML/CSS/JS</li>
           <li>EmailJS</li>
           <li>SQL</li>
-          <li>SEO</li>
           <li>IONOS</li>
+          <li>GitHub</li>
         </ul>
         <div class="story-hero__actions">
           <a href="https://domainedegach.com" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site</a>
@@ -66,10 +67,11 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-1">
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">01 — Contexte</p>
-        <h2 id="ch-1" class="story-chapter__center">Un lieu, une expérience à raconter</h2>
+        <h2 id="ch-1" class="story-chapter__center">Moderniser un site ancien</h2>
         <p class="story-chapter__lead">
-          Le site doit transmettre l’atmosphère du domaine : pierre, vignes, calme.
-          La structure met en avant les chambres et facilite la prise de contact sans friction.
+          Pendant un stage professionnalisant, j’ai dû reconstruire le site du Domaine de Gach
+          pour remplacer une version ancienne (2009). L’objectif était d’avoir une vitrine plus moderne,
+          plus claire et plus efficace pour présenter les chambres et faciliter les demandes de réservation.
         </p>
       </div>
     </section>
@@ -89,46 +91,61 @@
 
     <section class="story-chapter story-reveal" aria-labelledby="ch-2">
       <div class="story-chapter__inner">
-        <p class="story-eyebrow story-chapter__center">03 — Livrables</p>
-        <h2 id="ch-2" class="story-chapter__center">Points techniques clés</h2>
+        <p class="story-eyebrow story-chapter__center">03 — Réalisations</p>
+        <h2 id="ch-2" class="story-chapter__center">Ce que j’ai mis en place</h2>
         <ul class="story-metrics story-metrics--three">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">EmailJS</span>
-            <span class="story-metric__label">Formulaire de contact sans backend lourd sur l’hébergement mutualisé.</span>
+            <span class="story-metric__value">Fichiers statiques</span>
+            <span class="story-metric__label">Développement d’un site vitrine en HTML vanilla avec une structure simple à maintenir.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">SQL</span>
-            <span class="story-metric__label">Données métier hébergées sur VPS pour les besoins de gestion.</span>
+            <span class="story-metric__value">Déploiement IONOS</span>
+            <span class="story-metric__label">Mise en ligne sur IONOS (One &amp; One) en remplaçant l’ancien site en production.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">SEO & IONOS</span>
-            <span class="story-metric__label">Référencement de base, domaine et hébergement gérés chez IONOS.</span>
+            <span class="story-metric__value">Demandes clients</span>
+            <span class="story-metric__label">Écoute, audit des retours et ajustements réguliers pour répondre fidèlement aux besoins.</span>
           </li>
         </ul>
       </div>
     </section>
 
     <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-db">
-      <div class="story-chapter__inner story-split story-split--reverse">
-        <div class="story-split__text">
-          <p class="story-eyebrow">04 — Données</p>
-          <h2 id="ch-db">Schéma SQL</h2>
-          <p>
-            Base <code>gachDb</code> sur VPS : clients, chambres, réservations (clés étrangères et cascades)
-            et comptes d’administration pour le back-office.
-          </p>
+      <div class="story-chapter__inner">
+        <p class="story-eyebrow story-chapter__center">04 — Données</p>
+        <h2 id="ch-db" class="story-chapter__center">Schéma SQL et MCD</h2>
+        <p class="story-chapter__lead">
+          Le projet n’étant pas totalement finalisé pendant le stage, je l’ai continué sur mon temps libre
+          pour livrer une version de meilleure qualité. J’ai ensuite ajouté une base de données pour gérer
+          les clients et les réservations, avec un modèle conceptuel dérivé du script SQL.
+        </p>
+        <p class="story-chapter__center gach-data-intro">
+          Versionnement constant sur GitHub pour suivre les évolutions et sécuriser les modifications.
+        </p>
+        <div class="gach-data-quinconce" aria-label="Schéma SQL et modèle conceptuel">
+          <figure class="gach-data-quinconce__item gach-data-quinconce__item--sql story-frame story-frame--crisp story-frame--tilt">
+            <img
+              src="../img/domainedegach/gach-db.webp"
+              width="753"
+              height="955"
+              alt="Script SQL gachDb — tables CLIENTS, CHAMBRES, RESERVATIONS et USERS"
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>Fichier <code>gachDb.sql</code></figcaption>
+          </figure>
+          <figure class="gach-data-quinconce__item gach-data-quinconce__item--mcd story-frame story-frame--crisp story-frame--tilt-alt">
+            <img
+              src="../img/domainedegach/gach-mcd.png"
+              width="1024"
+              height="768"
+              alt="MCD Merise gachDb — entités CLIENT, CHAMBRE, association RESERVER et UTILISATEUR"
+              loading="lazy"
+              decoding="async"
+            >
+            <figcaption>MCD — <code>gachDb</code> (dérivé du SQL)</figcaption>
+          </figure>
         </div>
-        <figure class="story-split__visual story-frame story-frame--crisp">
-          <img
-            src="../img/domainedegach/gach-db.webp"
-            width="753"
-            height="955"
-            alt="Script SQL gachDb — tables CLIENTS, CHAMBRES, RESERVATIONS et USERS"
-            loading="lazy"
-            decoding="async"
-          >
-          <figcaption>Fichier <code>gachDb.sql</code></figcaption>
-        </figure>
       </div>
     </section>
 
@@ -138,8 +155,8 @@
           <p class="story-eyebrow">05 — Administration</p>
           <h2 id="ch-admin">Espace de gestion</h2>
           <p>
-            Interface d’administration pour piloter le contenu et les données liées au domaine :
-            structure pensée pour un usage régulier, distincte de la vitrine publique.
+            J’ai intégré un formulaire de contact EmailJS côté front pour fluidifier les prises de contact
+            sans alourdir l’infrastructure. Cette partie a déjà permis de générer des demandes réelles.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt story-frame--gach-admin">
@@ -160,10 +177,10 @@
       <div class="story-chapter__inner story-split story-split--reverse">
         <div class="story-split__text">
           <p class="story-eyebrow">06 — Déploiement</p>
-          <h2 id="ch-url">Sous-domaine admin</h2>
+          <h2 id="ch-url">Mise en ligne et continuité</h2>
           <p>
-            L’administration est isolée du site public (<code>domainedegach.com/admin</code>),
-            hébergée sur le VPS en complément de la vitrine IONOS.
+            Après validation, j’ai remplacé l’ancien site sur l’hébergeur IONOS pour publier la nouvelle version.
+            Depuis, je poursuis les améliorations selon les retours terrain et les demandes des exploitants.
           </p>
         </div>
         <figure class="story-split__visual gach-browser" aria-label="Accès administration — admin.domainedegach.com">

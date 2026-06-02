@@ -171,8 +171,9 @@
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
-  max-height: min(70vh, 520px);
+  object-fit: contain;
+  max-height: none;
+  background: var(--story-deep);
 }
 
 .projet-page.projet-portfolio-sarrail .ps-da__caption {

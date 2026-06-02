@@ -43,17 +43,19 @@
         <div class="story-hero__veil"></div>
       </div>
       <div class="story-hero__content">
-        <p class="story-eyebrow">Build &amp; development · Projet phare</p>
+        <p class="story-eyebrow">Build &amp; development · Projet phare · 03/10/2025 au 05/11/2025</p>
         <h1 id="story-hero-title">Lusciana.fr</h1>
         <p class="story-hero__tagline">
-          Vitrine et boutique pour une société de développement : présenter l’activité,
-          structurer l’offre et ancrer la marque sur le web avec une stack maîtrisée de bout en bout.
+          Développement d’un site web professionnel <strong>lusciana.fr</strong>
+          (HTML vanilla, Cloudflare Workers et base de données hébergée sur Cloudflare avec les Workers).
         </p>
         <ul class="story-tags" aria-label="Technologies">
-          <li>PHP</li>
+          <li>HTML/CSS/JS</li>
+          <li>Workers</li>
+          <li>API</li>
+          <li>DB</li>
           <li>SEO</li>
           <li>Cloudflare</li>
-          <li>VPS</li>
         </ul>
         <div class="story-hero__actions">
           <a href="https://lusciana.fr" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Voir le site en ligne</a>
@@ -71,8 +73,8 @@
         <h2 id="ch-identite" class="story-chapter__center">Une vitrine qui porte la marque</h2>
         <p class="story-chapter__lead">
           Lusciana est une entreprise de <strong>build &amp; development</strong>.
-          Le site traduit une posture professionnelle, rassure les visiteurs et ouvre la voie vers la boutique
-          ou les prises de contact — avec une direction visuelle lisible sur mobile comme sur desktop.
+          L’objectif était de rassurer dès la première visite : une identité visuelle propre, une lecture simple sur mobile
+          comme sur desktop, et un accès direct aux services, à la boutique et au contact.
         </p>
       </div>
     </section>
@@ -89,7 +91,7 @@
         >
         <div class="story-showcase__caption">
           <p class="story-eyebrow">02 — Expérience</p>
-          <p>Boutique en ligne : fiches produits, paiement sécurisé et parcours d’achat clair.</p>
+          <p>J’ai structuré la boutique avec des fiches produits lisibles, un paiement sécurisé et un parcours d’achat sans friction.</p>
         </div>
       </div>
     </section>
@@ -97,23 +99,27 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-livrables">
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">03 — Livrables</p>
-        <h2 id="ch-livrables" class="story-chapter__center">Ce que le projet démontre</h2>
-        <ul class="story-metrics">
+        <h2 id="ch-livrables" class="story-chapter__center">Ce que j’ai réalisé</h2>
+        <ul class="story-metrics story-metrics--lusciana-5">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">SEO</span>
-            <span class="story-metric__label">Structure sémantique, titres, performances de base et indexation.</span>
+            <span class="story-metric__value">API / Workers / DB</span>
+            <span class="story-metric__label">Gestion de l’API, des Workers et de la base de données.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Analytics</span>
-            <span class="story-metric__label">Lecture du trafic, bande passante et visites via les tableaux de bord.</span>
+            <span class="story-metric__value">Site pro en ligne</span>
+            <span class="story-metric__label">Mise en production d’un site professionnel accessible publiquement sur <strong>lusciana.fr</strong>.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">DNS</span>
-            <span class="story-metric__label">Apex, sous-domaines applicatifs et routage vers le VPS.</span>
+            <span class="story-metric__value">Frontend + Backend</span>
+            <span class="story-metric__label">Architecture complète entre frontend et backend pour la vitrine et la boutique.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Hébergement</span>
-            <span class="story-metric__label">Déploiement sur serveur dédié, cohabitation avec l’écosystème interne.</span>
+            <span class="story-metric__value">Déploiement Cloudflare + DB</span>
+            <span class="story-metric__label">Déploiement Cloudflare avec base de données pour la boutique.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Web avancé</span>
+            <span class="story-metric__label">Technologies web avancées : Workers et API.</span>
           </li>
         </ul>
       </div>
@@ -125,8 +131,12 @@
           <p class="story-eyebrow">04 — Performance</p>
           <h2 id="ch-perf">Suivi du trafic</h2>
           <p>
-            Cloudflare Analytics : visiteurs uniques, tendances sur 30 jours et indicateurs
-            pour ajuster cache, DNS et charge serveur.
+            Avec Cloudflare Analytics, je suis les visiteurs uniques et les tendances sur 30 jours.
+            Ça me permet d’ajuster le cache, les règles DNS et la charge serveur quand le trafic évolue.
+          </p>
+          <p>
+            Quand un dysfonctionnement est remonté (latence ou comportement inattendu), je reproduis le cas,
+            je corrige côté front/Workers puis je redéploie avec validation fonctionnelle.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--crisp">
@@ -146,23 +156,27 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-stats">
       <div class="story-chapter__inner story-split story-split--reverse">
         <div class="story-split__text">
-          <p class="story-eyebrow">05 — Compte</p>
-          <h2 id="ch-stats">Mesurer pour piloter</h2>
+          <p class="story-eyebrow">05 — Infrastructure</p>
+          <h2 id="ch-stats">Stockage des ressources boutique</h2>
           <p>
-            Vue globale du compte Cloudflare : requêtes, bande passante et tendances.
-            Ces indicateurs guident les arbitrages (cache, DNS, charge serveur).
+            Les nouvelles captures montrent l’espace de stockage objet Cloudflare utilisé pour la boutique,
+            avec le compartiment <code>lusciana-downloads</code> et l’état global d’utilisation.
+          </p>
+          <p>
+            On y voit aussi la liste des objets stockés, notamment le fichier produit présent dans le compartiment,
+            ce qui confirme la persistance des ressources côté plateforme Cloudflare.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--crisp">
           <img
-            src="../img/lusciana/lusciana-stats-compte.webp"
-            width="1302"
-            height="820"
-            alt="Statistiques compte Cloudflare — requêtes et bande passante"
+            src="../img/lusciana/Capture d'écran 2026-06-02 145142.png"
+            width="960"
+            height="514"
+            alt="Cloudflare Object Storage : utilisation du compartiment lusciana-downloads"
             loading="lazy"
             decoding="async"
           >
-          <figcaption>Vue compte (requêtes / bande passante)</figcaption>
+          <figcaption>Cloudflare Object Storage — compartiment lusciana-downloads</figcaption>
         </figure>
       </div>
     </section>
@@ -170,16 +184,20 @@
     <section class="story-chapter story-reveal" aria-labelledby="ch-infra">
       <div class="story-chapter__inner story-split">
         <div class="story-split__text">
-          <p class="story-eyebrow">06 — Infrastructure</p>
-          <h2 id="ch-infra">Du domaine au serveur</h2>
+          <p class="story-eyebrow">06 — Compte</p>
+          <h2 id="ch-infra">Objets stockés pour la boutique</h2>
           <p>
-            Les enregistrements DNS relient le nom de domaine au VPS : apex public,
-            sous-domaines pour les applications (dont <code>admin</code>), proxy ou DNS only selon les besoins.
+            Cette capture montre la recherche par préfixe dans le compartiment
+            <code>lusciana-downloads</code> et la liste des objets disponibles.
+          </p>
+          <p>
+            On visualise directement le fichier produit présent dans le stockage,
+            ce qui permet de vérifier rapidement que les ressources de la boutique sont bien en place.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt">
-          <img src="../img/lusciana/lusciana-dns.webp" width="748" height="433" alt="Tableau des enregistrements DNS Cloudflare" loading="lazy" decoding="async">
-          <figcaption>DNS &amp; sous-domaines</figcaption>
+          <img src="../img/lusciana/Capture d'écran 2026-06-02 145154.png" width="560" height="386" alt="Cloudflare Object Storage : liste des objets du compartiment lusciana-downloads" loading="lazy" decoding="async">
+          <figcaption>Cloudflare Object Storage — liste des objets stockés</figcaption>
         </figure>
       </div>
     </section>
@@ -189,8 +207,16 @@
         <p class="story-eyebrow">07 — Suite logique</p>
         <h2 id="ch-suite">Vitrine publique, back-office séparé</h2>
         <p>
-          Le site client vit sur <strong>lusciana.fr</strong>. La gestion interne (agents, commissions, tâches)
-          est isolée sur <strong>admin.lusciana.fr</strong> — Docker, MongoDB et API dédiée.
+          Le site client tourne sur <strong>lusciana.fr</strong> et je garde la gestion interne
+          isolée sur <strong>admin.lusciana.fr</strong> (Docker, MongoDB, API dédiée) pour séparer clairement usage public et administration.
+        </p>
+        <p>
+          Toute la partie backend métier est présentée dans le projet <strong>admin.lusciana.fr</strong>,
+          tandis que cette page se concentre sur la vitrine publique et son exploitation web.
+        </p>
+        <p>
+          Sur le projet, je maintiens aussi une routine de progression continue : documentation technique, veille sur Cloudflare/edge,
+          et capitalisation des retours pour améliorer les prochaines versions.
         </p>
         <a href="lusciana-crm.html" class="story-card-cta__link">
           <span class="story-card-cta__title">Découvrir le CRM</span>
