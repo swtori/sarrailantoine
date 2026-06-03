@@ -4,18 +4,6 @@
  */
 var PROJECTS = [
   {
-    id: "lusciana-vitrine",
-    title: "Lusciana.fr – vitrine & boutique",
-    url: "https://lusciana.fr",
-    github: "https://github.com/swtori",
-    image: "img/lusciana/lusciana.webp",
-    detailHref: "projets/lusciana-vitrine.html",
-    carousel: true,
-    description:
-      "Vitrine et boutique en ligne : CGU/CGV, DNS Cloudflare, hébergement VPS et suivi des performances.",
-    tags: ["PHP", "SEO", "VPS", "Cloudflare"]
-  },
-  {
     id: "domaine-de-gach",
     title: "Domaine de Gach – chambres d’hôtes",
     url: "https://domainedegach.com",
@@ -38,6 +26,18 @@ var PROJECTS = [
     description:
       "Portfolio GitHub Pages couplé à un back-office VPS : articles, utilisateurs et API.",
     tags: ["HTML", "CSS", "JavaScript", "FrankenPHP", "SQLite", "Docker", "VPS"]
+  },
+  {
+    id: "lusciana-vitrine",
+    title: "Lusciana.fr – vitrine & boutique",
+    url: "https://lusciana.fr",
+    github: "https://github.com/swtori",
+    image: "img/lusciana/lusciana.webp",
+    detailHref: "projets/lusciana-vitrine.html",
+    carousel: true,
+    description:
+      "Vitrine et boutique en ligne : CGU/CGV, DNS Cloudflare, hébergement VPS et suivi des performances.",
+    tags: ["PHP", "SEO", "VPS", "Cloudflare"]
   },
   {
     id: "the-bakery-python",
