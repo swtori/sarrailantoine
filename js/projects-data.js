@@ -12,7 +12,7 @@ var PROJECTS = [
     detailHref: "projets/lusciana-vitrine.html",
     carousel: true,
     description:
-      "Vitrine et boutique en ligne : DNS Cloudflare, hébergement VPS et suivi des performances.",
+      "Vitrine et boutique en ligne : CGU/CGV, DNS Cloudflare, hébergement VPS et suivi des performances.",
     tags: ["PHP", "SEO", "VPS", "Cloudflare"]
   },
   {
@@ -24,8 +24,8 @@ var PROJECTS = [
     detailHref: "projets/domaine-de-gach.html",
     carousel: true,
     description:
-      "Site chambres d’hôtes : contact EmailJS, base SQL sur VPS, domaine et hébergement IONOS.",
-    tags: ["EmailJS", "SQL", "SEO", "IONOS"]
+      "Évolution d’un site chambres d’hôtes : données internes (prix), direction artistique, base SQL, versionnement GitHub, EmailJS et IONOS.",
+    tags: ["GitHub", "EmailJS", "SQL", "IONOS"]
   },
   {
     id: "portfolio-sarrail",
@@ -128,7 +128,7 @@ var PROJECTS = [
     detailHref: "projets/lusciana-crm.html",
     carousel: true,
     description:
-      "CRM équipe et commissions : API REST MVC PHP, MongoDB, Docker, VPS Hostinger — backend, MCD/MLD et déploiement.",
+      "CRM équipe et commissions : API REST MVC PHP, MongoDB, Docker, VPS Hostinger — sauvegardes des cartes 2×/jour (rétention 7 j), MCD/MLD et déploiement.",
     tags: ["PHP", "MVC", "Docker", "Mode projet"]
   }
 ];
