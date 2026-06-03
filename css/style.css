@@ -3,6 +3,8 @@
    Noir / gris / bleu nuit – Inter
    ============================================ */
 
+@import url("curtain-transition.css");
+
 :root {
   /* Fond et surfaces */
   --bg: #0d1117;

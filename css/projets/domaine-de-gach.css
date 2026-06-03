@@ -120,6 +120,24 @@
   background: #f6f8fa;
 }
 
+.projet-page.projet-domaine .story-metrics--gach-4 {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .projet-page.projet-domaine .story-metrics--gach-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .projet-page.projet-domaine .story-metrics--gach-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 /* SQL + MCD en quinconce (décalage type grille projets) */
 .projet-page.projet-domaine .gach-data-intro {
   margin: 0 auto 0.5rem;

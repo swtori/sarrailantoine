@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="../css/projets/domaine-de-gach.css">
 </head>
 <body class="projet-page projet-domaine">
-  <header class="header">
+  <div id="page-curtain" class="page-curtain" aria-hidden="true"></div>
+  <script src="../js/curtain-build.js"></script>
+
+<header class="header">
     <nav class="nav" aria-label="Navigation principale">
       <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
       <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -156,10 +159,14 @@
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">03 — Réalisations</p>
         <h2 id="ch-2" class="story-chapter__center">Ce que j’ai mis en place</h2>
-        <ul class="story-metrics story-metrics--three">
+        <ul class="story-metrics story-metrics--gach-4">
           <li class="story-metric story-reveal">
             <span class="story-metric__value">Données métier</span>
             <span class="story-metric__label">Exploitation des données de l’organisation pour enrichir le contenu visible — prix des chambres, identité visuelle.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Formulaire EmailJS</span>
+            <span class="story-metric__label">Formulaire de contact côté front via EmailJS — prises de contact simplifiées sans alourdir l’infrastructure, avec des demandes réelles reçues.</span>
           </li>
           <li class="story-metric story-reveal">
             <span class="story-metric__value">Déploiement IONOS</span>
@@ -218,10 +225,10 @@
       <div class="story-chapter__inner story-split story-split--gach-admin">
         <div class="story-split__text">
           <p class="story-eyebrow">05 — Administration</p>
-          <h2 id="ch-admin">Espace de gestion</h2>
+          <h2 id="ch-admin">Connexion à l’espace admin</h2>
           <p>
-            J’ai intégré un formulaire de contact EmailJS côté front pour fluidifier les prises de contact
-            sans alourdir l’infrastructure. Cette partie a déjà permis de générer des demandes réelles.
+            L’accès au back-office passe par une page de <strong>connexion</strong> : authentification
+            par identifiants pour sécuriser l’espace de gestion et réserver l’administration aux exploitants du domaine.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt story-frame--gach-admin">
@@ -229,11 +236,11 @@
             src="../img/domainedegach/admin-section.webp"
             width="1297"
             height="671"
-            alt="Section administration du site Domaine de Gach"
+            alt="Page de connexion — authentification à l’espace admin Domaine de Gach"
             loading="lazy"
             decoding="async"
           >
-          <figcaption>Back-office — gestion du site</figcaption>
+          <figcaption>Authentification — accès admin</figcaption>
         </figure>
       </div>
     </section>
@@ -296,6 +303,7 @@
     </div>
   </footer>
   <script src="../js/site-config.js"></script>
+  <script src="../js/curtain-transition.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/projet-story.js" defer></script>
 </body>
