@@ -63,4 +63,12 @@
   .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 > .story-metric:nth-child(n + 4) {
     grid-column: span 3;
   }
+
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-6 > .story-metric {
+    grid-column: span 2;
+  }
 }
