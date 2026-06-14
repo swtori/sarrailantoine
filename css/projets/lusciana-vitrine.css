@@ -60,7 +60,8 @@
     grid-column: span 2;
   }
 
-  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 > .story-metric:nth-child(n + 4) {
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 > .story-metric:nth-child(4),
+  .projet-page.projet-lusciana-vitrine .story-metrics--lusciana-5 > .story-metric:nth-child(5) {
     grid-column: span 3;
   }
 

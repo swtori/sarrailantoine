@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="../css/projets/noel321.css">
 </head>
 <body class="projet-page projet-noel">
-  <header class="header">
+  <div id="page-curtain" class="page-curtain" aria-hidden="true"></div>
+  <script src="../js/curtain-build.js"></script>
+
+<header class="header">
     <nav class="nav" aria-label="Navigation principale">
       <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
       <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -115,6 +118,7 @@
     </div>
   </footer>
   <script src="../js/site-config.js"></script>
+  <script src="../js/curtain-transition.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/projet-story.js" defer></script>
 </body>

@@ -10,22 +10,92 @@
 }
 
 .projet-page.projet-domaine .story-frame--gach-admin {
-  transform: rotate(-1.2deg) scale(1.2);
-  transform-origin: center right;
+  transform: rotate(-1.2deg);
+  transform-origin: center center;
 }
 
 .projet-page.projet-domaine .story-frame--gach-admin:hover {
-  transform: rotate(0deg) scale(1.2);
+  transform: rotate(0deg) scale(1.01);
+}
+
+@media (min-width: 900px) {
+  .projet-page.projet-domaine .story-split--gach-admin {
+    grid-template-columns: minmax(0, 0.52fr) minmax(0, 1.48fr);
+    gap: 3rem;
+  }
+
+  .projet-page.projet-domaine .story-split--gach-admin .story-split__text {
+    min-width: 0;
+    max-width: 34ch;
+  }
+
+  .projet-page.projet-domaine .story-split--gach-admin .story-split__text p {
+    max-width: 34ch;
+  }
+
+  .projet-page.projet-domaine .story-split--gach-admin .story-split__visual {
+    min-width: 0;
+    justify-self: stretch;
+    width: 100%;
+    max-width: none;
+  }
+
+  .projet-page.projet-domaine .story-frame--gach-admin {
+    width: 100%;
+  }
+}
+
+@media (min-width: 900px) {
+  .projet-page.projet-domaine .story-split--gach-ancien {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+  }
+
+  .projet-page.projet-domaine .story-split--gach-ancien .story-split__visual {
+    min-width: 0;
+    justify-self: stretch;
+  }
+
+  .projet-page.projet-domaine .story-split--gach-ancien .story-split__text p {
+    max-width: 38ch;
+  }
+
+  .projet-page.projet-domaine .story-frame--gach-ancien img {
+    background: #ffffff;
+    padding: 0.35rem;
+  }
+}
+
+.projet-page.projet-domaine .story-frame--gach-trello img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+  padding: 0.35rem;
+}
+
+@media (min-width: 900px) {
+  .projet-page.projet-domaine .story-split--gach-trello {
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 3rem;
+  }
+
+  .projet-page.projet-domaine .story-split--gach-trello .story-split__visual {
+    min-width: 0;
+    justify-self: stretch;
+  }
 }
 
 @media (max-width: 767px) {
   .projet-page.projet-domaine .story-frame--gach-admin {
-    transform: rotate(-1.2deg) scale(1.05);
+    transform: rotate(-1.2deg);
     transform-origin: center center;
   }
 
   .projet-page.projet-domaine .story-frame--gach-admin:hover {
-    transform: rotate(0deg) scale(1.05);
+    transform: rotate(0deg) scale(1.01);
   }
 }
 
@@ -48,6 +118,24 @@
 
 .projet-page.projet-domaine .story-frame--crisp {
   background: #f6f8fa;
+}
+
+.projet-page.projet-domaine .story-metrics--gach-4 {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .projet-page.projet-domaine .story-metrics--gach-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .projet-page.projet-domaine .story-metrics--gach-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 /* SQL + MCD en quinconce (décalage type grille projets) */

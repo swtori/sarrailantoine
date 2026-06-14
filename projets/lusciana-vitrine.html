@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="../css/projets/lusciana-vitrine.css">
 </head>
 <body class="projet-page projet-lusciana-vitrine">
-  <header class="header">
+  <div id="page-curtain" class="page-curtain" aria-hidden="true"></div>
+  <script src="../js/curtain-build.js"></script>
+
+<header class="header">
     <nav class="nav" aria-label="Navigation principale">
       <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
       <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -92,7 +95,11 @@
         >
         <div class="story-showcase__caption">
           <p class="story-eyebrow">02 — Expérience</p>
-          <p>J’ai structuré la boutique avec des fiches produits lisibles, un paiement sécurisé et un parcours d’achat sans friction. Les demandes clients passent aussi par une gestion de tickettage via Discord.</p>
+          <p>
+            J’ai structuré la boutique avec des fiches produits lisibles, un paiement sécurisé et un parcours d’achat sans friction.
+            Les demandes clients passent aussi par une gestion de tickettage via Discord.
+            Le site intègre en plus des pages <strong>CGU</strong> et <strong>CGV</strong> pour encadrer l’usage du service et les conditions de vente.
+          </p>
         </div>
       </div>
     </section>
@@ -214,6 +221,7 @@
         <p>
           Le site client tourne sur <strong>lusciana.fr</strong> et je garde la gestion interne
           isolée sur <strong>admin.lusciana.fr</strong> (Docker, MongoDB, API dédiée) pour séparer clairement usage public et administration.
+          Les cartes de commissions y sont sauvegardées deux fois par jour, avec une rétention de 7 jours.
         </p>
         <p>
           Toute la partie backend métier est présentée dans le projet <strong>admin.lusciana.fr</strong>,
@@ -253,6 +261,7 @@
   </footer>
 
   <script src="../js/site-config.js"></script>
+  <script src="../js/curtain-transition.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/projet-story.js" defer></script>
 </body>

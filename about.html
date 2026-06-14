@@ -212,27 +212,139 @@
     }
 
     /* Qualités */
+    .ab-traits-panel {
+      padding: 1.5rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% -20%, rgba(88, 166, 255, 0.08), transparent 55%),
+        var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+    }
+
     .ab-traits {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.625rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.875rem;
       margin: 0;
       padding: 0;
       list-style: none;
     }
 
-    .ab-trait {
-      padding: 0.4375rem 0.875rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-      color: var(--text);
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: border-color var(--transition);
+    .ab-trait-card {
+      --trait-accent: var(--accent);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 1.25rem 0.875rem 1.125rem;
+      text-align: center;
+      background: linear-gradient(
+        165deg,
+        color-mix(in srgb, var(--bg-elevated) 92%, var(--trait-accent) 8%) 0%,
+        var(--bg) 100%
+      );
+      border: 1px solid color-mix(in srgb, var(--trait-accent) 18%, var(--border));
+      border-radius: var(--radius-lg);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      transition:
+        transform var(--transition),
+        border-color var(--transition),
+        box-shadow var(--transition);
     }
 
-    .ab-trait:hover { border-color: #3d444d; }
+    .ab-trait-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        circle at 50% 0%,
+        color-mix(in srgb, var(--trait-accent) 14%, transparent),
+        transparent 68%
+      );
+      opacity: 0;
+      transition: opacity var(--transition);
+      pointer-events: none;
+    }
+
+    .ab-trait-card:hover,
+    .ab-trait-card:focus-within {
+      transform: translateY(-4px);
+      border-color: color-mix(in srgb, var(--trait-accent) 42%, var(--border));
+      box-shadow:
+        0 14px 28px rgba(0, 0, 0, 0.32),
+        0 0 0 1px color-mix(in srgb, var(--trait-accent) 12%, transparent);
+    }
+
+    .ab-trait-card:hover::after,
+    .ab-trait-card:focus-within::after {
+      opacity: 1;
+    }
+
+    .ab-trait-card__icon {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 14px;
+      color: var(--trait-accent);
+      background: color-mix(in srgb, var(--trait-accent) 14%, transparent);
+      border: 1px solid color-mix(in srgb, var(--trait-accent) 22%, transparent);
+    }
+
+    .ab-trait-card__icon svg {
+      width: 1.35rem;
+      height: 1.35rem;
+    }
+
+    .ab-trait-card__label {
+      position: relative;
+      z-index: 1;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: var(--text-bright);
+    }
+
+    .ab-trait-card__hint {
+      position: relative;
+      z-index: 1;
+      font-size: 0.75rem;
+      line-height: 1.45;
+      color: var(--text-muted);
+    }
+
+    .ab-trait-card--creative { --trait-accent: #c4b5fd; }
+    .ab-trait-card--innovative { --trait-accent: #58a6ff; }
+    .ab-trait-card--fast { --trait-accent: #34d399; }
+    .ab-trait-card--curious { --trait-accent: #fbbf24; }
+    .ab-trait-card--motivated { --trait-accent: #f472b6; }
+
+    @media (min-width: 640px) {
+      .ab-traits {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .ab-trait-card:last-child {
+        grid-column: 2;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .ab-traits {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .ab-trait-card:last-child {
+        grid-column: auto;
+      }
+    }
 
     /* Parcours – timeline */
     .ab-timeline {
@@ -391,13 +503,19 @@
 
     @media (prefers-reduced-motion: reduce) {
       .ab-nav__link,
-      .ab-trait,
+      .ab-trait-card,
       .ab-nav-mobile__link { transition: none; }
+
+      .ab-trait-card:hover,
+      .ab-trait-card:focus-within { transform: none; }
     }
   </style>
 </head>
 <body class="page-about">
-  <header class="header">
+  <div id="page-curtain" class="page-curtain" aria-hidden="true"></div>
+  <script src="js/curtain-build.js"></script>
+
+<header class="header">
     <nav class="nav" aria-label="Navigation principale">
       <a href="index.html" class="nav__logo">Antoine Sarrail</a>
       <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
@@ -460,12 +578,9 @@
                 </figure>
                 <div class="ab-intro__text">
                   <p>
-                    Je m’appelle Antoine Sarrail. Mon parcours m’a conduit vers le développement informatique,
-                    un domaine où je peux allier logique, créativité et résolution de problèmes.
-                  </p>
-                  <p>
-                    Mes valeurs : rigueur, curiosité et envie d’apprendre. Je cherche à intégrer une entreprise
-                    où je pourrai progresser tout en apportant une réelle plus-value à l’équipe.
+                    <strong>BTS SIO SLAM</strong>, candidat libre — je développe des sites et applications web,
+                    du front au back. Cette page reprend mon parcours, mes compétences et mon
+                    <strong>objectif alternance</strong>.
                   </p>
                 </div>
               </article>
@@ -527,13 +642,62 @@
 
             <section class="ab-section ab-section--soft" id="soft-skills" aria-labelledby="soft-title">
               <h2 class="section-title" id="soft-title">Qualités humaines</h2>
-              <ul class="ab-traits">
-                <li class="ab-trait">Créatif et innovant</li>
-                <li class="ab-trait">Rapide et réactif</li>
-                <li class="ab-trait">Sociable et à l’écoute</li>
-                <li class="ab-trait">Apprentissage rapide</li>
-                <li class="ab-trait">Curieux et motivé</li>
-              </ul>
+              <div class="ab-traits-panel">
+                <ul class="ab-traits">
+                  <li class="ab-trait-card ab-trait-card--creative">
+                    <span class="ab-trait-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/>
+                        <path d="M5 19l1 2M19 5l1 2"/>
+                      </svg>
+                    </span>
+                    <span class="ab-trait-card__label">Créatif</span>
+                    <span class="ab-trait-card__hint">Solutions originales</span>
+                  </li>
+                  <li class="ab-trait-card ab-trait-card--innovative">
+                    <span class="ab-trait-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18h6"/>
+                        <path d="M10 22h4"/>
+                        <path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/>
+                      </svg>
+                    </span>
+                    <span class="ab-trait-card__label">Innovant</span>
+                    <span class="ab-trait-card__hint">Toujours en veille</span>
+                  </li>
+                  <li class="ab-trait-card ab-trait-card--fast">
+                    <span class="ab-trait-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                      </svg>
+                    </span>
+                    <span class="ab-trait-card__label">Rapide</span>
+                    <span class="ab-trait-card__hint">Efficace sous pression</span>
+                  </li>
+                  <li class="ab-trait-card ab-trait-card--curious">
+                    <span class="ab-trait-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7"/>
+                        <path d="M20 20l-3.5-3.5"/>
+                        <path d="M11 8v6M8 11h6"/>
+                      </svg>
+                    </span>
+                    <span class="ab-trait-card__label">Curieux</span>
+                    <span class="ab-trait-card__hint">Envie d’apprendre</span>
+                  </li>
+                  <li class="ab-trait-card ab-trait-card--motivated">
+                    <span class="ab-trait-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 20V10"/>
+                        <path d="M18 20V4"/>
+                        <path d="M6 20v-4"/>
+                      </svg>
+                    </span>
+                    <span class="ab-trait-card__label">Motivé</span>
+                    <span class="ab-trait-card__hint">Engagé jusqu’au bout</span>
+                  </li>
+                </ul>
+              </div>
             </section>
 
             <section class="ab-section" id="path" aria-labelledby="path-title">
@@ -544,12 +708,8 @@
                   <h3 class="ab-timeline__title">BTS SIO – candidat libre</h3>
                   <div class="ab-timeline__body">
                     <p>
-                      <strong>BTS SIO</strong> (Services Informatiques aux Organisations) en candidat libre.
-                      Formation centrée sur le développement, les réseaux et la gestion de projets informatiques.
-                    </p>
-                    <p>
-                      Ce choix en candidat libre m’a appris à organiser mon travail et à aller chercher l’information
-                      de manière autonome, tout en restant aligné avec les attendus du diplôme.
+                      <strong>BTS SIO</strong> en candidat libre — développement, réseaux et gestion de projets,
+                      mené en autonomie.
                     </p>
                   </div>
                 </li>
@@ -558,12 +718,8 @@
                   <h3 class="ab-timeline__title">Speedizycom – 2 mois</h3>
                   <div class="ab-timeline__body">
                     <p>
-                      J’ai effectué un <strong>stage de 2 mois chez Speedizycom</strong>, une agence web basée à Carcassonne,
-                      spécialisée en communication digitale, création de sites internet et accompagnement marketing.
-                    </p>
-                    <p>
-                      Durant ce stage, j’ai participé à la création de sites web, à la rédaction d’articles de blog et à l’utilisation de l’intelligence artificielle
-                      pour accélérer la production de contenu, améliorer la productivité et optimiser certaines tâches de communication.
+                      Agence web à Carcassonne : création de sites, rédaction de contenus et usage de l’IA
+                      pour accélérer la production.
                     </p>
                   </div>
                 </li>
@@ -572,9 +728,18 @@
                   <h3 class="ab-timeline__title">Développeur web</h3>
                   <div class="ab-timeline__body">
                     <p>
-                      En <strong>juin 2024</strong>, j’ai également effectué un stage en tant que développeur web&nbsp;:
-                      création d’un site complet en <strong>HTML, CSS et JavaScript</strong> avec un design soigné et responsive,
-                      ainsi que des actions de maintenance et d’optimisation pour assurer performance et sécurité.
+                      Site complet en <strong>HTML, CSS et JavaScript</strong>, design responsive,
+                      maintenance et optimisation.
+                    </p>
+                  </div>
+                </li>
+                <li class="ab-timeline__item">
+                  <span class="ab-timeline__badge">Formation</span>
+                  <h3 class="ab-timeline__title">Lycée Militaire – EPAE Grenoble · STMG Comptabilité</h3>
+                  <div class="ab-timeline__body">
+                    <p>
+                      Lycée à l’<strong>EPAE</strong> (<strong>École des pupilles de l’air et de l’espace</strong>)
+                      de Grenoble, filière <strong>STMG Comptabilité</strong>.
                     </p>
                   </div>
                 </li>
@@ -644,6 +809,7 @@
   </footer>
 
   <script src="js/site-config.js"></script>
+  <script src="js/curtain-transition.js"></script>
   <script src="js/main.js"></script>
   <script>
     (function () {

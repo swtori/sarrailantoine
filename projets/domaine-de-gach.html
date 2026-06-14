@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Domaine de Gach — chambres d’hôtes, EmailJS, SQL, IONOS. Projet Antoine Sarrail.">
+  <meta name="description" content="Domaine de Gach — évolution d’un site vitrine, données internes, base SQL, EmailJS, IONOS. Projet Antoine Sarrail.">
   <title>Domaine de Gach | Projet</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="../css/projets/domaine-de-gach.css">
 </head>
 <body class="projet-page projet-domaine">
-  <header class="header">
+  <div id="page-curtain" class="page-curtain" aria-hidden="true"></div>
+  <script src="../js/curtain-build.js"></script>
+
+<header class="header">
     <nav class="nav" aria-label="Navigation principale">
       <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
       <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -46,8 +49,8 @@
         <p class="story-eyebrow">Chambres d’hôtes · Site vitrine · 01/01/2026 au 15/04/2026</p>
         <h1 id="story-title">Domaine de Gach</h1>
         <p class="story-hero__tagline">
-          Développement de <strong>domainedegach.com</strong> en HTML vanilla : site vitrine moderne,
-          refonte de l’ancien site, mise en ligne sur IONOS et évolution continue selon les demandes clients.
+          Participation à l’évolution de <strong>domainedegach.com</strong> : site vitrine modernisé en HTML vanilla,
+          appui sur les données de l’organisation, base SQL ajoutée, <strong>versionnement GitHub</strong> et déploiement sur IONOS.
         </p>
         <ul class="story-tags" aria-label="Technologies">
           <li>HTML/CSS/JS</li>
@@ -69,23 +72,86 @@
         <p class="story-eyebrow story-chapter__center">01 — Contexte</p>
         <h2 id="ch-1" class="story-chapter__center">Moderniser un site ancien</h2>
         <p class="story-chapter__lead">
-          Pendant un stage professionnalisant, j’ai dû reconstruire le site du Domaine de Gach
-          pour remplacer une version ancienne (2009). L’objectif était d’avoir une vitrine plus moderne,
-          plus claire et plus efficace pour présenter les chambres et faciliter les demandes de réservation.
+          Pendant un stage professionnalisant, j’ai participé à l’évolution du site du Domaine de Gach
+          pour remplacer une version ancienne (2009). J’ai m’appuyé sur les données internes de l’entreprise
+          — notamment pour compléter les prix des chambres — et sur leur direction artistique afin d’aller
+          dans le même sens qu’eux, sans trop inventer : moderniser le design tout en conservant
+          l’esprit nature et chaleur du domaine.
         </p>
       </div>
     </section>
 
-    <section class="story-showcase story-reveal" aria-label="Page d’accueil">
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-ancien">
+      <div class="story-chapter__inner story-split story-split--reverse story-split--gach-ancien">
+        <figure class="story-split__visual story-frame story-frame--crisp story-frame--gach-ancien">
+          <img
+            src="../img/domainedegach/gach-ancien-site.png"
+            width="1130"
+            height="741"
+            alt="Ancien site Domaine de Gach — version 2009, navigation et mise en page d’origine"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Ancien site — version 2009</figcaption>
+        </figure>
+        <div class="story-split__text">
+          <p class="story-eyebrow">Avant</p>
+          <h2 id="ch-ancien">L’ancien site à moderniser</h2>
+          <p>
+            Voilà l’ancien site que j’ai modernisé : une vitrine datée (2009), avec une navigation peu lisible
+            et un rendu peu adapté aux écrans actuels. C’est cette base que j’ai entièrement refaite
+            en HTML, CSS et JavaScript pour aboutir à la version en ligne aujourd’hui.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-showcase story-reveal" aria-label="Site modernisé">
       <div class="story-showcase__wrap">
         <img
           src="../img/domainedegach/index-gach.webp"
           width="1901"
           height="904"
-          alt="Page d’accueil du site Domaine de Gach"
+          alt="Page d’accueil du site Domaine de Gach — version modernisée"
           loading="lazy"
           decoding="async"
         >
+        <div class="story-showcase__caption">
+          <p class="story-eyebrow">Après</p>
+          <p>
+            Le site modernisé : structure plus claire, design actualisé et esprit nature/chaleur conservé,
+            tout en s’appuyant sur les données et la direction artistique de l’établissement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="story-chapter story-chapter--alt story-reveal" aria-labelledby="ch-suivi">
+      <div class="story-chapter__inner story-split story-split--reverse story-split--gach-trello">
+        <figure class="story-split__visual story-frame story-frame--crisp story-frame--gach-trello">
+          <img
+            src="../img/domainedegach/gach-trello-board.png"
+            width="1536"
+            height="1024"
+            alt="Tableau Kanban type Trello — suivi des tâches Domaine de Gach avec deadlines"
+            loading="lazy"
+            decoding="async"
+          >
+          <figcaption>Suivi de projet — deadlines et priorités</figcaption>
+        </figure>
+        <div class="story-split__text">
+          <p class="story-eyebrow">02 — Suivi de projet</p>
+          <h2 id="ch-suivi">Respecter les deadlines</h2>
+          <p>
+            J’ai organisé l’avancement sur un tableau type Trello : colonnes par statut, labels par thème
+            (design, données, SQL, déploiement…) et dates d’échéance pour tenir le rythme du stage.
+          </p>
+          <p>
+            Chaque livrable passait par ce suivi avant mise en production — audit, refonte, intégration
+            des prix, schéma SQL. En parallèle, j’ai <strong>versionné tout le projet sur GitHub</strong> :
+            commits réguliers, historique des évolutions et possibilité de revenir en arrière sur chaque modification.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -93,18 +159,22 @@
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">03 — Réalisations</p>
         <h2 id="ch-2" class="story-chapter__center">Ce que j’ai mis en place</h2>
-        <ul class="story-metrics story-metrics--three">
+        <ul class="story-metrics story-metrics--gach-4">
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Fichiers statiques</span>
-            <span class="story-metric__label">Développement d’un site vitrine en HTML vanilla avec une structure simple à maintenir.</span>
+            <span class="story-metric__value">Données métier</span>
+            <span class="story-metric__label">Exploitation des données de l’organisation pour enrichir le contenu visible — prix des chambres, identité visuelle.</span>
+          </li>
+          <li class="story-metric story-reveal">
+            <span class="story-metric__value">Formulaire EmailJS</span>
+            <span class="story-metric__label">Formulaire de contact côté front via EmailJS — prises de contact simplifiées sans alourdir l’infrastructure, avec des demandes réelles reçues.</span>
           </li>
           <li class="story-metric story-reveal">
             <span class="story-metric__value">Déploiement IONOS</span>
             <span class="story-metric__label">Mise en ligne sur IONOS (One &amp; One) en remplaçant l’ancien site en production.</span>
           </li>
           <li class="story-metric story-reveal">
-            <span class="story-metric__value">Demandes clients</span>
-            <span class="story-metric__label">Écoute, audit des retours et ajustements réguliers pour répondre fidèlement aux besoins.</span>
+            <span class="story-metric__value">Versionnement GitHub</span>
+            <span class="story-metric__label">Code source, script SQL et évolutions du site versionnés sur GitHub — commits, branches et historique des modifications.</span>
           </li>
         </ul>
       </div>
@@ -116,11 +186,13 @@
         <h2 id="ch-db" class="story-chapter__center">Schéma SQL et MCD</h2>
         <p class="story-chapter__lead">
           Le projet n’étant pas totalement finalisé pendant le stage, je l’ai continué sur mon temps libre
-          pour livrer une version de meilleure qualité. J’ai ensuite ajouté une base de données pour gérer
-          les clients et les réservations, avec un modèle conceptuel dérivé du script SQL.
+          pour livrer une version de meilleure qualité. J’ai ajouté une base SQL pour gérer
+          les clients et les réservations, avec un modèle conceptuel dérivé du script — mais son exploitation
+          reste pour l’instant limitée côté fonctionnalités visibles sur le site public.
         </p>
         <p class="story-chapter__center gach-data-intro">
-          Versionnement constant sur GitHub pour suivre les évolutions et sécuriser les modifications.
+          Le dépôt <strong>GitHub</strong> centralise le code et le schéma SQL : chaque évolution est commitée,
+          tracée et versionnée pour sécuriser les modifications.
         </p>
         <div class="gach-data-quinconce" aria-label="Schéma SQL et modèle conceptuel">
           <figure class="gach-data-quinconce__item gach-data-quinconce__item--sql story-frame story-frame--crisp story-frame--tilt">
@@ -150,13 +222,13 @@
     </section>
 
     <section class="story-chapter story-reveal" aria-labelledby="ch-admin">
-      <div class="story-chapter__inner story-split">
+      <div class="story-chapter__inner story-split story-split--gach-admin">
         <div class="story-split__text">
           <p class="story-eyebrow">05 — Administration</p>
-          <h2 id="ch-admin">Espace de gestion</h2>
+          <h2 id="ch-admin">Connexion à l’espace admin</h2>
           <p>
-            J’ai intégré un formulaire de contact EmailJS côté front pour fluidifier les prises de contact
-            sans alourdir l’infrastructure. Cette partie a déjà permis de générer des demandes réelles.
+            L’accès au back-office passe par une page de <strong>connexion</strong> : authentification
+            par identifiants pour sécuriser l’espace de gestion et réserver l’administration aux exploitants du domaine.
           </p>
         </div>
         <figure class="story-split__visual story-frame story-frame--tilt story-frame--gach-admin">
@@ -164,11 +236,11 @@
             src="../img/domainedegach/admin-section.webp"
             width="1297"
             height="671"
-            alt="Section administration du site Domaine de Gach"
+            alt="Page de connexion — authentification à l’espace admin Domaine de Gach"
             loading="lazy"
             decoding="async"
           >
-          <figcaption>Back-office — gestion du site</figcaption>
+          <figcaption>Authentification — accès admin</figcaption>
         </figure>
       </div>
     </section>
@@ -231,6 +303,7 @@
     </div>
   </footer>
   <script src="../js/site-config.js"></script>
+  <script src="../js/curtain-transition.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/projet-story.js" defer></script>
 </body>

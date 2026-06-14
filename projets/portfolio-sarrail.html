@@ -14,7 +14,10 @@
   <link rel="stylesheet" href="../css/projets/portfolio-sarrail.css">
 </head>
 <body class="projet-page projet-portfolio-sarrail">
-  <header class="header">
+  <div id="page-curtain" class="page-curtain" aria-hidden="true"></div>
+  <script src="../js/curtain-build.js"></script>
+
+<header class="header">
     <nav class="nav" aria-label="Navigation principale">
       <a href="../index.html" class="nav__logo">Antoine Sarrail</a>
       <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -244,7 +247,24 @@
       <div class="story-chapter__inner">
         <p class="story-eyebrow story-chapter__center">04 — Modèle de données</p>
         <h2 id="ch-mld" class="story-chapter__center">MLD du blog</h2>
-        <p class="story-chapter__lead"><code>users</code> · <code>posts</code> · clé <code>author_id</code></p>
+        <p class="story-chapter__lead">
+          Modèle logique de données — une ligne par table, sans coupure :
+          clé primaire <code>#</code>, clé étrangère <code>→</code>.
+        </p>
+
+        <div class="ps-mld ps-mld--text" data-ps-reveal="fade">
+          <div class="ps-code ps-mld-code">
+            <p class="ps-code__label">MLD — blog (SQLite)</p>
+            <div class="ps-mld-fit">
+              <pre class="ps-code__block ps-code__block--mld" data-mld-fit><code class="ps-mld-line"><span class="ps-mld-table">users</span>(<span class="ps-mld-pk">#id</span>, name, email, password_hash, role, created_at)</code><code class="ps-mld-line"><span class="ps-mld-table">posts</span>(<span class="ps-mld-pk">#id</span>, title, slug, excerpt, content, status, <span class="ps-mld-fk">#author_id→users</span>, created_at, updated_at, published_at)</code></pre>
+            </div>
+            <p class="ps-mld-legend">
+              <span><code>#</code> clé primaire</span>
+              <span><code>→</code> clé étrangère</span>
+              <span>relation <strong>users</strong> 1,n — <strong>posts</strong> 0,1</span>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -304,7 +324,9 @@
     </div>
   </footer>
   <script src="../js/site-config.js"></script>
+  <script src="../js/curtain-transition.js"></script>
   <script src="../js/main.js"></script>
   <script src="../js/projet-story.js" defer></script>
+  <script src="../js/ps-mld-fit.js" defer></script>
 </body>
 </html>
